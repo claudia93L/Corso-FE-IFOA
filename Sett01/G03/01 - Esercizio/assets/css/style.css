@@ -11,10 +11,12 @@ body {
   background-position: center;
   padding: 15px;
   font-family: "Poppins", sans-serif;
+  color: #393939;
 }
 
 h3 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 header,
@@ -26,6 +28,7 @@ footer {
 header,
 #container-white-background {
   margin-bottom: 20px;
+  padding: 15px;
 }
 
 .ombreggiatura-container {
@@ -34,6 +37,11 @@ header,
 
 .arrotondamento-bordi {
   border-radius: 2px;
+}
+
+span,
+footer a {
+  color: #ff1493;
 }
 
 /* HEADER */
@@ -85,12 +93,50 @@ header li::marker {
 }
 
 .sfondo-grigio {
-  background-color: gainsboro;
+  background-color: #dcdcdc;
+  padding: 2px 15px;
+}
+
+.url-blue {
+  color: #01dfdf;
+  font-weight: 500;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
+#post-details p {
+  color: #dcdcdc;
+}
+
+#video {
+  border-radius: 30px;
+}
+
 /* TABELLE */
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  border-bottom: 2px solid #425faf;
+}
+
+td,
+th {
+  padding: 5px 30px;
+}
+
+#table-title {
+  font-style: italic;
+}
+
+thead tr:nth-of-type(2) {
+  background-color: #425faf;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dcdcdc;
+}
 
 /* FORM */
 
@@ -105,4 +151,11 @@ footer {
     rgba(33, 76, 91, 1) 0%,
     rgba(46, 51, 54, 1) 100%
   );
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+footer a {
+  font-weight: 600;
+  text-decoration: none;
 }
