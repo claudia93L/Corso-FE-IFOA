@@ -40,7 +40,7 @@ header,
 }
 
 .ombreggiatura-container {
-  box-shadow: 5px 13px 12px 0px rgb(115, 115, 115);
+  box-shadow: 4px 4px 8px 0px, -4px -4px 8px 0px rgb(115, 115, 115);
 }
 
 .arrotondamento-bordi,
@@ -161,12 +161,14 @@ code {
   color: white;
 }
 
-#btn-invia:hover {
-  background-color: #223159;
+input[type="email"] {
+  border: none;
+  padding: 5px;
+  border-bottom: 2px dashed #393939;
 }
 
-form input {
-  border-bottom: 2 dashed #393939;
+input[type="email"]:focus {
+  border-bottom: 2px dashed #03adad;
 }
 
 /* ELEMENTI NELL' ASIDE */
