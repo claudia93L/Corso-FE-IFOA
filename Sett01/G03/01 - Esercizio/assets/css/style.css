@@ -159,12 +159,19 @@ code {
 #btn-invia {
   background-color: #425faf;
   color: white;
+  border: none;
+  padding: 5px;
+}
+
+#btn-invia:hover {
+  background-color: #2a3b68;
+  cursor: pointer;
 }
 
 input[type="email"] {
   border: none;
   padding: 5px;
-  border-bottom: 2px dashed #393939;
+  border-bottom: 1px dashed #393939;
 }
 
 input[type="email"]:focus {
