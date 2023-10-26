@@ -118,6 +118,7 @@ header li::marker {
 
 #video {
   border-radius: 30px;
+  margin-bottom: 30px;
 }
 
 code {
@@ -175,6 +176,10 @@ form input {
 
 .data {
   text-align: right;
+}
+
+aside h4 {
+  margin-bottom: -10px;
 }
 
 /* FOOTER */
