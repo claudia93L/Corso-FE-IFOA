@@ -19,20 +19,24 @@
   </head>
   <body>
     <div id="container">
-      <div id="container-white-background">
-        <header>
-          <a href="#"
-            ><img id="logo" src="assets/img/logo.svg" alt="Logo di Epicode"
-          /></a>
-          <h1>Epicode - Il blog dei developers</h1>
-          <nav>
-            <ul>
-              <li><a href="#header">Home</a></li>
-              <li><a href="#articoli-correlati">Articoli</a></li>
-              <li><a href="#">Job</a></li>
-            </ul>
-          </nav>
-        </header>
+      <header class="ombreggiatura-container arrotondamento-bordi">
+        <a href="javascript:void(0)"
+          ><img id="logo" src="assets/img/logo.svg" alt="Logo di Epicode"
+        /></a>
+        <h1>Epicode - Il blog dei developers</h1>
+        <nav>
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#articoli-correlati">Articoli</a></li>
+            <li><a href="javascript:void(0)">Job</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div
+        id="container-white-background"
+        class="ombreggiatura-container arrotondamento-bordi"
+      >
+       
         <main>
           <section id="post">
             <article id="post">
@@ -148,61 +152,54 @@
             </section>
           </section>
         </main>
-        <aside id="newsletter">
+        <aside id="novità" class="sfondo-grigio arrotondamento-bordi">
           <h3>Novità</h3>
           <p>
             Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla
             nostra newsletter:
           </p>
           <form action="submit" method="POST" id="form-newsletter">
-            <fieldset>
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Inserisci la tua email"
-              />
-              <button
-                type="submit"
-                form="form-newsletter"
-                value="Iscriviti!"
-                id="btn-invia"
-              >
-                Iscriviti!
-              </button>
-            </fieldset>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Inserisci la tua email"
+            />
+            <button
+              type="submit"
+              form="form-newsletter"
+              value="Iscriviti!"
+              id="btn-invia"
+            >
+              Iscriviti!
+            </button>
           </form>
         </aside>
         <aside id="articoli-correlati">
           <h3>Articoli correlati</h3>
-          <div class="articolo">
-            <h4>Validare il codice HTML</h4>
-            <p><strong>Categoria: </strong>develop</p>
-            <p><strong>Data: </strong>18-9-2020</p>
+          <div class="articolo sfondo-grigio">
+            <h4 class="article-title">Validare il codice HTML</h4>
+            <p>Categoria: develop</p>
           </div>
-          <div class="articolo">
+          <div class="articolo sfondo-grigio">
             <h4>Correggere la sintassi</h4>
-            <p><strong>Categoria: </strong>develop</p>
-            <p><strong>Data: </strong>16-9-2020</p>
+            <h4 class="article-title">Correggere la sintassi</h4>
+            <p>Categoria: develop</p>
           </div>
-          <div class="articolo">
-            <h4>Meno Kb nella pagina</h4>
-            <p><strong>Categoria: </strong>ottimizzazione</p>
-            <p><strong>Data: </strong>30-9-2020</p>
+          <div class="articolo sfondo-grigio">
+            <h4 class="article-title">Meno Kb nella pagina/h4>
+            <p>Categoria: ottimizzazione</p>
           </div>
         </aside>
       </div>
-      <footer>
+      <footer class="ombreggiatura-container arrotondamento-bordi">
         <p>Blog Epicode &copy;2023</p>
         <p>
           Testata online di Mario Rossi, registrata con prot. n.213/2019 - via
-          luigi Einaudi 2 - Milano. P.IVA 00112233.
-        </p>
-        <p>
-          <a href="mailto:info@epicode.school" target="_blank"
-            >info@epicode.school</a
-          >
+          luigi Einaudi 2 - Milano. P.IVA 00112233. <a href="mailto:info@epicode.school" target="_blank"
+          >info@epicode.school</a
+        >
         </p>
       </footer>
     </div>

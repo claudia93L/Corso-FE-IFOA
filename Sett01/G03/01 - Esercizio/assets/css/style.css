@@ -23,6 +23,19 @@ footer {
   color: white;
 }
 
+header,
+#container-white-background {
+  margin-bottom: 20px;
+}
+
+.ombreggiatura-container {
+  box-shadow: 5px 13px 12px 0px rgb(115, 115, 115);
+}
+
+.arrotondamento-bordi {
+  border-radius: 2px;
+}
+
 /* HEADER */
 header {
   background: rgb(105, 165, 188);
@@ -69,6 +82,10 @@ header li::marker {
 
 #container-white-background {
   background-color: #fff;
+}
+
+.sfondo-grigio {
+  background-color: gainsboro;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
