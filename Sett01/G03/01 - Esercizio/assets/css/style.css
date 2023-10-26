@@ -14,6 +14,12 @@ body {
   color: #393939;
 }
 
+body p,
+body li,
+body table {
+  font-size: 0.8em;
+}
+
 h3 {
   text-transform: uppercase;
   text-align: center;
@@ -26,7 +32,8 @@ footer {
 }
 
 header,
-#container-white-background {
+#container-white-background,
+.articolo {
   margin-bottom: 20px;
   padding: 15px;
 }
@@ -35,13 +42,19 @@ header,
   box-shadow: 5px 13px 12px 0px rgb(115, 115, 115);
 }
 
-.arrotondamento-bordi {
+.arrotondamento-bordi,
+code {
   border-radius: 2px;
 }
 
 span,
 footer a {
   color: #ff1493;
+}
+
+.url-blue {
+  color: #03adad;
+  font-weight: 500;
 }
 
 /* HEADER */
@@ -97,11 +110,6 @@ header li::marker {
   padding: 2px 15px;
 }
 
-.url-blue {
-  color: #01dfdf;
-  font-weight: 500;
-}
-
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 #post-details p {
@@ -110,6 +118,11 @@ header li::marker {
 
 #video {
   border-radius: 30px;
+}
+
+code {
+  padding: 3px;
+  border: 1px solid #878787;
 }
 
 /* TABELLE */
@@ -134,13 +147,35 @@ thead tr:nth-of-type(2) {
   color: white;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even),
+code {
   background-color: #dcdcdc;
 }
 
 /* FORM */
 
+#btn-invia {
+  background-color: #425faf;
+  color: white;
+}
+
+#btn-invia:hover {
+  background-color: #223159;
+}
+
+form input {
+  border-bottom: 2 dashed #393939;
+}
+
 /* ELEMENTI NELL' ASIDE */
+
+#novità {
+  padding-bottom: 20px;
+}
+
+.data {
+  text-align: right;
+}
 
 /* FOOTER */
 
