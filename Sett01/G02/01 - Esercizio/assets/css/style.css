@@ -38,6 +38,7 @@ header {
   border-radius: 2%;
   width: 100%;
   margin: 1.8vh 0;
+  box-shadow: 10px 10px 5px gray;
 }
 
 .uppercase {
