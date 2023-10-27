@@ -170,6 +170,8 @@ article {
   display: inline-block;
 }
 
+/* Ho dovuto inserire l'altezza fissa, per far in modo che le card rimanessero allineate. A causa dell'immagine stavano a scaletta. Scalabile da 1300 a 1700 senza problemi di allineamento. Testato su Chrome con ridimensionamento finestra da ispeziona. */
+
 article img {
   width: 100%;
   height: 180px;
