@@ -21,41 +21,125 @@ h3,
 h4 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  color: #000;
+  color: #25a2c3;
   font-weight: bold;
 }
 
-#container {
-  width: 100vw;
+p {
+  font-size: 0.8em;
+}
+
+section {
+  padding: 30px 20px;
 }
 
 /* HEADER */
 
-header img {
+header {
+  background-color: #000;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+#logo {
   text-align: center;
+}
+
+header img {
+  width: 30%;
 }
 
 /* MAIN */
 
 /* MAIN - HERO */
 
+#hero-section {
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 button {
+  margin-top: 30px;
   background-color: #f04c2f;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   border: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* MAIN - DETAILS */
+
+#details img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+#details h3 {
+  font-size: 0.8em;
+  margin-bottom: -10px;
+}
+
+#details div {
+  margin-bottom: 30px;
 }
 
 /* MAIN - SECTION: TESTIMONIAL */
 
 #testimonials {
   background-color: #e22d0e;
+  color: #fff;
+}
+
+#testimonials h2 {
+  color: #fff;
+}
+
+#testimonials p:first-child {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+#testimonials cite {
+  font-style: normal;
+  font-weight: lighter;
+}
+
+#testimonials p:last-child {
+  margin-top: 0px;
+  font-style: lighter;
+  font-size: 0.6em;
 }
 
 /* MAIN - ARTICLE */
 
+#articles {
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
 article {
   border: 1px solid #dee1e3;
+  width: 90%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article img {
+  width: 100%;
+}
+
+article p {
+  margin-top: -10px;
+}
+
+.article-text {
+  padding: 5px 20px;
 }
 
 /* FOOTER */
@@ -65,6 +149,39 @@ footer {
   color: #c8e7f0;
 }
 
+footer h2 {
+  color: #fff;
+}
+
 footer a {
   color: #c8e7f0;
+}
+
+footer ul {
+  list-style: none;
+  font-size: 0.7em;
+}
+
+#contact-list {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer i {
+  color: #fff;
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer hr {
+  border: 0.1px solid #fff;
+  width: 40%;
+  opacity: 0.7;
+}
+
+footer p {
+  font-size: 0.6em;
 }
