@@ -4,6 +4,7 @@
 
 /* IMPOSTAZIONI GENERALI */
 
+html,
 body {
   margin: 0;
   padding: 0;
@@ -118,7 +119,7 @@ button {
 
 #articles {
   margin-top: 40px;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 article {
@@ -142,11 +143,18 @@ article p {
   padding: 5px 20px;
 }
 
+article h4 {
+  font-size: 0.9em;
+}
+
 /* FOOTER */
 
 footer {
   background-color: #25a2c3;
   color: #c8e7f0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 
 footer h2 {
@@ -160,6 +168,7 @@ footer a {
 footer ul {
   list-style: none;
   font-size: 0.7em;
+  padding-inline-start: 0px;
 }
 
 #contact-list {
