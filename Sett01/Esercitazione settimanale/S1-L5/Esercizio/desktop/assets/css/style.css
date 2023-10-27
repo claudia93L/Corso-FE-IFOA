@@ -192,9 +192,9 @@ footer {
   padding-bottom: 40px;
 }
 
-/* DA RIVEDERE */
-
 .centrato {
+  width: 15%;
+  display: block;
   margin: 0 auto;
   text-align: left;
 }
@@ -209,7 +209,7 @@ footer a {
 
 footer ul {
   list-style: none;
-  font-size: 0.7em;
+  font-size: 0.5em;
   padding-inline-start: 0px;
 }
 
@@ -228,10 +228,10 @@ footer address {
 
 footer hr {
   border: 0.1px solid #fff;
-  width: 40%;
+  width: 100%;
   opacity: 0.7;
 }
 
 footer p {
-  font-size: 0.6em;
+  font-size: 0.4em;
 }
