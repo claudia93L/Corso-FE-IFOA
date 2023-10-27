@@ -59,7 +59,7 @@ header img {
   background-image: url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20vh 20vw;
+  padding: 25vh 20vw;
 }
 
 button {
@@ -77,12 +77,11 @@ button {
 /* MAIN - DETAILS */
 
 #details {
-  text-align: left;
   font-size: 0.7em;
 }
 
 #details img {
-  width: 30%;
+  width: 60%;
   border-radius: 50%;
 }
 
@@ -98,7 +97,13 @@ button {
 }
 
 #right div {
+  text-align: left;
   display: inline;
+}
+
+#left {
+  text-align: right;
+  margin-right: 40px;
 }
 
 /* MAIN - SECTION: TESTIMONIAL */
@@ -171,6 +176,13 @@ footer {
   padding-bottom: 40px;
 }
 
+/* DA RIVEDERE */
+
+.centrato {
+  margin: 0 auto;
+  text-align: left;
+}
+
 footer h2 {
   color: #fff;
 }
@@ -186,7 +198,6 @@ footer ul {
 }
 
 #contact-list {
-  text-align: center;
   margin-right: auto;
   margin-left: auto;
 }
