@@ -77,11 +77,13 @@ button {
 /* MAIN - DETAILS */
 
 #details {
-  font-size: 0.7em;
+  margin: 0 auto;
+  width: 80vw;
+  font-size: 0.6em;
 }
 
 #details img {
-  width: 60%;
+  width: 50%;
   border-radius: 50%;
 }
 
@@ -90,15 +92,21 @@ button {
   margin-bottom: -10px;
 }
 
-#details div {
+#right,
+#left {
+  margin-top: 30px;
   margin-bottom: 30px;
   display: inline-block;
-  width: 30%;
+  width: 40%;
 }
 
 #right div {
   text-align: left;
   display: inline;
+}
+
+#right p {
+  margin-bottom: 20px;
 }
 
 #left {
