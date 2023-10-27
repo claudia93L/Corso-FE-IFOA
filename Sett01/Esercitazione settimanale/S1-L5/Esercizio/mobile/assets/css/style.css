@@ -1,0 +1,70 @@
+/* IMPORT FONT */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* IMPOSTAZIONI GENERALI */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #393d41;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  color: #000;
+  font-weight: bold;
+}
+
+#container {
+  width: 100vw;
+}
+
+/* HEADER */
+
+header img {
+  text-align: center;
+}
+
+/* MAIN */
+
+/* MAIN - HERO */
+
+button {
+  background-color: #f04c2f;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  border: none;
+}
+
+/* MAIN - SECTION: TESTIMONIAL */
+
+#testimonials {
+  background-color: #e22d0e;
+}
+
+/* MAIN - ARTICLE */
+
+article {
+  border: 1px solid #dee1e3;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #25a2c3;
+  color: #c8e7f0;
+}
+
+footer a {
+  color: #c8e7f0;
+}
