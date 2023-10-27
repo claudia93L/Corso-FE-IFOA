@@ -123,6 +123,7 @@ button {
 
 #testimonials h2 {
   color: #fff;
+  font-size: 0.8em;
 }
 
 #testimonials p:first-child {
@@ -133,12 +134,13 @@ button {
 #testimonials cite {
   font-style: normal;
   font-weight: lighter;
+  font-size: 0.6em;
 }
 
 #testimonials p:last-child {
   margin-top: 0px;
   font-style: lighter;
-  font-size: 0.6em;
+  font-size: 0.4em;
 }
 
 /* MAIN - ARTICLE */
