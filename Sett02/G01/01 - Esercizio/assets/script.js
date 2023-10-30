@@ -13,6 +13,11 @@ let eta = 29.5;
 let eta_arrotondata = 29;
 // booleano - accetta due valori --> true e false, che equivalgono rispettivamente a 1 e 0
 let donna = true;
+// null - il valore non è stato intenzionalmente attribuito
+let nullo = null;
+
+//undefined - variabile non definita
+let nonDefinita = undefined;
 
 console.log('***Esercizio 1 e 2***');
 console.log('Il mio nome è ' + myName);
