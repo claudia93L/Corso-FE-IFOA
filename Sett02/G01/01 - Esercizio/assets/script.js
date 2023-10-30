@@ -94,6 +94,7 @@ console.log('***Esercizio 7***');
 console.log('I nomi sono diversi?' + differenza);
 console.log('I nomi sono uguali?' + uguaglianza);
 
-name2 = 'john';
+name2 = name2.toLowerCase();
+
 console.log('I nomi sono diversi?' + differenza);
 console.log('I nomi sono uguali?' + uguaglianza);
