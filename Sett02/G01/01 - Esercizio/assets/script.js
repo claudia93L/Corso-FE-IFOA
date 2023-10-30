@@ -87,14 +87,13 @@ console.log(
 let name1 = 'john';
 let name2 = 'John';
 
+let uguaglianza = name1 === name2;
+let differenza = name1 !== name2;
+
 console.log('***Esercizio 7***');
-console.log('I nomi sono diversi?');
-console.log(name1 != name2);
-console.log('I nomi sono uguali?');
-console.log(name1 === name2);
+console.log('I nomi sono diversi?' + differenza);
+console.log('I nomi sono uguali?' + uguaglianza);
 
 name2 = 'john';
-console.log('I nomi sono diversi?');
-console.log(name1 !== name2);
-console.log('I nomi sono uguali?');
-console.log(name1 === name2);
+console.log('I nomi sono diversi?' + differenza);
+console.log('I nomi sono uguali?' + uguaglianza);
