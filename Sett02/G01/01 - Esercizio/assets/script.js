@@ -16,11 +16,16 @@ let donna = true;
 // null - il valore non è stato intenzionalmente attribuito
 let nullo = null;
 
-//undefined - variabile non definita
+// undefined - variabile non definita
 let nonDefinita = undefined;
+
+// date
+let dataOdierna = new Date().getDate() + '/' + new Date().getMonth() + '/' + new Date().getFullYear();
 
 console.log('***Esercizio 1 e 2***');
 console.log('Il mio nome è ' + myName);
+console.log(dataOdierna)
+
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
