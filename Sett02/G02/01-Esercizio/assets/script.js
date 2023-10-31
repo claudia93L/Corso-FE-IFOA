@@ -112,7 +112,37 @@ let num7 = 10;
 let num8 = 20;
 let num9 = 30;
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+if (num7 >= num8 && num7 >= num9) {
+  if (num8 >= num9) {
+    console.log(
+      'Numeri in ordine di grandezza: ' + num7 + ', ' + num8 + ', ' + num9
+    );
+  } else {
+    console.log(
+      'Numeri in ordine di grandezza: ' + num7 + ', ' + num9 + ', ' + num8
+    );
+  }
+} else if (num8 >= num7 && num8 >= num9) {
+  if (num7 >= num9) {
+    console.log(
+      'Numeri in ordine di grandezza: ' + num8 + ', ' + num7 + ', ' + num9
+    );
+  } else {
+    console.log(
+      'Numeri in ordine di grandezza: ' + num8 + ', ' + num9 + ', ' + num7
+    );
+  }
+} else {
+  if (num7 >= num8) {
+    console.log(
+      'Numeri in ordine di grandezza: ' + num9 + ', ' + num7 + ', ' + num8
+    );
+  } else {
+    console.log(
+      'Numeri in ordine di grandezza: ' + num9 + ', ' + num8 + ', ' + num9
+    );
+  }
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
