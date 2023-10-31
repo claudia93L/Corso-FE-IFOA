@@ -51,7 +51,13 @@ if (num4 % 5 === 0) {
 let num5 = 16;
 let num6 = 8;
 
-if (num5 === 8 || num6 === 8 || num5 + num6 === 8 || num5 - num6 === 8) {
+if (
+  num5 === 8 ||
+  num6 === 8 ||
+  num5 + num6 === 8 ||
+  num5 - num6 === 8 ||
+  num6 - num5 === 8
+) {
   let testo =
     "Uno dei due numeri inseriti è 8, o l'addizione/sottrazione dei due numeri, ha come risultato 8";
   document.getElementById('esercizio4').innerHTML = testo;
