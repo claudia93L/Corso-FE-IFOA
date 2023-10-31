@@ -139,7 +139,7 @@ if (num7 >= num8 && num7 >= num9) {
     );
   } else {
     console.log(
-      'Numeri in ordine di grandezza: ' + num9 + ', ' + num8 + ', ' + num9
+      'Numeri in ordine di grandezza: ' + num9 + ', ' + num8 + ', ' + num7
     );
   }
 }
