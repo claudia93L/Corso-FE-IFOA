@@ -21,7 +21,7 @@ if (num1 > num2) {
 
 let num3 = 30;
 
-if (num3 != 5) {
+if (num3 !== 5) {
   console.log('not equal');
 } else {
   document.getElementById('esercizio2').innerHTML =
@@ -108,7 +108,7 @@ if (totalShoppingCart >= 50) {
   Alla fine mostra il risultato in console.
 */
 
-let num7 = 10;
+let num7 = 40;
 let num8 = 20;
 let num9 = 30;
 
@@ -148,7 +148,15 @@ if (num7 >= num8 && num7 >= num9) {
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let input = '6';
+
+if (typeof input === 'number') {
+  document.getElementById('esercizio8').innerHTML =
+    "L'input inserito è un numero";
+} else {
+  document.getElementById('esercizio8').innerHTML =
+    "L'input inserito non è un numero";
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
