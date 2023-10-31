@@ -231,7 +231,21 @@ document.getElementById('esercizio13').innerHTML =
     Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
   */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const arrayNumeri = [];
+
+arrayNumeri[0] = 1;
+arrayNumeri[1] = 2;
+arrayNumeri[2] = 3;
+arrayNumeri[3] = 4;
+arrayNumeri[4] = 5;
+arrayNumeri[5] = 6;
+arrayNumeri[6] = 7;
+arrayNumeri[7] = 8;
+arrayNumeri[8] = 9;
+arrayNumeri[9] = 10;
+
+document.getElementById('esercizio13').innerHTML =
+  "Elementi interni all'array appena creato: " + arrayNumeri;
 
 /* ESERCIZIO 15
     Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
