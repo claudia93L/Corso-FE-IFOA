@@ -188,10 +188,10 @@ if (num10 % 2 === 0) {
 
 let val = 5;
 
-if (val < 10 && val >= 5) {
-  console.log('Meno di 10');
-} else if (val < 5) {
+if (val < 5) {
   console.log('Meno di 5');
+} else if (val < 10 && val >= 5) {
+  console.log('Meno di 10');
 } else {
   console.log('Uguale a 10 o maggiore');
 }
