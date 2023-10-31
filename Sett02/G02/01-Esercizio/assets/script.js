@@ -221,7 +221,11 @@ document.getElementById('esercizio12').innerHTML =
     Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
   */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.skills[2];
+
+document.getElementById('esercizio13').innerHTML =
+  "Rimosso l'ultimo elemento dall'array delle skills. La lista aggiornata è: " +
+  me.skills;
 
 /* ESERCIZIO 14
     Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
