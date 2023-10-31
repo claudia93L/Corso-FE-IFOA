@@ -162,7 +162,14 @@ if (typeof input === 'number') {
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let num10 = 15;
+
+if (num10 % 2 === 0) {
+  document.getElementById('esercizio9').innerHTML = 'Il numero inserito è pari';
+} else {
+  document.getElementById('esercizio9').innerHTML =
+    'Il numero inserito è dispari';
+}
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -176,7 +183,15 @@ if (typeof input === 'number') {
     }
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let val = 5;
+
+if (val < 10 && val >= 5) {
+  console.log('Meno di 10');
+} else if (val < 5) {
+  console.log('Meno di 5');
+} else {
+  console.log('Uguale a 10 o maggiore');
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
