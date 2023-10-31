@@ -244,11 +244,14 @@ arrayNumeri[7] = 8;
 arrayNumeri[8] = 9;
 arrayNumeri[9] = 10;
 
-document.getElementById('esercizio13').innerHTML =
+document.getElementById('esercizio14').innerHTML =
   "Elementi interni all'array appena creato: " + arrayNumeri;
 
 /* ESERCIZIO 15
     Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
   */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+arrayNumeri[9] = 100;
+
+document.getElementById('esercizio15').innerHTML =
+  "Ultimo numero dell'array aggiornato a " + arrayNumeri[9];
