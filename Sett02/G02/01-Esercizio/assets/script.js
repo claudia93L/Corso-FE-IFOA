@@ -9,6 +9,9 @@ if (num1 > num2) {
   let testo =
     'Il primo numero, ' + num1 + ', è maggiore del secondo numero, ' + num2;
   document.getElementById('esercizio1').innerHTML = testo;
+} else if (num1 === num2) {
+  let testo = 'I due numeri sono uguali';
+  document.getElementById('esercizio1').innerHTML = testo;
 } else {
   let testo =
     'Il secondo numero, ' + num2 + ', è maggiore del primo numero, ' + num1;
