@@ -205,13 +205,17 @@ const me = {
 
 me.city = 'Toronto';
 
-document.getElementById('esercizio11').innerHTML = me.city;
+document.getElementById('esercizio11').innerHTML =
+  'La città inserita con la nuova proprietà è ' + me.city;
 
 /* ESERCIZIO 12
     Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
   */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName;
+document.getElementById('esercizio12').innerHTML =
+  "Il cognome è stato rimosso dalla proprietà dell'oggetto, e risulta " +
+  me.lastName;
 
 /* ESERCIZIO 13
     Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
