@@ -124,9 +124,9 @@ console.log(characters);
 
 let femaleCharacters = [];
 
-for (let l = 0; l < starWarsCharacters.length; l++) {
-  if (starWarsCharacters[l].gender === 'female') {
-    femaleCharacters.push(starWarsCharacters[l]);
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === 'female') {
+    femaleCharacters.push(starWarsCharacters[i]);
   }
 }
 
@@ -150,22 +150,22 @@ const eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-for (let m = 0; m < starWarsCharacters.length; m++) {
-  switch (starWarsCharacters[m].eye_color) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  switch (starWarsCharacters[i].eye_color) {
     case 'blue':
-      eyeColor.blue.push(starWarsCharacters[m]);
+      eyeColor.blue.push(starWarsCharacters[i]);
       break;
     case 'yellow':
-      eyeColor.yellow.push(starWarsCharacters[m]);
+      eyeColor.yellow.push(starWarsCharacters[i]);
       break;
     case 'brown':
-      eyeColor.brown.push(starWarsCharacters[m]);
+      eyeColor.brown.push(starWarsCharacters[i]);
       break;
     case 'red':
-      eyeColor.red.push(starWarsCharacters[m]);
+      eyeColor.red.push(starWarsCharacters[i]);
       break;
     case 'blue-gray':
-      eyeColor['blue-gray'].push(starWarsCharacters[m]);
+      eyeColor['blue-gray'].push(starWarsCharacters[i]);
       break;
     default:
       console.log('Colore inesistente');
@@ -179,11 +179,11 @@ console.log(eyeColor.blue);
 */
 
 let crewMass = 0;
-let o = 0;
+let i = 0;
 
-while (o < starWarsCharacters.length) {
-  crewMass += Number(starWarsCharacters[o].mass);
-  o++;
+while (i < starWarsCharacters.length) {
+  crewMass += Number(starWarsCharacters[i].mass);
+  i++;
 }
 console.log("La massa totale dell'equipaggio è " + crewMass);
 
@@ -234,9 +234,9 @@ switch (true) {
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
 
-for (let p = 0; p < starWarsCharacters.length; p++) {
-  if (starWarsCharacters[p].gender === 'n/a') {
-    starWarsCharacters[p].gender = 'robot';
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === 'n/a') {
+    starWarsCharacters[i].gender = 'robot';
   }
 }
 
@@ -249,10 +249,10 @@ console.log(starWarsCharacters);
 
 console.log('Lunghezza array iniziale ' + characters.length);
 
-for (let x = 0; x < characters.length; x++) {
-  for (let y = 0; y < femaleCharacters.length; y++) {
-    if (characters[x] === femaleCharacters[y].name) {
-      characters.splice(x, 1);
+for (let i = 0; i < characters.length; i++) {
+  for (let j = 0; j < femaleCharacters.length; j++) {
+    if (characters[i] === femaleCharacters[j].name) {
+      characters.splice(i, 1);
       break;
     }
   }
