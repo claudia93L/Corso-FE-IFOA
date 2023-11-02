@@ -211,6 +211,25 @@ if (crewMass > 1000) {
   console.log('Ship is under loaded');
 }
 
+// alternativa con switch case
+// si usa true come operatore di confronto, e lo switch case analizzerà le singole casistiche, perchè verificherà che ciò che è scritto nei case sia vero
+switch (true) {
+  case crewMass > 1000:
+    console.log('DANGER! OVERLOAD ALERT: escape from ship now!');
+    break;
+  case crewMass > 900:
+    console.log('Critical Load: Over 900');
+    break;
+  case crewMass > 700:
+    console.log('Warning: Load is over 700');
+    break;
+  case crewMass > 500:
+    console.log('Ship is half loaded');
+    break;
+  default:
+    console.log('Ship is under loaded');
+}
+
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
