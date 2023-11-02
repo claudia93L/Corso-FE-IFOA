@@ -212,7 +212,7 @@ if (crewMass > 1000) {
 }
 
 // alternativa con switch case
-// si usa true come operatore di confronto, e lo switch case analizzerà le singole casistiche, perchè verificherà che ciò che è scritto nei case sia vero
+// si usa true come operatore di confronto, e lo switch case analizzerà le singole casistiche, perchè verificherà che ciò che è scritto nei case sia vero - si usa quando mi trovo a dover analizzare un range e non un valore specifico, numerico e non
 switch (true) {
   case crewMass > 1000:
     console.log('DANGER! OVERLOAD ALERT: escape from ship now!');
