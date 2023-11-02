@@ -244,3 +244,13 @@ console.log(characters.length);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+let randomNumber = Math.floor(Math.random() * starWarsCharacters.length);
+
+let randomCharacter = starWarsCharacters[randomNumber];
+
+console.log(
+  'Il mio nome è ' +
+    randomCharacter.name +
+    ' e il mio anno di nascita è ' +
+    randomCharacter.birth_year
+);
