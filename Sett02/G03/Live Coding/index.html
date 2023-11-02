@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcolo età</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Verifica la tua età</h1>
+      <!-- Niente method e action perchè è JS a gestire totalmente il suo comportamento -->
+      <h3 id="errore">&nbsp;</h3>
+      <form>
+        <fieldset>
+          <label for="nome">Inserisci il tuo nome</label>
+          <input type="text" name="nome" id="nome" />
+          <br />
+          <label for="eta">Inserisci l'anno di nascita</label>
+          <input type="number" name="anno" id="anno" />
+        </fieldset>
+      </form>
+      <br />
+      <button type="button" id="verifica" onclick="eventHandler()">
+        VERIFICA
+      </button>
+    </div>
+
+    <div id="stampa">
+      <h3 id="mioNome">&nbsp;</h3>
+      <h3 id="miaVerifica">&nbsp;</h3>
+    </div>
+
+    <div id="descrizione">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
+        necessitatibus incidunt officia veniam illum quibusdam, laborum rerum
+        quaerat obcaecati rem quae dicta id praesentium facere amet deserunt
+        accusantium pariatur quasi?
+      </p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
