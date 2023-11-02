@@ -113,6 +113,11 @@ let characters = [];
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  characters[i] = starWarsCharacters[i].name;
+  document.getElementById('esercizio2').innerHTML = characters;
+}
+
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
