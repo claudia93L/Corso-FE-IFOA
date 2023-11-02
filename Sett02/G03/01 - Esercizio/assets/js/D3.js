@@ -228,6 +228,7 @@ console.log(starWarsCharacters);
   Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
 */
 
+// DA RIVEDERE - NON FUNZIONA
 console.log(characters.length);
 
 for (let x = 0; x < characters.length; x++) {
