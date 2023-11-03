@@ -7,7 +7,7 @@
 
 const arrayNumeri = [];
 
-const giveMeRandom = function (n) {
+function giveMeRandom(n) {
   let numeroCasuale;
 
   for (let i = 0; i < n; i++) {
@@ -16,26 +16,29 @@ const giveMeRandom = function (n) {
   }
 
   return arrayNumeri;
-};
+}
 
-console.log('Lista di numeri casuali da 0 a 10: ' + giveMeRandom(15));
+let numero = giveMeRandom(15);
 
+console.log('Lista di numeri casuali da 0 a 10: ' + numero);
+
+let contatore = 0;
 function checkArray(arrayNumeri) {
-  let contatore;
-
   for (let i = 0; i < arrayNumeri.length; i++) {
     if (arrayNumeri[i] > 5) {
       contatore += arrayNumeri[i];
-      
-      console.log(
-        'Il numero è maggiore di 5 e la somma dei numeri maggiori di 5 è di ' +
-          contatore
-      );
+      console.log('Il numero è maggiore di 5');
     } else {
       console.log('il numero è minore di 5');
     }
   }
+
+  return contatore;
 }
+
+console.log(
+  "Il totale della somma dei numeri nell'array è " + checkArray(numero)
+);
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
