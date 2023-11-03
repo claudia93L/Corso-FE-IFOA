@@ -80,25 +80,25 @@ console.log(
   'Il numero inserito è compreso tra 20 e 100, o uguale a 400? ' +
     boundary(numero1)
 );
+
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve ritornare la stringa originale senza alterarla.
 */
 
 function epify(stringa1) {
-  let nuovaStringa = stringa1;
-  if (indexof(stringa1, 0) === 'EPICODE') {
-    return console.log('CIAO!');
+  if (stringa1.indexOf('EPICODE') === 0) {
+    return stringa1;
   } else {
-    console.log('CIAO CIAO');
+    return 'EPICODE ' + stringa1;
   }
 }
 
-epify('corso');
+console.log('Il risultato della stringa è: ' + epify('EPICODE corso'));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
- di 3 o di 7. (Suggerimento: usa l'operatore modulo)
+ di 3 o di 7. (Suggerimento: usa l'operatore modulo) - true o false
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
