@@ -123,7 +123,17 @@ console.log(
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString(stringaOriginale) {
+  let lettereStringa = stringaOriginale.split('');
+  // con il metodo degli array reverse, inverto gli elementi che si trovano all'interno dell'array
+  let arrayLettere = lettereStringa.reverse();
+  // con il metodo degli array join, unisco i singoli elementi (lettere) attualmente presenti nell'array in un'unica parola che sarà ora una stringa. indico tra parentesi di non volere un separatore
+  let arrayRovesciato = arrayLettere.join('');
+
+  return arrayRovesciato;
+}
+
+console.log('La stringa rovesciata è ' + reverseString('ciao'));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
