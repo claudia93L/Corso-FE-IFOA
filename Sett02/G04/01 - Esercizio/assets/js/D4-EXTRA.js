@@ -155,7 +155,7 @@ let contatoreEstrazione = 0;
 function loopUntil(numLoop) {
   while (contatoreEstrazione !== 3) {
     let numeroCasuale = Math.floor(Math.random() * 10);
-    console.log(numeroCasuale);
+    console.log('Numero estratto ' + numeroCasuale);
     if (numeroCasuale > numLoop) {
       contatoreEstrazione++;
     }
