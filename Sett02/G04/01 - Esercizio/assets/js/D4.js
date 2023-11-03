@@ -65,8 +65,22 @@ console.log(
  se n è uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(n) {
+  if ((n >= 20 && n <= 100) || n === 400) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
+let numero1 = 50;
+let numero2 = 400;
+let numero3 = 5;
+
+console.log(
+  'Il numero inserito è compreso tra 20 e 100, o uguale a 400? ' +
+    boundary(numero1)
+);
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
