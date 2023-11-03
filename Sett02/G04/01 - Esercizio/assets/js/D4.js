@@ -104,6 +104,7 @@ console.log('Il risultato della stringa è: ' + epify('EPICODE corso'));
 */
 
 function check3and7(num1) {
+  // in alternativa all'if di verifica, si poteva utilizzare il metodo Math.abs() per accettare solo numeri assoluti/positivi
   if (num1 > 0) {
     if (num1 % 3 === 0 || num1 % 7 === 0) {
       return true;
