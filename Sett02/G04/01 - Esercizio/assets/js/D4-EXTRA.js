@@ -149,7 +149,21 @@ console.log(
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let numeroInput;
+
+console.log(loopUntil(controllo(6)));
+
+function loopUntil(numLoop) {
+  let numeroCasuale = Math.floor(Math.random() * 10);
+}
+
+function controllo(numeroInput) {
+  if (numeroInput >= 0 && numeroInput <= 9) {
+    return numeroInput;
+  } else {
+    return alert("Numero incorretto, dev'essere compreso tra 0 e 9 inclusi");
+  }
+}
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
