@@ -157,11 +157,16 @@ function upperFirst(stringaInput) {
 console.log(upperFirst('ciao sono claudia'));
 
 /* ESERCIZIO 9
- Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
- della stringa originale.
+ Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(str1) {
+  let nuovaStringa = str1.substring(1);
+
+  return nuovaStringa;
+}
+
+console.log(cutString('ciao sono un test'));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
