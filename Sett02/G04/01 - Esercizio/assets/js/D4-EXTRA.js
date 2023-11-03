@@ -69,6 +69,8 @@ const shoppingCart = [
 let totaleCarrello = 0;
 
 function shoppingCartTotal() {
+  totaleCarrello = 0;
+
   for (let i = 0; i < shoppingCart.length; i++) {
     totaleCarrello += shoppingCart[i].price * shoppingCart[i].quantity;
   }
@@ -84,7 +86,28 @@ console.log(
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let acquario = {
+  price: 280,
+  name: 'acquario',
+  id: 3245,
+  quantity: 1,
+};
+
+let numeroOggettiCarrello = 0;
+
+function addToShoppingCart(nuovoOggetto) {
+  shoppingCart.push(nuovoOggetto);
+
+  for (let i = 0; i < shoppingCart.length; i++) {
+    numeroOggettiCarrello += shoppingCart[i].quantity;
+  }
+
+  return numeroOggettiCarrello;
+}
+
+console.log(
+  'Il numero di oggetti nel carrello è: ' + addToShoppingCart(acquario)
+);
 
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
