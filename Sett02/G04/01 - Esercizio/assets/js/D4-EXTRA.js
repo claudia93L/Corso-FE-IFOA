@@ -135,7 +135,14 @@ console.log(
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function latestShoppingCart(shoppingCart) {
+  let lastObject = shoppingCart[shoppingCart.length - 1];
+  return lastObject;
+}
+
+console.log(
+  "L'ultimo oggetto nel carrello è " + latestShoppingCart(shoppingCart).name
+);
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
