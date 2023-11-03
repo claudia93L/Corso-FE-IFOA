@@ -94,6 +94,8 @@ function epify(stringa1) {
   }
 }
 
+// Soluzione alternativa durante la correzione, usando il metodo delle stringhe startsWith()
+
 console.log('Il risultato della stringa è: ' + epify('EPICODE corso'));
 
 /* ESERCIZIO 6
