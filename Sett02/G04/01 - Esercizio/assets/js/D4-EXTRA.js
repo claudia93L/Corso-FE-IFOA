@@ -203,8 +203,6 @@ function average(arrayDiNumeri) {
     if (typeof arrayDiNumeri[i] === 'number') {
       totaleSomma += arrayDiNumeri[i];
       totaleNumeriArray++;
-    } else {
-      continue;
     }
   }
 
@@ -217,7 +215,25 @@ console.log('La media aritmetica è ' + average(arrayDiNumeri));
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let arrayStringhe = [
+  'ciao',
+  'buongiorno',
+  'buonasera',
+  'buon pomeriggio',
+  'arrivederci',
+];
+
+function longest(arrayStringhe) {
+  let stringaLunga = arrayStringhe[0];
+  for (let i = 0; i < arrayStringhe.length; i++) {
+    if (arrayStringhe[i].length > stringaLunga.length) {
+      stringaLunga = arrayStringhe[i];
+    }
+  }
+  return stringaLunga;
+}
+
+console.log("La parola più lunga dell'array è " + longest(arrayStringhe));
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
