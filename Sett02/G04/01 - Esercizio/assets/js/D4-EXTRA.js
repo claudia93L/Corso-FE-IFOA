@@ -150,20 +150,31 @@ console.log(
 */
 
 let numeroInput;
-
-console.log(loopUntil(controllo(6)));
+let contatoreEstrazione = 0;
 
 function loopUntil(numLoop) {
-  let numeroCasuale = Math.floor(Math.random() * 10);
+  while (contatoreEstrazione !== 3) {
+    let numeroCasuale = Math.floor(Math.random() * 10);
+    console.log(numeroCasuale);
+    if (numeroCasuale > numLoop) {
+      contatoreEstrazione++;
+    }
+  }
+
+  return console.log('Il numero è stato superato 3 volte');
 }
 
 function controllo(numeroInput) {
   if (numeroInput >= 0 && numeroInput <= 9) {
     return numeroInput;
   } else {
-    return alert("Numero incorretto, dev'essere compreso tra 0 e 9 inclusi");
+    return console.log(
+      "Numero incorretto, dev'essere compreso tra 0 e 9 inclusi"
+    );
   }
 }
+
+loopUntil(5);
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
