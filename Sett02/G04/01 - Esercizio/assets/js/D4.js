@@ -173,4 +173,16 @@ console.log(cutString('ciao sono un test'));
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+  let arrayNumeri = [];
+  let numeroCasuale;
+
+  for (let i = 0; i < n; i++) {
+    numeroCasuale = Math.floor(Math.random() * 11);
+    arrayNumeri.push(numeroCasuale);
+  }
+
+  return arrayNumeri.join(', ');
+}
+
+console.log('Lista di numeri casuali da 0 a 10: ' + giveMeRandom(15));
