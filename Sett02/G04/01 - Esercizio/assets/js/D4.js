@@ -33,8 +33,7 @@ console.log('La somma dei due numeri è pari a ' + crazySum(5, 5));
 */
 
 function crazyDiff(num) {
-  let differenza = num / 19;
-
+  let differenza = Math.abs(num / 19);
   if (num > 19) {
     return differenza * 3;
   } else {
@@ -42,7 +41,7 @@ function crazyDiff(num) {
   }
 }
 
-let numeroArgomento = 20;
+let numeroArgomento = 3;
 
 console.log(
   'La differenza dei due numeri è pari a ' + crazyDiff(numeroArgomento)
@@ -83,11 +82,19 @@ console.log(
 );
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
- La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
- ritornare la stringa originale senza alterarla.
+ La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function epify(stringa1) {
+  let nuovaStringa = stringa1;
+  if (indexof(stringa1, 0) === 'EPICODE') {
+    return console.log('CIAO!');
+  } else {
+    console.log('CIAO CIAO');
+  }
+}
+
+epify('corso');
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
