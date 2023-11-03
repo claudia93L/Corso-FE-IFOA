@@ -161,7 +161,8 @@ console.log(upperFirst('ciao sono claudia'));
 */
 
 function cutString(str1) {
-  let nuovaStringa = str1.substring(1);
+  let nuovaStringa = str1.slice(1);
+  nuovaStringa = nuovaStringa.slice(0, -1);
 
   return nuovaStringa;
 }
