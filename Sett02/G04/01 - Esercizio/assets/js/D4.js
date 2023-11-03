@@ -140,7 +140,21 @@ console.log('La stringa rovesciata è ' + reverseString('ciao'));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(stringaInput) {
+  let paroleStringa = stringaInput.split(' ');
+
+  for (let i = 0; i < paroleStringa.length; i++) {
+    // prendo il primo carattere di ogni parola che ho inserito nell'array e la rendo maiuscola con charAt e toUpperCase
+    // utilizzo poi il metodo slice, indicando una posizione di partenza di 1 (quindi la seconda lettera) per rimuovere la prima lettera che è rimasta minuscola
+    paroleStringa[i] =
+      paroleStringa[i].charAt(0).toUpperCase() + paroleStringa[i].slice(1);
+  }
+
+  // con join riunisco le parole/elementi dell'array e lo trasformo nuovamente in stringa
+  return paroleStringa.join(' ');
+}
+
+console.log(upperFirst('ciao sono claudia'));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
