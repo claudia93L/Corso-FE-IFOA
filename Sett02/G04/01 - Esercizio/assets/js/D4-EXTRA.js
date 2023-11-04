@@ -245,19 +245,33 @@ console.log(
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
+// non contiene scam/spam
 let email1 =
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequatur hic facere mollitia quisquam quasi magni, aut nihil nobis minus placeat temporibus magnam similique quo. Doloribus nobis libero sed veritatis!';
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequatur hic facere mollitia quisquam quasi magni, aut nihil nobis minus placeat temporibus magnam similique. Doloribus nobis libero sed veritatis!';
+// contiene SPAM
 let email2 =
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequatur hic facere mollitia quisquam quasi magni, aut nihil nobis minus placeat temporibus magnam similique SPAM. Doloribus nobis libero sed veritatis!';
+
+// contiene scam
 let email3 =
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequatur hic facere mollitia quisquam quasi magni, aut nihil nobis minus SCAM temporibus magnam similique quo. Doloribus nobis libero sed veritatis!';
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequatur hic facere mollitia quisquam quasi magni, aut nihil nobis minus scam temporibus magnam similique quo. Doloribus nobis libero sed veritatis!';
 
 function filtroSpam(email1) {
-  if (email1) {
+  let vero = true;
+
+  if (
+    email1.includes('spam') ||
+    email1.includes('SPAM') ||
+    email1.includes('SCAM') ||
+    email1.includes('scam')
+  ) {
+    vero = false;
   }
+
+  return vero;
 }
 
-filtroSpam('Lorem ips');
+console.log("L'email è sicura? " + filtroSpam(email3));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
