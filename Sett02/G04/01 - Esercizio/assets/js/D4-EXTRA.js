@@ -277,7 +277,20 @@ console.log("L'email è sicura? " + filtroSpam(email3));
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function calcolaGiorni(dataInserita) {
+  let dataOdierna = new Date();
+
+  let differenzaTemporale = dataOdierna.getTime() - dataInserita.getTime();
+  let differenzaGiorni = differenzaTemporale / (1000 * 3600 * 24);
+
+  differenzaGiorni = Math.floor(differenzaGiorni);
+  return differenzaGiorni;
+}
+console.log(
+  'La differenza di giorni tra le due date è pari a ' +
+    calcolaGiorni(new Date('2023-10-30')) +
+    ' giorni'
+);
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
@@ -287,4 +300,6 @@ console.log("L'email è sicura? " + filtroSpam(email3));
  "10","11","12"]
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function matrixGenerator(x, y) {}
+
+matrixGenerator(5, 8);
