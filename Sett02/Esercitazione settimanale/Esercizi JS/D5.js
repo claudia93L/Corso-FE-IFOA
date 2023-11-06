@@ -149,8 +149,150 @@ while (numericArray[i] !== 32) {
 }
 
 /* ESERCIZIO 10
-    Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
-    dell'alfabeto italiano.
+    Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ['g', 'n', 'u', 'z', 'd'];
+const alfabetoItaliano = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z',
+];
+
+const posizioniAlfabeto = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  let lettera = charactersArray[i];
+  let stringaJS = posizioniAlfabeto.push(alfabetoItaliano.indexOf(lettera));
+  switch (lettera) {
+    case 'a':
+      lettera = 'a';
+      stringaJS;
+      break;
+    case 'b':
+      lettera = 'b';
+      stringaJS;
+      break;
+    case 'c':
+      lettera = 'c';
+      stringaJS;
+      break;
+    case 'd':
+      lettera = 'd';
+      stringaJS;
+      break;
+    case 'e':
+      lettera = 'e';
+      stringaJS;
+      break;
+    case 'f':
+      lettera = 'f';
+      stringaJS;
+      break;
+    case 'g':
+      lettera = 'g';
+      stringaJS;
+      break;
+    case 'h':
+      lettera = 'h';
+      stringaJS;
+      break;
+    case 'i':
+      lettera = 'i';
+      stringaJS;
+      break;
+    case 'j':
+      lettera = 'j';
+      stringaJS;
+      break;
+    case 'k':
+      lettera = 'k';
+      stringaJS;
+      break;
+    case 'l':
+      lettera = 'l';
+      stringaJS;
+      break;
+    case 'm':
+      lettera = 'm';
+      stringaJS;
+      break;
+    case 'n':
+      lettera = 'n';
+      stringaJS;
+      break;
+    case 'o':
+      lettera = 'o';
+      stringaJS;
+      break;
+    case 'p':
+      lettera = 'p';
+      stringaJS;
+      break;
+    case 'q':
+      lettera = 'q';
+      stringaJS;
+      break;
+    case 'r':
+      lettera = 'r';
+      stringaJS;
+      break;
+    case 's':
+      lettera = 's';
+      stringaJS;
+      break;
+    case 't':
+      lettera = 't';
+      stringaJS;
+      break;
+    case 'u':
+      lettera = 'u';
+      stringaJS;
+      break;
+    case 'v':
+      lettera = 'v';
+      stringaJS;
+      break;
+    case 'w':
+      lettera = 'w';
+      stringaJS;
+      break;
+    case 'x':
+      lettera = 'x';
+      stringaJS;
+      break;
+    case 'y':
+      lettera = 'y';
+      stringaJS;
+      break;
+    case 'z':
+      lettera = 'z';
+      stringaJS;
+      break;
+  }
+}
+
+console.log(posizioniAlfabeto);
