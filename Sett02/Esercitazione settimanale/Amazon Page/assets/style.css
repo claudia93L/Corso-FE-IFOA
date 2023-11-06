@@ -6,6 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
 }
 
 header,
@@ -35,14 +36,18 @@ section:first-of-type,
 /* MAIN - MARGINS */
 
 #main-margins {
-  background-color: #35414e;
+  background-color: #d0d3d4;
   margin: 30px;
 }
 
 /* HEADER */
 
 header nav {
-    
+  display: inline;
+}
+
+#navbar ul {
+  list-style: none;
 }
 
 /* ASIDE */
