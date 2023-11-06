@@ -55,7 +55,10 @@ aside {
 
 /* MAIN - FULL WIDTH */
 
-#main-full-width {
+#main-full-width,
+figure img,
+#articles-inline,
+article img {
   width: 100%;
 }
 
@@ -142,7 +145,6 @@ section:first-of-type {
 #articles-inline {
   display: block;
   margin: 5px auto;
-  width: 100%;
 }
 
 article {
@@ -156,7 +158,6 @@ article:not(:last-of-type) {
 
 article img {
   vertical-align: top;
-  width: 100%;
   height: auto;
   min-height: 350px;
   border-radius: 20px;
@@ -167,7 +168,6 @@ article img {
 
 figure img {
   margin-bottom: -12px;
-  width: 100%;
 }
 
 /* FOOTER */
