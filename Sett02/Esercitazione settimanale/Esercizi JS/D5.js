@@ -89,7 +89,7 @@ cars.push({
   brand: 'Fiat',
   model: 'Panda',
   color: 'blue',
-  trims: ['titanium', 'style'],
+  trims: ['iron', 'style'],
 });
 
 for (let i = 0; i < cars.length; i++) {
@@ -113,6 +113,14 @@ console.log(
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
 const justTrims = [];
+
+for (let i = 0; i < cars.length; i++) {
+  if (cars[i].trims !== undefined) {
+    justTrims.push(cars[i].trims[0]);
+  }
+}
+
+console.log(justTrims);
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
