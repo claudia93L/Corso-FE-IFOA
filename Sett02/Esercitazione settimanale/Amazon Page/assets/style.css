@@ -147,9 +147,10 @@ article:not(:last-of-type) {
 }
 
 article img {
+  margin: 10px 0;
   vertical-align: top;
   width: 100%;
-  height: 30vh;
+  min-height: 300px;
   border-radius: 20px;
   box-shadow: 17px 10px 10px -3px rgba(0, 0, 0, 0.1);
 }
