@@ -63,6 +63,23 @@ const cars = [
   },
 ];
 
+const licensePlates = ['UGFO37', 'IUS326', 'DUG126'];
+
+for (let i = 0; i < cars.length; i++) {
+  if (i < licensePlates.length) {
+    cars[i].licensePlate = licensePlates[i];
+  } else {
+    console.log(
+      'Non ci sono più targhe disponibili, verrà inserito un valore di default'
+    );
+    cars[i].licensePlate = 'default';
+  }
+}
+
+console.log(
+  cars[0].licensePlate + ' ' + cars[1].licensePlate + ' ' + cars[2].licensePlate
+);
+
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
