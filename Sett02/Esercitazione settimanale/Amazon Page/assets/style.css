@@ -180,13 +180,13 @@ article:not(:last-of-type) {
   margin-right: 30px;
 }
 
-article img {
+/* article img {
   vertical-align: top;
   height: auto;
   min-height: 350px;
   border-radius: 20px;
   box-shadow: 17px 10px 10px -3px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* SECTION 3 E 4 */
 
