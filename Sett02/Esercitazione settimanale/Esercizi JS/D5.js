@@ -145,6 +145,9 @@ for (let i = 0; i < cars.length; i++) {
   }
 }
 
+//correzione docente dell'if
+// if(cars[i].color.slice(0,1) === 'b')
+
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
