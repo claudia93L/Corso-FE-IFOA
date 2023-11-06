@@ -30,10 +30,9 @@ aside,
 section:first-of-type,
 #above-footer {
   text-align: center;
-  border: 2px solid red;
 }
 
-.section-height {
+.section-font {
   font-size: 0.6em;
 }
 
@@ -109,6 +108,7 @@ aside {
   background-color: #ca6429;
   font-size: 0.6em;
   font-weight: 200;
+  padding: 0.5px 0.5px;
 }
 
 /* SECTION 1 */
