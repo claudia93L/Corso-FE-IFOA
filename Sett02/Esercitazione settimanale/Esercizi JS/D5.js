@@ -95,13 +95,12 @@ for (let i = 0; i < cars.length; i++) {
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
 
-// correzione docente - non is usava push, è un oggetto!!
-let nuovaMacchina = {
+cars.push({
   brand: 'Fiat',
   model: 'Panda',
   color: 'yellow',
   trims: ['iron', 'style'],
-};
+});
 
 for (let i = 0; i < cars.length; i++) {
   if (cars[i].trims !== undefined) {
