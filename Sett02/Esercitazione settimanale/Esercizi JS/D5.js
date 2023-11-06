@@ -32,6 +32,13 @@ console.log(pets.reverse());
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
 
+// faccio push per inserire l'elemento in ultima posizione dell'array
+// tra parentesi indico come elemento da prendere, di prelevare il primo elemento dell'array usando shift
+
+pets.push(pets.shift());
+
+console.log(pets);
+
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
 */
