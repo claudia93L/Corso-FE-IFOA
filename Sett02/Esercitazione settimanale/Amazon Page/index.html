@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
+    <a id="back-to-top"></a>
     <div id="main-full-width">
       <header>
         <div id="logo-img">
@@ -36,26 +37,31 @@
           <h4>Be a go-gifter</h4>
         </section>
         <section>
-          <p>Find the perfect gift</p>
-          <p class="fake-link">Shop now</p>
-          <article>
-            <img src="assets/img/img_1.jpg" alt="Fotografia di un kindle" />
-          </article>
-          <article>
-            <img
-              src="assets/img/img_2.jpg"
-              alt="Fotografia di una scrivania con libri e un laptop"
-            />
-          </article>
-          <article>
-            <img src="assets/img/img_3.jpg" alt="Fotografia due smartwatch" />
-          </article>
-          <article>
-            <img
-              src="assets/img/img_4.jpg"
-              alt="Fotografia di un cane e un gatto"
-            />
-          </article>
+          <div class="text-inline">
+            <p>Find the perfect gift</p>
+            <p class="fake-link">Shop now</p>
+          </div>
+
+          <div id="articles">
+            <article>
+              <img src="assets/img/img_1.jpg" alt="Fotografia di un kindle" />
+            </article>
+            <article>
+              <img
+                src="assets/img/img_2.jpg"
+                alt="Fotografia di una scrivania con libri e un laptop"
+              />
+            </article>
+            <article>
+              <img src="assets/img/img_3.jpg" alt="Fotografia due smartwatch" />
+            </article>
+            <article>
+              <img
+                src="assets/img/img_4.jpg"
+                alt="Fotografia di un cane e un gatto"
+              />
+            </article>
+          </div>
         </section>
         <section>
           <figure>
@@ -63,7 +69,7 @@
               src="assets/img/img_9.png"
               alt="Fotografia di un VR e di due controller"
             />
-            <figcaption>
+            <figcaption class="text-inline">
               <p>Play the gifting game</p>
               <p class="fake-link">Shop gaming</p>
             </figcaption>
@@ -75,7 +81,7 @@
               src="assets/img/img_10.png"
               alt="Fotografia di paio di cuffie e di una cassa bluetooth Marshall"
             />
-            <figcaption>
+            <figcaption class="text-inline">
               <p>The sound of cheer</p>
               <p class="fake-link">Shop audio & Accessories</p>
             </figcaption>
@@ -83,7 +89,9 @@
         </section>
       </div>
       <footer>
-        <div id="above-footer"><a href="#">Back to top</a></div>
+        <div id="above-footer">
+          <a href="#back-to-top">Back to top</a>
+        </div>
         <div id="logo-container">
           <img src="assets/img/logo.png" alt="Logo Amazon" />
         </div>

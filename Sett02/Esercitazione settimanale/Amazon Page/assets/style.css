@@ -38,6 +38,14 @@ section:first-of-type,
   width: 100vw;
 }
 
+
+
+.fake-link {
+  color: #2a545c;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
 /* MAIN - MARGINS */
 
 #main-margins {
@@ -65,6 +73,8 @@ header nav {
 /* ASIDE */
 aside {
   background-color: #ca6429;
+  font-size: 0.6em;
+  font-weight: 200;
 }
 
 /* SECTION */
@@ -77,7 +87,28 @@ section:first-of-type {
   font-size: 0.7em;
 }
 
+section:nth-of-type(2) {
+  padding: 5px;
+  background-color: #fff;
+}
+
+#articles {
+  margin: 5px auto;
+}
+
 /* ARTICLE */
+
+article {
+  width: 20%;
+  display: inline-block;
+}
+
+article img {
+  width: 100%;
+  display: inline;
+  border-radius: 10px;
+  vertical-align: top;
+}
 
 /* FOOTER */
 
