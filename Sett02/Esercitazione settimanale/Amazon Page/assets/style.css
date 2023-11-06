@@ -28,11 +28,16 @@ section:first-of-type {
 
 aside,
 section:first-of-type,
-#above-footer {
+#above-footer,
+.section-images,
+#articles-inline,
+footer #logo-container {
   text-align: center;
 }
 
-.section-font {
+.section-font,
+.text-inline p,
+aside {
   font-size: 0.6em;
 }
 
@@ -67,13 +72,17 @@ aside {
 .text-inline p {
   display: inline;
   margin-right: 1%;
-  font-size: 0.6em;
 }
 
 .text-inline .fake-link {
   color: #2a545c;
   font-size: 0.4em;
   font-weight: 600;
+}
+
+article img,
+.section-images {
+  margin: 10px 0;
 }
 
 /* HEADER */
@@ -106,7 +115,6 @@ header nav {
 /* ASIDE */
 aside {
   background-color: #ca6429;
-  font-size: 0.6em;
   font-weight: 200;
   padding: 0.5px 0.5px;
 }
@@ -134,7 +142,6 @@ section:first-of-type {
   display: block;
   margin: 5px auto;
   width: 100%;
-  text-align: center;
 }
 
 article {
@@ -147,7 +154,6 @@ article:not(:last-of-type) {
 }
 
 article img {
-  margin: 10px 0;
   vertical-align: top;
   width: 100%;
   min-height: 300px;
@@ -156,11 +162,6 @@ article img {
 }
 
 /* SECTION 3 E 4 */
-
-.section-images {
-  text-align: center;
-  margin: 10px 0;
-}
 
 figure img {
   margin-bottom: -12px;
@@ -175,10 +176,6 @@ figure img {
 
 #above-footer a {
   color: white;
-}
-
-footer #logo-container {
-  text-align: center;
 }
 
 footer img {
