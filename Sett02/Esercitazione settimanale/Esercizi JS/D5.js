@@ -28,6 +28,11 @@ console.log(pets.sort());
 
 console.log(pets.reverse());
 
+// correzione docente
+for (let i = pets.length - 1; i >= 0; i++) {
+  console.log(pets[i]);
+}
+
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
@@ -80,17 +85,23 @@ console.log(
   cars[0].licensePlate + ' ' + cars[1].licensePlate + ' ' + cars[2].licensePlate
 );
 
+// correzione docente
+for (let i = 0; i < cars.length; i++) {
+  cars[i].licensePlate = 'GG34' + i + 'YZ';
+}
+
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
 
-cars.push({
+// correzione docente - non is usava push, è un oggetto!!
+let nuovaMacchina = {
   brand: 'Fiat',
   model: 'Panda',
   color: 'yellow',
   trims: ['iron', 'style'],
-});
+};
 
 for (let i = 0; i < cars.length; i++) {
   if (cars[i].trims !== undefined) {
