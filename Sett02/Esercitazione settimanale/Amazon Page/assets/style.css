@@ -34,7 +34,12 @@ section:first-of-type,
 
 .section-height {
   font-size: 0.6em;
-  padding: 10px 0;
+  border: 2px solid red;
+}
+
+aside,
+section {
+  margin-bottom: 30px;
 }
 
 /* MAIN - FULL WIDTH */
@@ -43,16 +48,27 @@ section:first-of-type,
   width: 100vw;
 }
 
-.fake-link {
-  color: #2a545c;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
 /* MAIN - MARGINS */
 
 #main-margins {
   margin: 30px;
+}
+
+.text-inline {
+  display: inline-block;
+  width: 30vw;
+}
+
+.text-inline p {
+  display: inline;
+  margin-right: 1%;
+  font-size: 0.6em;
+}
+
+.text-inline .fake-link {
+  color: #2a545c;
+  font-size: 0.4em;
+  font-weight: 600;
 }
 
 /* HEADER */
