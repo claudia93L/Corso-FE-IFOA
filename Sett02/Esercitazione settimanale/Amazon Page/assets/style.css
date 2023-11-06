@@ -7,6 +7,7 @@ body {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
+  background-color: #d0d3d4;
 }
 
 header,
@@ -40,7 +41,6 @@ section:first-of-type,
 /* MAIN - MARGINS */
 
 #main-margins {
-  background-color: #d0d3d4;
   margin: 30px;
 }
 
