@@ -5,16 +5,61 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+  background-color: #222c38;
+}
+
+aside,
+#above-footer {
+  background-color: #35414e;
+}
+
+nav,
+aside,
+section:first-of-type {
+  color: #fff;
+}
+
+aside,
+section:first-of-type,
+#above-footer {
+  text-align: center;
+}
+
+/* MAIN - FULL WIDTH */
+
+/* MAIN - MARGINS */
+
+#main-margins {
+  background-color: #35414e;
+  margin: 30px;
 }
 
 /* HEADER */
 
-/* MAIN */
+header nav {
+    
+}
 
 /* ASIDE */
+aside {
+  background-color: #ca6429;
+}
 
 /* SECTION */
 
 /* ARTICLE */
 
 /* FOOTER */
+
+#above-footer a {
+  color: white;
+}
+
+footer #logo-container {
+  text-align: center;
+}

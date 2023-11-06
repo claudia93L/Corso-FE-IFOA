@@ -163,8 +163,6 @@ const alfabetoItaliano = [
   'g',
   'h',
   'i',
-  'j',
-  'k',
   'l',
   'm',
   'n',
@@ -176,9 +174,6 @@ const alfabetoItaliano = [
   't',
   'u',
   'v',
-  'w',
-  'x',
-  'y',
   'z',
 ];
 
@@ -224,14 +219,6 @@ for (let i = 0; i < charactersArray.length; i++) {
       lettera = 'i';
       stringaJS;
       break;
-    case 'j':
-      lettera = 'j';
-      stringaJS;
-      break;
-    case 'k':
-      lettera = 'k';
-      stringaJS;
-      break;
     case 'l':
       lettera = 'l';
       stringaJS;
@@ -274,18 +261,6 @@ for (let i = 0; i < charactersArray.length; i++) {
       break;
     case 'v':
       lettera = 'v';
-      stringaJS;
-      break;
-    case 'w':
-      lettera = 'w';
-      stringaJS;
-      break;
-    case 'x':
-      lettera = 'x';
-      stringaJS;
-      break;
-    case 'y':
-      lettera = 'y';
       stringaJS;
       break;
     case 'z':
