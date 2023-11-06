@@ -30,11 +30,11 @@ aside,
 section:first-of-type,
 #above-footer {
   text-align: center;
+  border: 2px solid red;
 }
 
 .section-height {
   font-size: 0.6em;
-  border: 2px solid red;
 }
 
 aside,
@@ -79,6 +79,10 @@ aside {
 
 /* HEADER */
 
+header {
+  padding-top: 5px;
+}
+
 header img {
   width: 7%;
   margin-left: 30px;
@@ -87,6 +91,11 @@ header img {
 
 header nav {
   display: inline;
+}
+
+#navbar {
+  margin-top: 20px;
+  padding: 0.5px 0.5px;
 }
 
 #navbar li {
@@ -115,7 +124,6 @@ section:first-of-type {
 /* SECTION 2 */
 
 #section-cards {
-  border: 2px solid red;
   padding: 5px 15px;
   background-color: #fff;
 }
@@ -136,7 +144,6 @@ article {
 
 article:not(:last-of-type) {
   margin-right: 30px;
-  border: 2px solid red;
 }
 
 article img {
