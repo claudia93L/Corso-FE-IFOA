@@ -85,6 +85,30 @@ console.log(
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
 
+cars.push({
+  brand: 'Fiat',
+  model: 'Panda',
+  color: 'blue',
+  trims: ['titanium', 'style'],
+});
+
+for (let i = 0; i < cars.length; i++) {
+  if (cars[i].trims !== undefined) {
+    cars[i].trims.pop();
+  }
+}
+
+console.log(
+  'macchina 1 ' +
+    cars[0].trims +
+    ' macchina 2 ' +
+    cars[1].trims +
+    ' macchina 3 ' +
+    cars[2].trims +
+    ' macchina 4 ' +
+    cars[3].trims
+);
+
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
