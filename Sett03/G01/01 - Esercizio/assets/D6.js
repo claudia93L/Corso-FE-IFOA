@@ -1,11 +1,30 @@
+``
+
 /* ESERCIZIO 1
-  Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
-  prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
+  Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+
+const myConcat = function (str1, str2) {
+  const caratteriStr1 = str1.slice(0, 2);
+  const caratteriStr2 = str2.slice(-3);
+
+  let stringaConcatenata = caratteriStr1.concat(caratteriStr2);
+
+  return stringaConcatenata.toUpperCase();
+};
+
+console.log(myConcat('Ciao', 'Mondo'));
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+
+// creare funzione
+// all'interno creare array vuoto
+// per 10 volte...
+// generi un numero casuale
+// e lo pushi
+// ritorni l'array
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
@@ -22,6 +41,15 @@
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+const arr = [1, 2, 3];
+
+const n = 5;
+// [6, 7, 8]
+
+const addN = function (arr, n) {
+  // tornare un nuovo array con ogni valore addizionato con n
+};
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -146,7 +174,7 @@ const movies = [
     Poster:
       'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
   },
-]
+];
 
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
