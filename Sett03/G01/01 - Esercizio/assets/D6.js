@@ -57,11 +57,17 @@ function sommaArray(arrNum) {
   return somma;
 }
   
-console.log(`La somma dei numeri nell'array è ${sommaArray(arrNum)}`);
+console.log(`La somma dei numeri nell'array con il forEach è ${sommaArray(arrNum)}`);
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+let somma = 0;
+const sommaNumeri = arrNum.reduce((
+somma, numero
+) => somma + numero);
+
+console.log(`La somma dei numeri nell'array con il reduce è ${sommaNumeri}`);
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
