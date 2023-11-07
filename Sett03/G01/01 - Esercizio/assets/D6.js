@@ -289,8 +289,8 @@ console.log(`I film presenti nell'array dei titoli, sono ${titoliFilm}`);
 */
 
 function filmNuovoMillennio(){
+  const filmDuemila = movies.filter((movie) => movie.Year >= 2000);ù
   console.log('I film usciti dal 2000 in poi sono: ');
-  const filmDuemila = movies.filter((movie) => movie.Year >= 2000);
   filmDuemila.forEach(film => console.log(film.Title));
 }
 
