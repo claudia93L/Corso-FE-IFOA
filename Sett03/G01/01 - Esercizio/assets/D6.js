@@ -280,6 +280,10 @@ console.log(`I film presenti nell'array sono ${totaleFilm()}`);
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+const titoliFilm = movies.map((movie) => movie.Title);
+
+console.log(`I film presenti nell'array dei titoli, sono ${titoliFilm}`);
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
