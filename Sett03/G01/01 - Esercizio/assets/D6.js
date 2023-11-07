@@ -264,13 +264,17 @@ const filmVecchio = movies.forEach(filmX => {
 console.log(`Il film più vecchio è datato ${film}`);
 
 
-// utilizzare il parseInt()
+// versione del docente -> utilizza il parseInt()
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+function totaleFilm() {
+	return movies.length;
+}
 
+console.log(`I film presenti nell'array sono ${totaleFilm()}`);
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
