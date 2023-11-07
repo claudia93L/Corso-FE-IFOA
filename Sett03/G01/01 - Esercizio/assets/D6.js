@@ -33,16 +33,13 @@ function numeriCasuali(){
 
 console.log(numeriCasuali());
 
-// creare funzione
-// all'interno creare array vuoto
-// per 10 volte...
-// generi un numero casuale
-// e lo pushi
-// ritorni l'array
-
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+
+const numeriPari = numeriCasuali().filter((numero) => numero % 2 === 0);
+
+console.log(`Numeri pari dell'array: ${numeriPari}`);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
