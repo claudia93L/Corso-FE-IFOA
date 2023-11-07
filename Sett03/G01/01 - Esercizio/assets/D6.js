@@ -74,13 +74,17 @@ console.log(`La somma dei numeri nell'array con il reduce è ${sommaNumeri}`);
 */
 
 const arr = [1, 2, 3];
-
 const n = 5;
 // [6, 7, 8]
 
 const addN = function (arr, n) {
+  
+ const arrayNumIncr = arr.map((numero) => numero + n)
   // tornare un nuovo array con ogni valore addizionato con n
+  return arrayNumIncr;
 };
+
+console.log(`Array con i numeri incrementati di ${5}: ${addN(arr, n)}`);
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
