@@ -300,6 +300,15 @@ filmNuovoMillennio();
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+function sommaAnni(){
+  // lo zero finale è il valore di partenza
+  const totAnni = movies.reduce((totale, movie) => totale + movie.Year, 0);
+  return totAnni;
+}
+
+console.log(sommaAnni());
+
+
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
