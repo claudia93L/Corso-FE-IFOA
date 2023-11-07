@@ -19,6 +19,20 @@ console.log(myConcat('Ciao', 'Mondo'));
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
+function numeriCasuali(){
+  const arrayNumeri = [];
+  let numeroCasuale = 0;
+
+  for(let i = 0; i !== 10; i++){
+    numeroCasuale = Math.floor(Math.random() * 101);
+    arrayNumeri.push(numeroCasuale);
+  }
+
+  return arrayNumeri;
+}
+
+console.log(numeriCasuali());
+
 // creare funzione
 // all'interno creare array vuoto
 // per 10 volte...
