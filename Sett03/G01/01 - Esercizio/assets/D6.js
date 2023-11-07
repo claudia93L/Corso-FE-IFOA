@@ -105,6 +105,34 @@ console.log(calcolaLunghezze(arrFrutti));
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
+const numeriDispari = [];
+
+function smistaNumeri(numeriDispari){
+  for(let i = 0; i < 100; i++){
+    if(i % 2 !== 0){
+      numeriDispari.push(i);
+    }
+  }
+  return numeriDispari;
+}
+
+console.log(smistaNumeri(numeriDispari));
+
+/* const numeriDispari = [];
+let numero = 1
+
+function riempiArray(){
+  while(numeri.length !== 99){
+    numeri.push(numero)
+    numero++;
+  }
+
+  return numeri;
+} */
+
+
+// console.log(riempiArray());
+
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
