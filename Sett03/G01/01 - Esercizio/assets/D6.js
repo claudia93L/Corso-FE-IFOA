@@ -45,6 +45,20 @@ console.log(`Numeri pari dell'array: ${numeriPari}`);
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+const arrNum = [10, 20, 15, 5];
+
+function sommaArray(arrNum) {
+  let somma = 0;
+
+  arrNum.forEach(function(numero) {
+    somma += numero;
+  });
+
+  return somma;
+}
+  
+console.log(`La somma dei numeri nell'array è ${sommaArray(arrNum)}`);
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
