@@ -91,6 +91,16 @@ console.log(`Array con i numeri incrementati di ${5}: ${addN(arr, n)}`);
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+const arrFrutti = ["Mela", "Ciliegia", "Pesca", "Melograno"];
+
+function calcolaLunghezze(arrFrutti){
+  const arrayLunghezzeParole = arrFrutti.map((frutto) => frutto.length);
+
+  return arrayLunghezzeParole;
+}
+
+console.log(calcolaLunghezze(arrFrutti));
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
