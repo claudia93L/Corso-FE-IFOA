@@ -324,3 +324,12 @@ console.log(`Il film cercato è ${trovaFilm('tt2395427')}`);
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+function trovaIndice(annoUscita){
+  const primaUscita = movies.findIndex(({Year}) => parseInt(Year) === annoUscita);
+  // console.log(primaUscita);
+
+  return movies[primaUscita].Title;
+}
+
+console.log(`Il titolo del primo film uscito è ${trovaIndice(2012)}`);
