@@ -14,7 +14,11 @@ changeTitle('Questo è il nuovo titolo della pagina');
         Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
      */
 
-const addClassToTitle = function () {};
+const addClassToTitle = function () {
+  document.querySelector('h1').classList.add('myHeading');
+};
+
+addClassToTitle();
 
 /* ESERCIZIO 3
         Scrivi una funzione che cambi il testo dei p figli di un div
