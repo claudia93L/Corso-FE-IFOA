@@ -6,6 +6,7 @@
 
 const myConcat = function (str1, str2) {
   const caratteriStr1 = str1.slice(0, 2);
+  // sarebbe stato meglio scrivere str2.length - 3
   const caratteriStr2 = str2.slice(-3);
 
   let stringaConcatenata = caratteriStr1.concat(caratteriStr2);
@@ -14,6 +15,13 @@ const myConcat = function (str1, str2) {
 };
 
 console.log(myConcat('Ciao', 'Mondo'));
+
+// versione docente
+/* const myConcat = function (str1, str2){
+  return str1.slice(0, 2).concat(str2.slice(str2.length - 3));
+}
+
+console.log(myConcat('Nicola', 'Anna').toUpperCase()); */
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
@@ -37,9 +45,12 @@ console.log(numeriCasuali());
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
-const numeriPari = numeriCasuali().filter((numero) => numero % 2 === 0);
+// corretto dal docente -> non avevo scritto la funzione
+const numeriPari = (array) => {
+  return array.filter((numero) => numero % 2 === 0);
+}; 
 
-console.log(`Numeri pari dell'array: ${numeriPari}`);
+console.log(`Numeri pari dell'array: ${numeriPari(numeriCasuali())}`);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
