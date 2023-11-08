@@ -1,28 +1,28 @@
 *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-      body {
-        margin: 0;
-      }
+body {
+  margin: 0;
+}
 
-      body div,
-      footer {
-        padding: 1rem;
-      }
+body div,
+footer {
+  padding: 1rem;
+}
 
-      footer {
-        padding: 1rem;
-        background-color: black;
-        color: white;
-      }
+footer {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+}
 
-      .myHeading {
-        color: #ff00d6;
-      }
+.myHeading {
+  color: #ff00d6;
+}
 
-      h2 {
-        color: #ff00d6;
-      }
+#changeMyColor {
+  color: #ff00d6;
+}
