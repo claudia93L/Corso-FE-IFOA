@@ -300,24 +300,40 @@ console.log(`I film presenti nell'array dei titoli, sono ${titoliFilm}`);
 */
 
 function filmNuovoMillennio(){
-  const filmDuemila = movies.filter((movie) => movie.Year >= 2000);ù
+  const filmDuemila = movies.filter((movie) => movie.Year >= 2000);
   console.log('I film usciti dal 2000 in poi sono: ');
   filmDuemila.forEach(film => console.log(film.Title));
 }
 
 filmNuovoMillennio();
 
+// versione docente
+const millennio = (array) => {
+  
+  return array.filter((film) => parseInt(film.Year) >= 2000);
+  // questa è la condizione, e le parentesi graffe non sono necessarie perchè la condizione deve solo restituire qualcosa
+}
+
+console.log(millennio(movies));
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
 function sommaAnni(){
-  // lo zero finale è il valore di partenza
+  // lo zero finale è il valore di partenza, indica che sono numeri
   const totAnni = movies.reduce((totale, movie) => totale + movie.Year, 0);
   return totAnni;
 }
 
 console.log(sommaAnni());
+
+// versione docente
+/* const sommaAnni = (array) => {
+  return array.reduce((valore, element) => valore + parseInt(element.Year), 0);
+}
+
+console.log(sommaAnni()); */
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
@@ -331,6 +347,13 @@ function trovaFilm(imdbCercato){
 }
 
 console.log(`Il film cercato è ${trovaFilm('tt2395427')}`);
+
+// versione docente
+const cercaFilm = (array, id) => {
+  return array.find((film) => film.imdbID === id);
+}
+
+console.log(cercaFilm(movies, 'tt4154756'));
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
