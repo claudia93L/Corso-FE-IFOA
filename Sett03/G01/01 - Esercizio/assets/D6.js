@@ -367,3 +367,11 @@ function trovaIndice(annoUscita){
 }
 
 console.log(`Il titolo del primo film uscito è ${trovaIndice(2012)}`);
+
+// versione docente
+
+const cercaAnno = (array, anno) => {
+  return array.findIndex((element) => parseInt(element.Year) === anno);
+}
+
+console.log(cercaAnno(movies, 1978));
