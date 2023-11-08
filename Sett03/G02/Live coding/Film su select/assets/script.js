@@ -115,6 +115,12 @@ const movies = [
 
 // versione alternativa esercizio per far trovare il film all'utente tramite HTML -> ricerca tramite select
 
+// quando la finestra finisce di caricare...
+window.addEventListener('load', function(){
+  // aggiungi questa classe all'elemento
+  document.getElementById('film').className = 'hidden';
+});
+
 // popolo la select
 movies.forEach((film) => {
     document.getElementById('imdbID').innerHTML += `<option value = "${film.imdbID}">${film.Title}</option>`;
@@ -126,7 +132,12 @@ movies.forEach((film) => {
     mioFilm = movies.find((element) => element.imdbID === imdbID);
     // console.log(mioFilm);
     // con style.display settiamo il nuovo valore alla proprietà css
-    document.getElementById('film').style.display = 'block';
+   // document.getElementById('film').style.display = 'block';
+   // rimuoviamo l'attributo classe all'elemento
+  // document.getElementById('film').removeAttribute('class');
+
+  // sostituiamo la classe
+  document.getElementById('film').className = 'visible';
     document.getElementById('titolo').innerHTML = mioFilm.Title;
     document.getElementById('anno').innerHTML = mioFilm.Year;
     // richiamiamo la corretta immagine prelevata dall'array e scriviamo l'attributo src corretto nell'html

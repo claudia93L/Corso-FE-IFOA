@@ -15,7 +15,15 @@ body {
 }
 
 #film {
-    display: none;
+   /*  display: none; */
     background-color: beige;
     padding: 30px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
