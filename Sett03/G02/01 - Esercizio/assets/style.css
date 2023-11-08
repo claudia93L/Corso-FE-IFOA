@@ -27,6 +27,10 @@ footer {
   color: #ff00d6;
 }
 
-table {
-  border: 1px solid black;
+table,
+tr,
+td,
+th {
+  border: 2px solid black;
+  border-collapse: collapse;
 }

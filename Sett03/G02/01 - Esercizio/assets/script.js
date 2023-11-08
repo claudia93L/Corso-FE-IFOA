@@ -119,29 +119,48 @@ const revealFooterLink = function () {
         La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
      */
 
+const datiTabella = [
+  {
+    immagine: 'img1.jpg',
+    nomeProdotto: 'Prodotto 1',
+    quantita: 10,
+    prezzo: 25.99,
+  },
+  {
+    immagine: 'img2.jpg',
+    nomeProdotto: 'Prodotto 2',
+    quantita: 15,
+    prezzo: 19.99,
+  },
+  {
+    immagine: 'img3.jpg',
+    nomeProdotto: 'Prodotto 3',
+    quantita: 8,
+    prezzo: 34.99,
+  },
+];
+
 const generateTable = function () {
-  /* const divTable = document.querySelector('#tableArea');
+  const tableArea = document.getElementById('tableArea');
+  const tabella = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
 
-  const table = divTable.createElement('table');
-  divTable.appendChild(table);
+  // Heading della tabella
+  const th = document.createElement('tr');
+  th.innerHTML =
+    '<th>Immagine</th><th>Nome Prodotto</th><th>Quantità</th><th>Prezzo</th>';
+  thead.appendChild(th);
 
-  const tableHead = divTable.createElement('thead');
-  table.appendChild(tableHead);
+  datiTabella.forEach((info) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td><img src="${info.immagine}" alt="${info.nomeProdotto}"></td><td>${info.nomeProdotto}</td><td>${info.quantita}</td><td>${info.prezzo}</td>`;
+    tbody.appendChild(tr);
+  });
 
-  tableHead.createElement();
-
-  const tableBody = divTable.createElement('tbody');
-  table.appendChild(tableBody);
-
-  const tr = divTable.createElement('tr');
-
-  const th = tr.createElement('th');
-
-  tableHead.appendChild(tr);
-
-  tr.appendChild(th);
-
-  const td = tr.createElement('td'); */
+  tabella.appendChild(thead);
+  tabella.appendChild(tbody);
+  tableArea.appendChild(tabella);
 };
 
 generateTable();
@@ -169,7 +188,7 @@ const changeColorWithRandom = function () {
     const red = Math.floor(Math.random() * 255);
     const green = Math.floor(Math.random() * 255);
     const blue = Math.floor(Math.random() * 255);
-    
+
     h2.style.color = `rgb(${red}, ${green}, ${blue})`;
   };
 };
