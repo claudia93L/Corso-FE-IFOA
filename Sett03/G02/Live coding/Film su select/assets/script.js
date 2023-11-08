@@ -137,7 +137,7 @@ movies.forEach((film) => {
   // document.getElementById('film').removeAttribute('class');
 
   // sostituiamo la classe
-  document.getElementById('film').className = 'visible';
+    document.getElementById('film').className = 'visible';
     document.getElementById('titolo').innerHTML = mioFilm.Title;
     document.getElementById('anno').innerHTML = mioFilm.Year;
     // richiamiamo la corretta immagine prelevata dall'array e scriviamo l'attributo src corretto nell'html
