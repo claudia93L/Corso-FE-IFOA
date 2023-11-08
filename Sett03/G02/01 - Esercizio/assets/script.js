@@ -211,4 +211,9 @@ const changeColorWithRandom = function () {
        Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
      */
 
-const deleteVowels = function () {};
+const deleteVowels = function () {
+  // seleziona tutto il contenuto testuale presente sull'HTML
+  const contenutoTestuale = document.documentElement.textContent;
+};
+
+deleteVowels();
