@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <div id="container">
     <h1>Cerca film</h1>
-
     <form>
       <select name="imdbID" id="imdbID">
       </select>
 
       <button type="button" id="cerca" onclick="find()">CERCA</button>
       <hr>
-      <h2 id="titolo"></h2>
-      <h4 id="anno"></h4>
-      <!-- Segnaposto per l'immagine -->
-      <img id="poster">
+      <div id="film"> 
+        <h2 id="titolo"></h2>
+        <h4 id="anno"></h4>
+        <!-- Segnaposto per l'immagine -->
+        <img id="poster">
+      </div>
+
     </form>
+  </div>
     <script src="assets/script.js"></script>
 </body>
 </html>

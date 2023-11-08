@@ -125,7 +125,10 @@ movies.forEach((film) => {
     // console.log(imdbID);
     mioFilm = movies.find((element) => element.imdbID === imdbID);
     // console.log(mioFilm);
+    // con style.display settiamo il nuovo valore alla proprietà css
+    document.getElementById('film').style.display = 'block';
     document.getElementById('titolo').innerHTML = mioFilm.Title;
     document.getElementById('anno').innerHTML = mioFilm.Year;
+    // richiamiamo la corretta immagine prelevata dall'array e scriviamo l'attributo src corretto nell'html
     document.getElementById('poster').setAttribute('src', mioFilm.Poster);
   }
