@@ -60,7 +60,13 @@ addToTheSecond();
         Scrivi una funzione che aggiunga un paragrafo al primo div
      */
 
-const addParagraph = function () {};
+const addParagraph = function () {
+  const primoDiv = document.querySelector('div');
+  const newPara = document.createElement('p');
+  primoDiv.appendChild(newPara).innerText = 'Testo di prova';
+};
+
+addParagraph();
 
 /* ESERCIZIO 7
         Scrivi una funzione che faccia scomparire la prima lista non ordinata
