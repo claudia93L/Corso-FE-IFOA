@@ -24,7 +24,13 @@ addClassToTitle();
         Scrivi una funzione che cambi il testo dei p figli di un div
        */
 
-const changePcontent = function () {};
+const changePcontent = function (nuovoTesto) {
+  const p = document.querySelectorAll('div p');
+
+  p.forEach((p) => (p.innerText = nuovoTesto));
+};
+
+changePcontent('Nuovo testo dei paragrafi interni a un div');
 
 /* ESERCIZIO 4
         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
