@@ -27,7 +27,7 @@ addClassToTitle();
 const changePcontent = function (nuovoTesto) {
   const p = document.querySelectorAll('div p');
 
-  p.forEach((p) => (p.innerText = nuovoTesto));
+  p.forEach((para) => (para.innerText = nuovoTesto));
 };
 
 changePcontent('Nuovo testo dei paragrafi interni a un div');
@@ -36,7 +36,13 @@ changePcontent('Nuovo testo dei paragrafi interni a un div');
         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
        */
 
-const changeUrls = function () {};
+const changeUrls = function (newUrl) {
+  const link = document.querySelectorAll('a:not(footer a)');
+
+  link.forEach((a) => a.setAttribute('href', newUrl));
+};
+
+changeUrls('https://www.google.com');
 
 /* ESERCIZIO 5
         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
