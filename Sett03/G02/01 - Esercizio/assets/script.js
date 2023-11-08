@@ -105,7 +105,14 @@ const makeItClickable = function () {
         Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
        */
 
-const revealFooterLink = function () {};
+const revealFooterLink = function () {
+  const footer = document.querySelector('footer');
+  const link = document.querySelector('footer a');
+
+  footer.onclick = () => {
+    alert(link);
+  };
+};
 
 /* ESERCIZIO 11
         Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
