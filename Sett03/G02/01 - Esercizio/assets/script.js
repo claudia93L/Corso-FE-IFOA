@@ -182,7 +182,14 @@ addRow('img4.jpg', 'Prodotto 4', 5, 8.99);
        Crea una funzione che nasconda le immagini della tabella quando eseguita
      */
 
-const hideAllImages = function () {};
+const hideAllImages = function () {
+  const immaginiTabella = document.querySelectorAll('td img');
+  immaginiTabella.forEach((immagine) => {
+    immagine.classList.add('hidden');
+  });
+};
+
+hideAllImages();
 
 /* EXTRA ESERCIZIO 15
        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto

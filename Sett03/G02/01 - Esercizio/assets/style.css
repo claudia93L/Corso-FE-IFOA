@@ -34,3 +34,7 @@ th {
   border: 2px solid black;
   border-collapse: collapse;
 }
+
+.hidden {
+  display: none;
+}
