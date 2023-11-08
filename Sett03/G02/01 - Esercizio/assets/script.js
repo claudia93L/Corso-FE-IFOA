@@ -119,7 +119,32 @@ const revealFooterLink = function () {
         La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
      */
 
-const generateTable = function () {};
+const generateTable = function () {
+  /* const divTable = document.querySelector('#tableArea');
+
+  const table = divTable.createElement('table');
+  divTable.appendChild(table);
+
+  const tableHead = divTable.createElement('thead');
+  table.appendChild(tableHead);
+
+  tableHead.createElement();
+
+  const tableBody = divTable.createElement('tbody');
+  table.appendChild(tableBody);
+
+  const tr = divTable.createElement('tr');
+
+  const th = tr.createElement('th');
+
+  tableHead.appendChild(tr);
+
+  tr.appendChild(th);
+
+  const td = tr.createElement('td'); */
+};
+
+generateTable();
 
 /* ESERCIZIO 12
         Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
@@ -137,7 +162,17 @@ const hideAllImages = function () {};
        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
      */
 
-const changeColorWithRandom = function () {};
+const changeColorWithRandom = function () {
+  const h2 = document.querySelector('#changeMyColor');
+
+  h2.onclick = () => {
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+    
+    h2.style.color = `rgb(${red}, ${green}, ${blue})`;
+  };
+};
 
 /* EXTRA ESERCIZIO 16
        Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
