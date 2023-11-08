@@ -169,7 +169,14 @@ generateTable();
         Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
      */
 
-const addRow = function () {};
+const addRow = function (img, nome, quantita, prezzo) {
+  const tbody = document.querySelector('tbody');
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td><img src="${img}" alt="${nome}"></td><td>${nome}</td><td>${quantita}</td><td>${prezzo}</td>`;
+  tbody.appendChild(tr);
+};
+
+addRow('img4.jpg', 'Prodotto 4', 5, 8.99);
 
 /* ESERCIZIO 14
        Crea una funzione che nasconda le immagini della tabella quando eseguita
