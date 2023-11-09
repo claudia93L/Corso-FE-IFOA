@@ -46,7 +46,17 @@ btn.addEventListener('click', function (e) {
 
 // codice per setTimeout() e setInterval()
 
+let btnRigenera = document.getElementById('ricrea');
+let codiceHTML = document.getElementById('codice');
+let textRigenera = document.getElementById('rigenera');
+
 function generaCodice() {
+  // il bottone è disabilitato
+  btnRigenera.setAttribute('disabled', true);
+  // cancelliamo eventuali stilizzazioni di rigenera()
+  codiceHTML.style.textDecoration = 'none';
+  textRigenera.innerText = '';
+
   // si arrotonda sempre per difetto altrimenti, per eccesso, il numero zero non uscirebbe mai
   let codice = Math.floor(Math.random() * 1000001);
 
@@ -54,4 +64,25 @@ function generaCodice() {
   if (codice < 100000) {
     codice += 100000;
   }
+
+  // scriviamo il codice generato sull'html
+  codiceHTML.innerText = codice;
+
+  scadenza();
 }
+
+function scadenza() {
+  setTimeout(() => {
+    rigenera();
+    // 10 secondi
+  }, 10000);
+}
+
+function rigenera() {
+  codiceHTML.style.textDecoration = 'line-through';
+  textRigenera.innerText = 'Codice scaduto, rigenerare!';
+  // abilito il bottone
+  btnRigenera.removeAttribute('disabled');
+}
+
+generaCodice();
