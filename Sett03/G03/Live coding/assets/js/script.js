@@ -91,23 +91,25 @@ generaCodice();
 
 // codice per setInterval() --> progress bar
 let barra = document.getElementById('barra');
+let stop = document.getElementById('stop');
+let percentuale = document.getElementById('percentuale');
 
 const avviaTimer = () => {
   let timer = 0;
   barra.style.width = '0px';
-  document.getElementById('stop').innerText = '';
+  stop.innerText = '';
   document.getElementById('percentuale').innerText = '';
-  document.getElementById('stop').innerText = '';
+
   setInterval(() => {
     // è come se fosse un ciclo do while
     // per arrivare da 0 a 500 in 5000 millisecondi, ogni quanto si dovrà scatenare l'evento? ogni 10 millisecondi
     if (timer < 501) {
       barra.style.width = `${timer}px`;
       let percentuale = timer / 5;
-      document.getElementById('percentuale').innerText = `${percentuale}`;
+      percentuale.innerText = `${percentuale}`;
       timer++;
     } else {
-      document.getElementById('stop').innerText = 'Progress Bar interrotta';
+      stop.innerText = 'Progress Bar interrotta';
       clearInterval(avviaTimer);
     }
     // tutto questo me lo devi fare ogni 10 millisecondi
