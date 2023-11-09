@@ -221,8 +221,10 @@ const deleteVowels = function () {
     .forEach((element) => {
       element.innerHTML = [...element.innerHTML]
         .filter((carattere) => {
+          // descrizione di una stringa di testo come array con lo spread operator
           carattere = carattere.toLowerCase();
           return (
+            // restituzione di elementi filtrati a condizione
             carattere !== 'a' &&
             carattere !== 'e' &&
             carattere !== 'i' &&
@@ -230,7 +232,7 @@ const deleteVowels = function () {
             carattere !== 'u'
           );
         })
-        .join('');
+        .join(''); // fusione degli elementi nell'array filtrato in parola unica
     });
 };
 
