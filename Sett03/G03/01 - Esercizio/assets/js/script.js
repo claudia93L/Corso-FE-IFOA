@@ -9,7 +9,6 @@ let task = document.getElementById('task');
 let btnAdd = document.getElementById('btn-add');
 let ul = document.querySelector('ul');
 let divTask = document.getElementById('container-tasks');
-const tasks = [];
 
 btnAdd.addEventListener('click', function (e) {
   e.preventDefault();
@@ -36,11 +35,26 @@ function showTasks() {
 
 function aggiungiTask(listEl) {
   showTasks();
-  ul.appendChild(listEl);
-  const taskValue = task.value;
-  listEl.innerText = taskValue;
+  svuotaInput();
+
+  const liste = document.querySelectorAll('li');
+  liste.forEach((element, index) => {
+    // const taskValue = task.value;
+    listEl.innerHTML = `(${element})`;
+    let btnDel = document.createElement('button');
+    btnDel.innerHTML = 'X';
+    btnDel.setAttribute('onclick', `elimina(${index})`);
+    listEl.appendChild(btnDel);
+    ul.appendChild(listEl);
+  });
+  testoCancellato();
+}
+
+function svuotaInput() {
   task.value = '';
 }
+
+function testoCancellato() {}
 
 /* const btnDel = document.createElement('button');
 ul.appendChild(btnDel);
