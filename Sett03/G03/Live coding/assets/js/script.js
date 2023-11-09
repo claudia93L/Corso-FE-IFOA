@@ -71,6 +71,8 @@ function generaCodice() {
   scadenza();
 }
 
+// è sempre meglio, se con il timeOut devono essere avviate varie funzionalità, è meglio richiamare una funzione esterna
+
 function scadenza() {
   setTimeout(() => {
     rigenera();

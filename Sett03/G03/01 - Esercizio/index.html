@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- Esercizio - To-do-list:
+        •   All'avvio l'applicazione deve presentare un tag input per poter inserire il nome del nuovo task
+        • Un bottone a fianco del tag input aggiungerà il testo inserito alla lista dei task sottostante
+        • Ogni task nella lista deve poter reagire al click del mouse, che lo segnerà come "completato" (un task completato si differenzia per il testo attraversato da una linea orizzontale)
+        • Ogni task nella lista deve poter essere eliminato individualmente tramite un bottone dedicato
+        • Cerca di rendere l'applicazione accattivante nello stile e piacevole da utilizzare per l'utente!
+    -->
+
+    <h1>Task list</h1>
+    <form>
+      <label for="task">Task</label>
+      <input type="text" id="task" />
+
+      <button type="button" onclick="addTask()" id="btn-add">Aggiungi task</button>
+    </form>
+
+    <div id="container-tasks" class="hidden">
+      <h2>Lista di task</h2>
+      <ul></ul>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
