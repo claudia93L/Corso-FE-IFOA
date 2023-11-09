@@ -9,24 +9,43 @@ let task = document.getElementById('task');
 let btnAdd = document.getElementById('btn-add');
 let ul = document.querySelector('ul');
 let divTask = document.getElementById('container-tasks');
+const tasks = [];
 
 btnAdd.addEventListener('click', function (e) {
   e.preventDefault();
-
-  const taskValue = task.value;
-
-  divTask.classList.remove('hidden');
-
-  const listEl = document.createElement('li');
-  ul.appendChild(listEl);
-  const btnDel = document.createElement('button');
-  ul.appendChild(btnDel);
-
-  listEl.innerText = taskValue;
-  btnDel.innerText = 'X';
-
-  task.value = '';
+  creaTask();
+  aggiungiTask();
+  //eliminaTask();
 });
+
+function creaTask() {
+  if (task !== '') {
+    const listEl = document.createElement('li');
+    showTasks();
+    aggiungiTask(listEl);
+    return listEl;
+  } else {
+    console.log('Scrivi un task');
+    return;
+  }
+}
+
+function showTasks() {
+  divTask.classList.remove('hidden');
+}
+
+function aggiungiTask(listEl) {
+  showTasks();
+  ul.appendChild(listEl);
+  const taskValue = task.value;
+  listEl.innerText = taskValue;
+  task.value = '';
+}
+
+/* const btnDel = document.createElement('button');
+ul.appendChild(btnDel);
+
+btnDel.innerText = 'X'; */
 
 /* const liste = document.querySelectorAll('li');
 
