@@ -11,16 +11,23 @@ let ul = document.querySelector('ul');
 let divTask = document.getElementById('container-tasks');
 
 btnAdd.addEventListener('click', function (e) {
-  e.preventDefault;
+  e.preventDefault();
 
-  task = task.value;
+  const taskValue = task.value;
 
-  if (task !== '') {
-    // rimuoviamo la classe al div #container-tasks
-    divTask.classList.remove('hidden'); // da testare
-    // creiamo un nuovo elemento li
-    const listEl = document.createElement('li');
-    // scriviamo il valore
-    ul.appendChild(listEl).innerText = task;
-  }
+  divTask.classList.remove('hidden');
+
+  const listEl = document.createElement('li');
+  ul.appendChild(listEl);
+  const btnDel = document.createElement('button');
+  ul.appendChild(btnDel);
+
+  listEl.innerText = taskValue;
+  btnDel.innerText = 'X';
+
+  task.value = '';
 });
+
+/* const liste = document.querySelectorAll('li');
+
+liste.forEach((element) => {}); */
