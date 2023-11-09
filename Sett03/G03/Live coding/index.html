@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live coding - Validazione form e manipolazione BOM</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" />
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <label for="eta">Età</label>
+        <input type="number" id="eta" min="18" max="90" />
+        <button type="button" id="invia">INVIA</button>
+        <button type="reset">RESET</button>
+      </fieldset>
+    </form>
+
+    <div id="container">
+      <h2 id="nomeForm"></h2>
+      <h2 id="cognomeForm"></h2>
+      <h2 id="emailForm"></h2>
+      <h2 id="etaForm"></h2>
+    </div>
+
+    <hr />
+
+    <h1>SetTimeout</h1>
+
+    <h3 id="codice"></h3>
+    <h3 id="rigenera"></h3>
+    <button type="button" id="ricrea">Rigenera codice</button>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
