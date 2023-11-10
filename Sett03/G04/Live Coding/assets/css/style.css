@@ -40,6 +40,7 @@ form {
   color: #ebebeb;
   border-radius: 10px;
   border: 10px solid #0c0a1e;
+  background-color:  #0c0a1e;
 }
 
 .day {
@@ -71,7 +72,7 @@ form {
 
 #addMeeting div {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: top;
   margin-right: 50px;
 }
 
