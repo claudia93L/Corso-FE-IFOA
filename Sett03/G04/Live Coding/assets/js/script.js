@@ -1,8 +1,8 @@
-// 1. Dobbiamo capire in che mese siamo, per scriverlo nell'h1, e quanti giorni ha il mese, per generare il corretto numero di celle
+// Dobbiamo capire in che mese siamo, per scriverlo nell'h1, e quanti giorni ha il mese, per generare il corretto numero di celle
 
 const now = new Date();
 
-/* 2. Per salvare gli appuntamenti, abbiamo bisogno di un'array, perchè ogni appuntamento è una stringa, ogni giorno può contenere infiniti appuntamenti e ogni mese ha un numero di giorni variabile. Creeremo quindi un array di array, dove l'array genitore è il mese e gli array figli rappresentano i giorni
+/* Per salvare gli appuntamenti, abbiamo bisogno di un'array, perchè ogni appuntamento è una stringa, ogni giorno può contenere infiniti appuntamenti e ogni mese ha un numero di giorni variabile. Creeremo quindi un array di array, dove l'array genitore è il mese e gli array figli rappresentano i giorni
 
 [ rappresenta il mese
     [rappresenta il primo giorno e conterrà i vari appuntamenti - '09:00 -live coding', '14:00 - esercizio'], [rappresenta il secondo giorno],....
@@ -109,3 +109,22 @@ const creaGriglia = function (numeroGiorni) {
 };
 
 creaGriglia(calcolaGiorni());
+
+const mostraAppuntamenti = function (indiceGiorno) {
+  // Con questa funzione si popola la lista degli appuntamenti con gli appuntamenti del giorno
+  // 1. Prendere gli appuntamenti corretti
+  const appuntamentiGiorno = appointments[indiceGiorno];
+  // 2. Selezionare la lista contenitore
+  const lista = document.querySelector('#appointments ul');
+  // 3. Svuotare la lista
+  lista.innerHTML = '';
+  // 4. Ciclare gli appuntamenti del giorno e creare un li per ciascuno di essi
+  appuntamentiGiorno.forEach((element) => {
+    const newLi = document.createElement('li');
+    newLi.innerText = element;
+    lista.appendChild(newLi);
+  });
+  // 5. La lista è piena ma è ancora nascosta
+  const divAppuntamenti = document.getElementById('appointments');
+  divAppuntamenti.style.display = 'block';
+};
