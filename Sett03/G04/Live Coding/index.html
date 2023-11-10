@@ -4,6 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <main>
+        <!-- calendario, form per nuovi appuntamenti -->
+        <h1></h1>
+        <div id="calendar">
+          <!-- le celle dei giorni saranno generate da JS e posizionate qua dentro -->
+        </div>
+        <h2>Aggiungi appuntamento</h2>
+        <div id="addMeeting">
+          <div>
+            <h4>Giorno</h4>
+            <span id="newMeetingDay">Clicca su un giorno</span>
+          </div>
+
+          <form>
+            <div>
+              <h4>Ora appuntamento</h4>
+              <input type="time" id="newMeetingTime" required />
+            </div>
+            <div>
+              <h4>Nome appuntamento</h4>
+              <input
+                type="text"
+                id="newMeetingName"
+                required
+                placeholder="Inserisci un nome per l'appuntamento"
+              />
+            </div>
+            <div>
+              <h4>Aggiungi</h4>
+              <button type="submit">Salva</button>
+            </div>
+          </form>
+        </div>
+      </main>
+      <section>
+        <!-- sezione dove mostro gli appuntamenti esistenti per il giorno selezionato -->
+        <div id="appuntamenti">
+          <h2>Appuntamenti del giorno:</h2>
+          <ul>
+            <!-- la lista appuntamenti sarà generata e costruita da JS-->
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
