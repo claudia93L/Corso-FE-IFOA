@@ -128,3 +128,37 @@ const mostraAppuntamenti = function (indiceGiorno) {
   const divAppuntamenti = document.getElementById('appointments');
   divAppuntamenti.style.display = 'block';
 };
+
+// Dobbiamo creare nuovi appuntamenti
+const meetingForm = document.querySelector('form');
+// chiamiamo dentro l'addEventListener() il metodo di gestione del form con button submit
+// l'uso del type="submit" è molto più rapido da gestire
+meetingForm.addEventListener('submit', function (e) {
+  // non è necessario creare una funzione onclick(), perchè il button è di tipo submit e cerca, di default, di cercare di fare qualcosa al click
+  e.preventDefault();
+  // 1. Giorno dell'appuntamento
+  const selectedDay = document.getElementById('newMeetingDay').innerText;
+  // 2. Ora dell'appuntamento selezionato
+  const meetingTime = document.getElementById('newMeetingTime').value;
+  // 3. Nome dell'appuntamento
+  const meetingName = document.getElementById('newMeetingName').value;
+  // 4. Creo la stringa dell'appuntamento
+  const stringaAppuntamento = `${meetingTime} - ${meetingName}`;
+  // 5. Scrivo l'appuntamento nell'array -> numero del giorno -1 per riallinearsi al conteggio degli array che partono da 0
+  const indiceArray = parseInt(selectedDay) - 1;
+  //console.log('array prima del salvataggio', appointments);
+  appointments[indiceArray].push(stringaAppuntamento);
+  //console.log('array dopo il salvataggio', appointments);
+
+  // creo un pallino che evidenzi nel calendario la presenza di un appuntamento
+  const pallino = document.createElement('span');
+  pallino.classList.add('pallino');
+  // cerco il div del giorno selezionato
+  const divSelezionato = document.querySelector('.selected');
+
+  // aggiungiamo solo un pallino se sono presenti degli appuntamenti, non uno per appuntamento
+  if (!divSelezionato.querySelector('.pallino')) {
+    divSelezionato.appendChild(pallino);
+  }
+  mostraAppuntamenti(indiceArray);
+});

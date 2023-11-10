@@ -40,7 +40,7 @@ form {
   color: #ebebeb;
   border-radius: 10px;
   border: 10px solid #0c0a1e;
-  background-color:  #0c0a1e;
+  background-color: #0c0a1e;
 }
 
 .day {
@@ -138,4 +138,14 @@ form button {
 
 #appointments ul li {
   min-height: 30px;
+}
+
+.pallino {
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #7a408a;
 }
