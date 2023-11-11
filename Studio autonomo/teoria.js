@@ -48,4 +48,15 @@ Caso d'uso:
 
 // FOREACH
 
+/*
+
+Consente di eseguire una funzione su ogni elemento dell’array e NON crea un nuovo array. 
+
+Sintassi:
+
+arr.forEach(function(item, index, array) {
+  // ... fa qualcosa con l'elemento
+});
+*/
+
 // MAP

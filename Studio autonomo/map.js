@@ -93,25 +93,58 @@ const arrayDate = [
 
 //   Data un'array di numeri, usa map() per ottenere un nuovo array contenente i quadrati di ciascun numero.
 
+const numeriQuadrati = numeri.map((el) => el * el);
+//console.log(numeriQuadrati);
+
 //   Crea un nuovo array che contenga la lunghezza di ciascuna stringa nell'array di stringhe.
+
+const lunghezzaStringhe = stringhe.map((el) => el.length);
+
+//console.log(lunghezzaStringhe);
 
 //   Usa map() per ottenere un nuovo array con le stringhe maiuscole a partire da un array di stringhe iniziale.
 
+const stringheMaiuscole = stringhe.map((el) => el.toUpperCase());
+
+//console.log(stringheMaiuscole);
+
 //   Data un'array di temperature in gradi Celsius, usa map() per convertirle in gradi Fahrenheit.
+
+const gradiCelsius = [30, 38.5, 24, 22, 15];
+
+const gradiFahrenheit = gradiCelsius.map((el) => el * (9 / 5) + 32);
+
+//console.log(gradiFahrenheit);
 
 //   Crea un nuovo array contenente la radice quadrata di ciascun numero in un array di numeri.
 
+const radiceQuadrata = numeri.map((el) => Math.sqrt(el));
+
+//console.log(radiceQuadrata);
+
 //   Usa map() per raddoppiare ciascun numero in un array di numeri.
 
-//   Data un'array di oggetti che rappresentano persone con età, crea un nuovo array con l'età delle persone divisa per 2.
+const numeriRaddoppiati = numeri.map((el) => el * 2);
 
-//   Usa map() per ottenere un nuovo array che contenga la data in formato lungo (es. "15 agosto 2023") a partire da un array di oggetti evento.
+//console.log(numeriRaddoppiati);
 
 //   Data un'array di booleani, usa map() per ottenere un nuovo array con il valore opposto (true diventa false e viceversa).
 
-//   Crea un nuovo array contenente la lunghezza di ciascuna parola in un array di frasi.
+const booleani = [true, true, false, true, false, false, false];
+
+const booleaniInversi = booleani.map((el) => {
+  if (el === true) {
+    return (el = false);
+  } else {
+    return (el = true);
+  }
+});
+
+console.log(booleaniInversi);
 
 // MAP - Array di oggetti
+
+//   Usa map() per ottenere un nuovo array che contenga la data in formato lungo (es. "15 agosto 2023") a partire da un array di oggetti evento.
 
 //   Modifica l'array libri in modo che restituisca un nuovo array contenente solo i titoli dei libri.
 
