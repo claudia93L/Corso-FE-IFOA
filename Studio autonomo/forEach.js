@@ -147,20 +147,64 @@ stringhe.forEach((el) => {
 
 //   Stampare il titolo e l'anno di pubblicazione di ciascun libro utilizzando il metodo forEach().
 
+libri.forEach((el) =>
+  console.log(`${el.titolo} è stato pubblicato nel ${el.pubblicazione}`)
+);
+
 //   Stampare il nome e l'email di ciascun utente utilizzando il metodo forEach().
+utenti.forEach((el) => console.log(`${el.nome} e l'email è ${el.email}`));
 
 //   Stampare il nome e il prezzo di ciascun prodotto disponibile in stock utilizzando il metodo forEach().
 
+prodotti.forEach((el) => {
+  if (el.inStock === true) {
+    console.log(`L'articolo ${el.nome} costa ${el.prezzo}`);
+  }
+});
+
 //   Stampare il nome delle città e il paese a cui appartengono utilizzando il metodo forEach().
+
+citta.forEach((el) => console.log(`${el.nome} si trova in ${el.paese}`));
 
 //   Stampare il nome di ciascun studente e il loro punteggio in matematica utilizzando il metodo forEach().
 
+studenti.forEach((el) =>
+  console.log(
+    `${el.nome} ha un punteggio in matematica pari a ${el.matematica}`
+  )
+);
+
 //   Stampare lo stato di ciascun ordine utilizzando il metodo forEach().
+
+ordini.forEach((el) => console.log(el.stato));
 
 //   Stampare il nome dell'evento e la data in cui si svolgerà utilizzando il metodo forEach().
 
+eventi.forEach((el) =>
+  console.log(`L'evento ${el.nome} si svolgerà in data ${el.data}`)
+);
+
 //   Stampare il nome dell'articolo e se è in vendita o meno utilizzando il metodo forEach().
+
+const inVendita = 'in vendita';
+const nonInVendita = 'non in vendita';
+
+articoli.forEach((el) => {
+  el.inVendita
+    ? console.log(`L'articolo ${el.nome} risulta `.concat(inVendita))
+    : console.log(`L'articolo ${el.nome} risulta `.concat(nonInVendita));
+});
 
 //   Aggiungere " (anno di pubblicazione)" al titolo di ciascun libro utilizzando il metodo forEach() e sostituire il titolo originale con il nuovo valore.
 
+libri.forEach((el) => {
+  el.titolo = el.titolo.concat(` (${el.pubblicazione})`);
+  console.log(el.titolo);
+});
+
 //   Aggiungere " (email: email)" al nome di ciascun utente utilizzando il metodo forEach() e sostituire il nome originale con il nuovo valore.
+
+utenti.forEach((el) => {
+  el.nome = el.nome.concat(` (${el.email})`);
+  console.log(el.nome);
+});
