@@ -93,29 +93,101 @@ const arrayDate = [
 
 //   Aggiungi un nuovo numero all'array numeriArray utilizzando il metodo splice().
 
+numeri.splice(numeri.length, 0, 38);
+
+//console.log(numeri);
+
 //   Rimuovi un numero specifico dall'array numeriArray utilizzando il metodo splice().
+
+const numeroRimosso = numeri.splice(3, 1);
+
+//console.log(numeroRimosso);
 
 //   Modifica un numero nell'array numeriArray in una posizione specifica utilizzando il metodo splice().
 
+numeri.splice(0, 0, 30);
+
+//console.log(numeri);
+
 //   Inserisci una stringa nell'array stringhe in una posizione specifica utilizzando il metodo splice().
+
+stringhe.splice(stringhe.length, 0, 'stringa per lo splice');
+
+//console.log(stringhe);
 
 //   Rimuovi una stringa specifica dall'array stringhe utilizzando il metodo splice().
 
+stringhe.splice(0, 1);
+
+//console.log(stringhe);
+
 //   Inserisci un nuovo valore in un array di date utilizzando il metodo splice().
 
+arrayDate.splice(arrayDate.length, 0, '2023-11-11');
+
+//console.log(arrayDate);
+
 //   Rimuovi una data specifica dall'array di date utilizzando il metodo splice().
+
+arrayDate.splice(4, 1);
+
+// console.log(arrayDate);
 
 // SPLICE - Array di oggetti
 
 //   Aggiungi un nuovo libro all'array libri utilizzando il metodo splice().
 
+const libriAgg = [...libri];
+
+libriAgg.splice(libriAgg.length, 0, {
+  titolo: 'Il suggeritore',
+  pubblicazione: 2023,
+});
+
+//console.log(libriAgg);
+
 //   Rimuovi un utente dall'array utenti in base all'indice utilizzando il metodo splice().
 
+const copiaUtenti = [...utenti];
+
+copiaUtenti.splice(0, 1);
+
+//console.log(copiaUtenti);
+
 //   Modifica il prezzo di un prodotto nell'array prodotti utilizzando il metodo splice().
+
+// AIUTO
+
+/* const copiaProdotti = [...prodotti];
+
+const indiceProdotto = copiaProdotti.length;
+
+const oggettoEstratto = copiaProdotti[indiceProdotto];
+
+copiaProdotti[indiceProdotto].prezzo = 99.99;
+
+copiaProdotti.splice(indiceProdotto, 1, oggettoEstratto); */
+
+//console.log(copiaProdotti);
 
 //   Inserisci una nuova città nell'array citta in una posizione specifica utilizzando il metodo splice().
 
 //   Rimuovi uno studente dall'array studenti in base a una condizione specifica utilizzando il metodo splice().
+
+/* const copiaStudenti = [...studenti];
+
+const removeStudent = () => {
+  for (let i = 0; i < copiaStudenti.length; i++) {
+    if (copiaStudenti[i].scienze < 90) {
+      copiaStudenti.splice(i, 1);
+    }
+  }
+  return copiaStudenti;
+};
+
+removeStudent();
+
+console.log(copiaStudenti); */
 
 //   Aggiungi un nuovo ordine all'array ordini utilizzando il metodo splice().
 
