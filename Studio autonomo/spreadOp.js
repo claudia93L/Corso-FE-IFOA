@@ -247,16 +247,16 @@ const copiaUtentiDue = [...utentiAlContrario].sort((a, b) =>
   a.nome.localeCompare(b.nome)
 );
 
-console.log(copiaUtentiDue);
+// console.log(copiaUtentiDue);
 
 // Crea un nuovo array prodotti3 che contenga solo i prodotti con un prezzo superiore a 50 da prodotti utilizzando il spread operator.
 
 const prodotti4 = [...prodotti].filter((el) => el.prezzo > 50);
 
-console.log(prodotti4);
+// console.log(prodotti4);
 
 // Copia l'array citta in un nuovo array copiaCitta e filtra copiaCitta per includere solo le città in Italia utilizzando il spread operator.
 
 const copiaCittaDue = [...citta].filter((el) => el.paese === 'Italia');
 
-console.log(copiaCittaDue);
+// console.log(copiaCittaDue);

@@ -62,10 +62,18 @@ const articoli = [
   { nome: 'Articolo E', inVendita: true },
 ];
 
-const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 500];
 
 // Array di stringhe
-const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante'];
+const stringhe = [
+  'mela',
+  'banana',
+  'cetriolo',
+  'dado',
+  'elefante',
+  'sono molto lunga',
+  'Ananas',
+];
 
 // Array di stringhe e numeri
 const stringheENumeri = [
@@ -93,23 +101,47 @@ const arrayDate = [
 
 //   Stampare tutti i numeri pari dall'array utilizzando il metodo forEach().
 
+console.log('Numeri pari');
+numeri.forEach((el) => {
+  if (el % 2 === 0) {
+    console.log(el);
+  }
+});
+
 //   Stampare tutti i numeri dispari dall'array utilizzando il metodo forEach().
 
+console.log('Numeri dispari');
+numeri.forEach((el) => {
+  if (el % 2 !== 0) {
+    console.log(el);
+  }
+});
+
 //   Stampare tutti i numeri maggiori di 50 dall'array utilizzando il metodo forEach().
+console.log('Numeri maggiori di 50');
+numeri.forEach((el) => {
+  if (el > 50) {
+    console.log(el);
+  }
+});
 
 //   Stampare tutte le stringhe con una lunghezza superiore a 10 caratteri utilizzando il metodo forEach().
 
+console.log('Stringhe più lunghe di 10 caratteri');
+stringhe.forEach((el) => {
+  if (el.length > 10) {
+    console.log(el);
+  }
+});
+
 //   Stampare tutte le stringhe che iniziano con la lettera "A" utilizzando il metodo forEach().
 
-//   Stampare tutti gli oggetti con il prezzo superiore a 50 dall'array utilizzando il metodo forEach().
-
-//   Calcolare la somma di tutti i punteggi in matematica degli studenti utilizzando il metodo forEach().
-
-//   Calcolare la data in cui si terrà l'evento successivo utilizzando il metodo forEach().
-
-//   Stampare il nome di ciascun animale dell'array utilizzando il metodo forEach().
-
-//   Aggiungere " (età: X anni)" al nome di ciascuna persona utilizzando il metodo forEach() e sostituire il nome originale con il nuovo valore.
+console.log('Stringhe che iniziano con A');
+stringhe.forEach((el) => {
+  if (el.startsWith('A')) {
+    console.log(el);
+  }
+});
 
 // FOREACH - Array di oggetti
 
