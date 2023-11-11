@@ -81,6 +81,14 @@ const stringheENumeri = [
   5,
 ];
 
+const arrayDate = [
+  '2023-08-15',
+  '2023-09-20',
+  '2023-07-10',
+  '2023-08-25',
+  '2023-10-05',
+];
+
 // SPLICE - Array
 
 //   Aggiungi un nuovo numero all'array numeriArray utilizzando il metodo splice().
@@ -89,15 +97,9 @@ const stringheENumeri = [
 
 //   Modifica un numero nell'array numeriArray in una posizione specifica utilizzando il metodo splice().
 
-//   Inserisci una stringa nell'array stringheArray in una posizione specifica utilizzando il metodo splice().
+//   Inserisci una stringa nell'array stringhe in una posizione specifica utilizzando il metodo splice().
 
-//   Rimuovi una stringa specifica dall'array stringheArray utilizzando il metodo splice().
-
-//   Aggiungi un nuovo oggetto all'array oggettiArray utilizzando il metodo splice().
-
-//   Rimuovi un oggetto dall'array oggettiArray in base a una condizione specifica utilizzando il metodo splice().
-
-//   Modifica un valore in un oggetto nell'array oggettiArray utilizzando il metodo splice().
+//   Rimuovi una stringa specifica dall'array stringhe utilizzando il metodo splice().
 
 //   Inserisci un nuovo valore in un array di date utilizzando il metodo splice().
 

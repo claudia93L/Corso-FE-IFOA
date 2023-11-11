@@ -65,10 +65,29 @@ const articoli = [
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Array di stringhe
-const stringhe = ["mela", "banana", "cetriolo", "dado", "elefante"];
+const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante'];
 
 // Array di stringhe e numeri
-const stringheENumeri = ["uno", 2, "tre", 4, "cinque", 1, "due", 3, "quattro", 5];
+const stringheENumeri = [
+  'uno',
+  2,
+  'tre',
+  4,
+  'cinque',
+  1,
+  'due',
+  3,
+  'quattro',
+  5,
+];
+
+const arrayDate = [
+  '2023-08-15',
+  '2023-09-20',
+  '2023-07-10',
+  '2023-08-25',
+  '2023-10-05',
+];
 
 // FIND - Array
 

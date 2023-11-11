@@ -65,10 +65,29 @@ const articoli = [
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Array di stringhe
-const stringhe = ["mela", "banana", "cetriolo", "dado", "elefante"];
+const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante'];
 
 // Array di stringhe e numeri
-const stringheENumeri = ["uno", 2, "tre", 4, "cinque", 1, "due", 3, "quattro", 5];
+const stringheENumeri = [
+  'uno',
+  2,
+  'tre',
+  4,
+  'cinque',
+  1,
+  'due',
+  3,
+  'quattro',
+  5,
+];
+
+const arrayDate = [
+  '2023-08-15',
+  '2023-09-20',
+  '2023-07-10',
+  '2023-08-25',
+  '2023-10-05',
+];
 
 // CONCAT - Array
 
@@ -76,19 +95,13 @@ const stringheENumeri = ["uno", 2, "tre", 4, "cinque", 1, "due", 3, "quattro", 5
 
 //   Unisci due array di stringhe in uno solo utilizzando il metodo concat().
 
-//   Unisci due array di oggetti in uno solo utilizzando il metodo concat().
-
 //   Crea un nuovo array di numeri e concatena il risultato con l'array originale di numeri utilizzando il metodo concat().
 
 //   Crea un nuovo array di stringhe e concatena il risultato con l'array originale di stringhe utilizzando il metodo concat().
 
-//   Crea un nuovo array di oggetti e concatena il risultato con l'array originale di oggetti utilizzando il metodo concat().
-
 //   Unisci tre array di numeri in uno solo utilizzando il metodo concat().
 
 //   Unisci tre array di stringhe in uno solo utilizzando il metodo concat().
-
-//   Unisci tre array di oggetti in uno solo utilizzando il metodo concat().
 
 //   Crea un nuovo array di numeri, un array di stringhe e un array di oggetti e concatena il risultato con l'array originale di numeri, stringhe e oggetti utilizzando il metodo concat().
 

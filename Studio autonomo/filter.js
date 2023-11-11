@@ -81,6 +81,14 @@ const stringheENumeri = [
   5,
 ];
 
+const arrayDate = [
+  '2023-08-15',
+  '2023-09-20',
+  '2023-07-10',
+  '2023-08-25',
+  '2023-10-05',
+];
+
 // FILTER - Array
 
 // Filtra oggetti con una proprietà specifica: Data un'array di oggetti rappresentanti libri, filtra gli oggetti per trovare i libri che sono stati pubblicati dopo il 2000.

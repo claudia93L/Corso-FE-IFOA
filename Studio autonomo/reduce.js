@@ -81,6 +81,13 @@ const stringheENumeri = [
   5,
 ];
 
+const arrayDate = [
+  '2023-08-15',
+  '2023-09-20',
+  '2023-07-10',
+  '2023-08-25',
+  '2023-10-05',
+];
 // REDUCE - Array
 
 //   Calcola la somma di tutti i numeri in un array di numeri utilizzando reduce().
