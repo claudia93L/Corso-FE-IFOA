@@ -51,7 +51,7 @@ const eventi = [
   { nome: 'Evento B', data: '2023-09-20' },
   { nome: 'Evento C', data: '2023-07-10' },
   { nome: 'Evento D', data: '2023-08-25' },
-  { nome: 'Evento E', data: '2023-10-05' },
+  { nome: 'Evento E', data: '2023-12-05' },
 ];
 
 const articoli = [
@@ -212,12 +212,51 @@ copiaOrdini2.forEach((el) => {
 
 // Crea un nuovo array eventi3 che includa solo gli eventi futuri da eventi utilizzando il spread operator.
 
+const eventi3 = [...eventi].filter((el) => el.data > '2023-11-11');
+
+// console.log(eventi3);
+
 // Copia l'array articoli in un nuovo array copiaArticoli e modifica lo valore di inVendita per un articolo all'interno di copiaArticoli utilizzando il spread operator.
+
+const copiaArticoliDue = [...articoli];
+
+copiaArticoliDue.forEach((el) => {
+  if (el.nome === 'Articolo E') {
+    el.inVendita = 'false';
+  }
+});
+
+// console.log(copiaArticoliDue);
 
 // Crea un nuovo array libri3 che contenga solo i libri pubblicati prima del 2000 da libri utilizzando il spread operator.
 
+const libri3 = [...libri].filter((el) => el.pubblicazione <= 2000);
+
+// console.log(libri3);
+
 // Copia l'array utenti in un nuovo array copiaUtenti e ordina copiaUtenti in base al nome utilizzando il spread operator.
+
+// Il metodo localeCompare è un metodo delle stringhe in JavaScript che serve a confrontare due stringhe. Questo metodo è utilizzato per determinare l'ordine relativo di due stringhe rispetto alla lingua corrente dell'utente o alla lingua specificata.
+// sintassi -> stringa.localeCompare(stringaDaConfrontare [, lingua [, opzioni]]);
+
+(a, b) => a.value - b.value;
+
+const utentiAlContrario = utenti.reverse();
+// in questo modo, prendiamo due valori, che verranno ordinati in base al valore di ogni oggetto-proprietà nome e comparati ad un secondo oggetto-proprietò
+const copiaUtentiDue = [...utentiAlContrario].sort((a, b) =>
+  a.nome.localeCompare(b.nome)
+);
+
+console.log(copiaUtentiDue);
 
 // Crea un nuovo array prodotti3 che contenga solo i prodotti con un prezzo superiore a 50 da prodotti utilizzando il spread operator.
 
+const prodotti4 = [...prodotti].filter((el) => el.prezzo > 50);
+
+console.log(prodotti4);
+
 // Copia l'array citta in un nuovo array copiaCitta e filtra copiaCitta per includere solo le città in Italia utilizzando il spread operator.
+
+const copiaCittaDue = [...citta].filter((el) => el.paese === 'Italia');
+
+console.log(copiaCittaDue);
