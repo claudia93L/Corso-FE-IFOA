@@ -140,28 +140,104 @@ const booleaniInversi = booleani.map((el) => {
   }
 });
 
-console.log(booleaniInversi);
+//console.log(booleaniInversi);
 
 // MAP - Array di oggetti
 
 //   Usa map() per ottenere un nuovo array che contenga la data in formato lungo (es. "15 agosto 2023") a partire da un array di oggetti evento.
 
+/*
+  const date = new Date(2009, 10, 10);  // 2009-11-10
+  const month = date.toLocaleString('default', { month: 'long' });
+
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };: Questo definisce un oggetto options contenente le opzioni per il formato della data nel metodo toLocaleString(). In questo caso, stiamo specificando che vogliamo visualizzare il giorno come numero, il mese come nome completo e l'anno come numero.
+
+  const dataLunga = data.toLocaleString('it-IT', options);: Questa è la chiamata al metodo toLocaleString(). Prende come argomenti la localizzazione ('it-IT' per l'italiano in Italia) e le opzioni di formattazione specificate in options. Questo metodo restituisce la rappresentazione della data come stringa formattata in base alle opzioni specificate.
+*/
+
+const dateLunghe = eventi.map((el) => {
+  // creo una data a partire dalla stringa dell'array di oggetti
+  const data = new Date(el.data);
+  const dataLunga = data.toLocaleString(
+    'default',
+    ('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })
+  );
+  return dataLunga;
+});
+
+//console.log(dateLunghe);
+
 //   Modifica l'array libri in modo che restituisca un nuovo array contenente solo i titoli dei libri.
+
+const titoliLibri = libri.map((el) => el.titolo);
+
+//console.log(titoliLibri);
 
 //   Crea un nuovo array contenente gli indirizzi email degli utenti nell'array utenti.
 
+const emailUtenti = utenti.map((el) => el.email);
+
+//console.log(emailUtenti);
+
 //   Usa map() per creare un nuovo array contenente solo i nomi dei prodotti dall'array prodotti.
+
+const nomiProdotti = prodotti.map((el) => el.nome);
+
+//console.log(nomiProdotti);
 
 //   Crea un nuovo array contenente solo i nomi delle città dall'array citta.
 
+const nomiCitta = citta.map((el) => el.nome);
+
+//console.log(nomiCitta);
+
 //   Calcola la media dei punteggi in matematica degli studenti nell'array studenti e restituisci un array con le medie.
+
+// utilizzo map per estrarre i punteggi
+const mediaPunteggiMatematica = studenti.map((el) => el.matematica);
+
+// con reduce calcolo il totale dei voti dei vari studenti
+const sommaPunteggi = mediaPunteggiMatematica.reduce(
+  (accumulatore, punteggio) => accumulatore + punteggio,
+  0
+);
+
+const media = sommaPunteggi / studenti.length;
+
+//console.log(media);
 
 //   Usa map() per ottenere un nuovo array contenente solo gli ID degli ordini dall'array ordini.
 
+const idOrdini = ordini.map((el) => el.id);
+
+//console.log(idOrdini);
+
 //   Crea un nuovo array contenente solo i nomi degli eventi dall'array eventi.
+
+const nomiEventi = eventi.map((el) => el.nome);
+
+//console.log(nomiEventi);
 
 //   Modifica l'array articoli in modo che restituisca un nuovo array contenente solo i nomi degli articoli in vendita.
 
+const nomiArticoliInVendita = articoli.map((el) => {
+  if (el.inVendita === true) {
+    return el.nome;
+  } else {
+    return 'Articolo fuori serie';
+  }
+});
+
+//console.log(nomiArticoliInVendita);
+
 //   Usa map() per ottenere un nuovo array contenente solo gli anni di pubblicazione dei libri nell'array libri.
 
+const anniLibri = libri.map((el) => el.pubblicazione);
+
+//console.log(anniLibri);
+
 //   Crea un nuovo array contenente solo i prezzi dei prodotti nell'array prodotti.
+
+const prezziProdotti = prodotti.map((el) => el.prezzo);
+
+console.log(prezziProdotti);
