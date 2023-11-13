@@ -144,6 +144,19 @@ console.log(deleteOne('Stringa di test', true));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+console.log('Esercizio 5');
+
+const onlyLetters = (stringa) => {
+  const stringaFiltrata = stringa
+    .split('')
+    .filter((el) => isNaN(parseInt(el))) // la funzione isNaN verifica se il risultato di parseInt(el) è NaN
+    .join('');
+
+  return stringaFiltrata;
+};
+
+console.log(onlyLetters('Sono la stringa 394 di test'));
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
