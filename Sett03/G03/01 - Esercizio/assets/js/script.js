@@ -5,62 +5,65 @@
 // 5. Accanto ad ogni li sarà aggiunto un botton (icona?) per la sua rimozione dalla lista
 // 6. Al click del mouse su un elemento li, l'elemento risulterà completato e si mostrerà con una linea orizzontale
 
-let task = document.getElementById('task');
-let btnAdd = document.getElementById('btn-add');
-let ul = document.querySelector('ul');
-let divTask = document.getElementById('container-tasks');
+const addBtn = document.querySelector('#btn-add');
+const divTask = document.querySelector('#container-tasks');
+let taskList = document.querySelector('#lista-task');
+const task = document.querySelector('#task');
+const tasks = [];
 
-btnAdd.addEventListener('click', function (e) {
-  e.preventDefault();
-  creaTask();
-  aggiungiTask();
-  //eliminaTask();
-});
-
-function creaTask() {
-  if (task !== '') {
-    const listEl = document.createElement('li');
-    showTasks();
-    aggiungiTask(listEl);
-    return listEl;
+addBtn.addEventListener('click', function () {
+  if (task.value !== '') {
+    //addTask();
+    createList();
+    deleteInput();
   } else {
-    console.log('Scrivi un task');
+    alert('Inserire un task nel campo di input!');
     return;
   }
-}
+});
 
-function showTasks() {
-  divTask.classList.remove('hidden');
-}
+const addTask = () => {
+  tasks.push(task.value);
+};
 
-function aggiungiTask(listEl) {
-  showTasks();
-  svuotaInput();
+const createList = () => {
+  taskList.innerHTML = '';
+  tasks.map((element, index) => {
+    let singleTask = document.createElement('li');
+    singleTask.style.borderBottom = '1px solid gray';
+    singleTask.innerHTML = `${element}`;
 
-  const liste = document.querySelectorAll('li');
-  liste.forEach((element, index) => {
-    // const taskValue = task.value;
-    listEl.innerHTML = `(${element})`;
-    let btnDel = document.createElement('button');
-    btnDel.innerHTML = 'X';
-    btnDel.setAttribute('onclick', `elimina(${index})`);
-    listEl.appendChild(btnDel);
-    ul.appendChild(listEl);
+    let delBtn = document.createElement('button');
+    delBtn.classList.add('button');
+    delBtn.innerHTML = 'Elimina';
+    delBtn.setAttribute('onclick', `elimina(${index})`);
+
+    singleTask.appendChild(delBtn);
+
+    taskList.appendChild(singleTask);
+    showTask();
   });
-  testoCancellato();
-}
+  barraTask();
+};
 
-function svuotaInput() {
+const showTask = () => {
+  divTask.classList.remove('hidden');
+};
+
+function deleteInput() {
   task.value = '';
 }
 
-function testoCancellato() {}
+function elimina(index) {
+  tasks.splice(index, 1);
+  createList();
+}
 
-/* const btnDel = document.createElement('button');
-ul.appendChild(btnDel);
-
-btnDel.innerText = 'X'; */
-
-/* const liste = document.querySelectorAll('li');
-
-liste.forEach((element) => {}); */
+function barraTask() {
+  const elencoTask = document.querySelectorAll('li');
+  elencoTask.forEach((element) => {
+    element.onclick = function () {
+      element.classList.toggle('barrato');
+    };
+  });
+}
