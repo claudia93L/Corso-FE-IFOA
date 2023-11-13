@@ -582,6 +582,12 @@ ul.removeChild(li);
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+const tr = document.querySelectorAll('tr');
+
+const addClassTest = () => tr.forEach((el) => el.classList.add('test'));
+
+addClassTest();
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
