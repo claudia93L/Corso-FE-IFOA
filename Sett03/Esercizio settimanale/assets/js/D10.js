@@ -161,6 +161,8 @@ console.log(onlyLetters('Sono la stringa 394 di test'));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+console.log('Esercizio 6');
+
 const isThisAnEmail = (email) =>
   email
     .toLowerCase()
@@ -175,6 +177,16 @@ console.log(isThisAnEmail('claudia@gmail.com'));
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+console.log('Esercizio 7');
+
+const whatDayIsIt = () => {
+  const data = new Date();
+
+  return data.getDate();
+};
+
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
