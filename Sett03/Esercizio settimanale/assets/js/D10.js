@@ -649,6 +649,24 @@ halfTree(3);
 
 console.log('Esercizio 28');
 
+// soluzione trovata ma non svolta da me - riadattata
+
+const tree = (numeroRighe) => {
+  for (let i = 0; i <= numeroRighe; i++) {
+    let asterisco = '*';
+    let spazio = ' ';
+    let riga = '';
+    for (let j = i; j < numeroRighe; j++) {
+      riga += spazio;
+    }
+    for (let k = 0; k < i * 2 - 1; k++) {
+      riga += asterisco;
+    }
+    console.log(riga);
+  }
+};
+
+tree(3);
 /* ESERCIZIO 29
 Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
