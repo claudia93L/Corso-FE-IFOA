@@ -480,6 +480,15 @@ console.log(sumAllTheYears());
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
+const searchByTitle = (titoloDaCercare) =>
+  movies.filter((el) => {
+    if (el.Title.toLowerCase().includes(titoloDaCercare)) {
+      return el;
+    }
+  });
+
+console.log(searchByTitle('avengers'));
+
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
