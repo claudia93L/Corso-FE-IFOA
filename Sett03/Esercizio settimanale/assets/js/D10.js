@@ -545,11 +545,15 @@ const divContainer = document.getElementById('container');
 
 const td = document.querySelectorAll('td');
 
-td.forEach((td) => (td.innerText = 'Test'));
+td.forEach((td) => (td.innerText = 'Test del querySelectorAll'));
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+const stampaTd = () => td.forEach((td) => console.log(td.innerText));
+
+stampaTd();
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
