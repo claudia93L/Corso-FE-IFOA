@@ -576,6 +576,8 @@ ul.appendChild(li).innerText = 'Sono una lista generata da JS';
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+ul.removeChild(li);
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
