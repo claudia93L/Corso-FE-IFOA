@@ -427,9 +427,26 @@ console.log(oggetto);
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
+let filmRecente = movies[0].Year;
+
+const newestMovie = () => {
+  for (let i = 0; i < movies.length; i++) {
+    if (filmRecente < movies[i].Year) {
+      filmRecente = movies[i].Year;
+    }
+  }
+  return filmRecente;
+};
+
+console.log(newestMovie());
+
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
+
+const countMovies = () => movies.reduce((totale, film) => totale + film, 0);
+
+console.log(countMovies());
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
