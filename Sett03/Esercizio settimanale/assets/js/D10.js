@@ -510,7 +510,7 @@ const searchAndDivide = (stringa) =>
     return filmSmistati;
   });
 
-searchAndDivide('lord')
+searchAndDivide('lord');
 
 console.log(filmSmistati.match);
 console.log(filmSmistati.unmatch);
@@ -518,6 +518,18 @@ console.log(filmSmistati.unmatch);
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+const removeIndex = (indiceFilm) => movies.splice(indiceFilm, 1);
+
+removeIndex(13);
+console.log(movies);
+
+// oppure
+
+const removeIndex2 = (indiceFilm) =>
+  movies.filter((el, index) => index !== indiceFilm);
+
+console.log(removeIndex2(13));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
