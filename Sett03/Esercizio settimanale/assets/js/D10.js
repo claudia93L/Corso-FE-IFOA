@@ -180,10 +180,24 @@ console.log(isThisAnEmail('claudia@gmail.com'));
 
 console.log('Esercizio 7');
 
-const whatDayIsIt = () => {
-  const data = new Date();
+const giorni = [
+  'Lunedì',
+  'Martedì',
+  'Mercoledì',
+  'Giovedì',
+  'Venerdì',
+  'Sabato',
+  'Domenica',
+];
 
-  return data.getDate();
+const whatDayIsIt = () => {
+  let data = new Date();
+
+  data = data.getDay();
+
+  const giorno = giorni.find((el) => el.indexOf(data));
+
+  return giorno;
 };
 
 console.log(whatDayIsIt());
@@ -200,6 +214,8 @@ console.log(whatDayIsIt());
       values: [3, 3, 4]
   }
 */
+
+console.log('Esercizio 8');
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
