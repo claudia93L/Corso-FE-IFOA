@@ -602,6 +602,19 @@ addClassTest();
 
 */
 
+function halfTree(numeroRighe) {
+  let asterisco = '*';
+  for (let i = 0; i < numeroRighe; i++) {
+    let rigaAsterisco = '';
+    for (let j = 0; j <= i; j++) {
+      rigaAsterisco += asterisco;
+    }
+    console.log(rigaAsterisco);
+  }
+}
+
+halfTree(3);
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -617,3 +630,23 @@ addClassTest();
 /* ESERCIZIO 29
 Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+// Un intero n≥2 si dice primo se è divisibile solo per 1 e per sé stesso
+
+// NON FUNZIONA CORRETTAMENTE - Logica da rivedere, ritorna sempre true
+
+const isItPrime = (numero) => {
+  if (numero >= 2) {
+    for (let i = 0; i < numero; i++) {
+      if (numero % i === 0) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  } else {
+    return false;
+  }
+};
+
+console.log(isItPrime(4));
