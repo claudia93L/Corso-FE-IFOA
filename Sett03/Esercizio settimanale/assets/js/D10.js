@@ -427,6 +427,8 @@ console.log(oggetto);
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
+console.log('Esercizio 12');
+
 let filmRecente = movies[0].Year;
 
 const newestMovie = () => {
@@ -444,6 +446,8 @@ console.log(newestMovie());
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
+console.log('Esercizio 13');
+
 const countMovies2 = () => movies.length;
 // oppure
 const countMovies = () => movies.reduce((totaleFilm) => totaleFilm + 1, 0);
@@ -455,6 +459,8 @@ console.log(countMovies2());
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
 
+console.log('Esercizio 14');
+
 const onlyTheYears = () => movies.map((el) => el.Year);
 
 console.log(onlyTheYears());
@@ -462,6 +468,8 @@ console.log(onlyTheYears());
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
+
+console.log('Esercizio 15');
 
 const onlyInLastMillennium = () => movies.filter((film) => film.Year < 2000);
 
@@ -471,6 +479,8 @@ console.log(onlyInLastMillennium());
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+console.log('Esercizio 16');
+
 const sumAllTheYears = () =>
   movies.reduce((somma, numero) => (somma += parseInt(numero.Year)), 0);
 
@@ -479,6 +489,8 @@ console.log(sumAllTheYears());
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+console.log('Esercizio 17');
 
 const searchByTitle = (titoloDaCercare) =>
   movies.filter((el) => {
@@ -493,6 +505,8 @@ console.log(searchByTitle('avengers'));
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+
+console.log('Esercizio 18');
 
 const filmSmistati = {
   match: [],
@@ -518,6 +532,8 @@ console.log(filmSmistati.unmatch);
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+console.log('Esercizio 19');
 
 const removeIndex = (indiceFilm) => movies.splice(indiceFilm, 1);
 
@@ -550,6 +566,8 @@ td.forEach((td) => (td.innerText = 'Test del querySelectorAll'));
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+console.log('Esercizio 22');
 
 const stampaTd = () => td.forEach((td) => console.log(td.innerText));
 
@@ -602,6 +620,8 @@ addClassTest();
 
 */
 
+console.log('Esercizio 27');
+
 function halfTree(numeroRighe) {
   let asterisco = '*';
   for (let i = 0; i < numeroRighe; i++) {
@@ -634,6 +654,8 @@ Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e rit
 // Un intero n≥2 si dice primo se è divisibile solo per 1 e per sé stesso
 
 // NON FUNZIONA CORRETTAMENTE - Logica da rivedere, ritorna sempre true
+
+console.log('Esercizio 29');
 
 const isItPrime = (numero) => {
   if (numero >= 2) {
