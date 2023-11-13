@@ -537,9 +537,15 @@ console.log(removeIndex2(13));
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+const divContainer = document.getElementById('container');
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+
+const td = document.querySelectorAll('td');
+
+td.forEach((td) => (td.innerText = 'Test'));
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
