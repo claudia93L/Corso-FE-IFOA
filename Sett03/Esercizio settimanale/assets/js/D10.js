@@ -647,25 +647,25 @@ halfTree(3);
 
 */
 
+console.log('Esercizio 28');
+
 /* ESERCIZIO 29
 Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-// Un intero n≥2 si dice primo se è divisibile solo per 1 e per sé stesso
-
-// NON FUNZIONA CORRETTAMENTE - Logica da rivedere, ritorna sempre true
-
 console.log('Esercizio 29');
 
 const isItPrime = (numero) => {
-  if (numero >= 2) {
-    for (let i = 0; i < numero; i++) {
+  if (numero > 2) {
+    for (let i = 2; i < numero; i++) {
       if (numero % i === 0) {
         return false;
       } else {
         return true;
       }
     }
+  } else if (numero === 2) {
+    return true;
   } else {
     return false;
   }
