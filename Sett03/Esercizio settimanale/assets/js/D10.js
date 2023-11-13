@@ -559,6 +559,10 @@ stampaTd();
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+const link = document.querySelectorAll('a');
+
+link.forEach((a) => (a.style.backgroundColor = 'red'));
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
