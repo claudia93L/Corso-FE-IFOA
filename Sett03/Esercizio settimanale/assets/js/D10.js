@@ -567,6 +567,11 @@ link.forEach((a) => (a.style.backgroundColor = 'red'));
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const ul = document.querySelector('#myList');
+const li = document.createElement('li');
+
+ul.appendChild(li).innerText = 'Sono una lista generata da JS';
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
