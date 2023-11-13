@@ -12,30 +12,78 @@ REGOLE
 /* ESERCIZIO A
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
+console.log('Esercizio A');
+
+const a = 10;
+const b = 20;
+
+const sum = a + b;
+
+console.log(sum);
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
+console.log('Esercizio B');
+
+const random = Math.floor(Math.random() * 21);
+
+console.log(random);
+
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
+
+console.log('Esercizio C');
+
+const me = {
+  name: 'Claudia',
+  surname: 'Lai',
+  age: 29,
+};
+
+console.log(me.name);
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
+console.log('Esercizio D');
+
+delete me.age;
+
+console.log(me.age);
+
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
+
+console.log('Esercizio E');
+
+me.skills = ['Java SE', 'Spring Boot', 'JavaScript'];
+
+console.log(me.skills);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
+console.log('Esercizio F');
+
+me.skills.push('SQL');
+
+console.log(me.skills);
+
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
+
+console.log('Esercizio G');
+
+me.skills.pop();
+
+console.log(me.skills);
 
 // Funzioni
 
@@ -311,4 +359,4 @@ const movies = [
     Poster:
       'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
   },
-]
+];
