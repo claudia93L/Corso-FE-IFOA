@@ -444,9 +444,12 @@ console.log(newestMovie());
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
-const countMovies = () => movies.reduce((totale, film) => totale + film, 0);
+const countMovies2 = () => movies.length;
+// oppure
+const countMovies = () => movies.reduce((totaleFilm) => totaleFilm + 1, 0);
 
 console.log(countMovies());
+console.log(countMovies2());
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
