@@ -118,6 +118,7 @@ let answer2 = document.querySelector('#answer-2 button');
 let answer3 = document.querySelector('#answer-3 button');
 let answer4 = document.querySelector('#answer-4 button');
 let answerLine2 = document.getElementById('answer-line2');
+let circle = document.querySelector('#circle');
 
 let lunghezzaArray = questions.length;
 let wrongAnswers = 0;
@@ -239,6 +240,7 @@ function verificaRisposta() {
 function cambioDomanda() {
   questionNumber++;
   caricaQuiz();
+  resettaCerchioTimer();
 }
 
 function setTimer() {
@@ -256,6 +258,14 @@ function setTimer() {
       cambioDomanda();
     }
   }, 1000);
+}
+
+function resettaCerchioTimer() {
+  // da rivedere
+  circle.style.strokeDashoffset = '0px';
+  circle.style.animation = 'countdown 20s linear infinite forwards';
+  circle.style.fill = 'none';
+  circle.style.strokeDasharray = '113px';
 }
 
 function numeroDomanda() {
