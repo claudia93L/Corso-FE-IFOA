@@ -208,7 +208,7 @@ footer a {
 
 /* minimo 320px come partenza poi 576, 768 e 1200*/
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   /* HEADER */
   header {
     padding: 0.8em 1em 0em 1em;
@@ -346,16 +346,18 @@ footer a {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 2.3em;
+    line-height: 1.2em;
   }
 
   h1,
   .div-header p,
   .div-header a,
   .div-header ul,
-  section h2, aside h2 {
+  section h2,
+  aside h2 {
     font-weight: 500;
   }
 
@@ -412,4 +414,51 @@ footer a {
     display: block;
     width: 100%;
   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  article p {
+    font-size: 1em;
+  }
+
+  .logo-html img {
+    width: 10%;
+  }
+
+  article h2 {
+    font-weight: normal;
+  }
+
+  .tabella {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  table {
+    margin: 0;
+  }
+
+  iframe {
+    height: 150px;
+  }
+
+  .div-50 h2 {
+    padding: 10px 0;
+    font-size: 1.5em;
+  }
+
+  input {
+    margin-top: 30px;
+    width: 60%;
+    padding: 8px 10px;
+  }
+
+  button {
+    font-size: 0.8em;
+    width: 25%;
+    padding: 10px 10px;
+  }
+}
+
+@media print {
 }
