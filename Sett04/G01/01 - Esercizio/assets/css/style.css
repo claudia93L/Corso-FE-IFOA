@@ -319,6 +319,10 @@ footer a {
     margin-bottom: 30px;
   }
 
+  section h2 {
+    text-transform: none;
+  }
+
   input {
     margin-top: 30px;
     width: 70%;
@@ -339,5 +343,73 @@ footer a {
   aside div {
     display: inline-block;
     width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.3em;
+  }
+
+  h1,
+  .div-header p,
+  .div-header a,
+  .div-header ul,
+  section h2, aside h2 {
+    font-weight: 500;
+  }
+
+  .div-header {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .div-header ul {
+    padding-bottom: 20px;
+  }
+
+  #logo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .div-header:first-of-type,
+  .div-header p,
+  .div-header a,
+  .div-header ul {
+    text-align: center;
+  }
+
+  article p {
+    font-size: 0.8em;
+  }
+
+  .logo-html img {
+    width: 5%;
+  }
+
+  table {
+    width: 80%;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  .div-50 {
+    display: block;
+    width: 100%;
+  }
+
+  .div-50 section {
+    border-radius: 0;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  aside div {
+    display: block;
+    width: 100%;
   }
 }
