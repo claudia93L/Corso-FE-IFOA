@@ -461,4 +461,26 @@ footer a {
 }
 
 @media print {
+  .container-div,
+  footer {
+    display: none;
+  }
+
+  caption {
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+
+  thead th {
+    border-bottom: 1px solid #c3c3c3;
+
+  }
+  th {
+    background-color: none;
+    color: black;
+    border-bottom: 1px solid #3f6bca;
+  }
+
+
+
 }
