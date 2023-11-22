@@ -133,6 +133,7 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
+  z-index: 0;
 }
 
 span {
@@ -146,6 +147,7 @@ h1 span img {
   right: 0px;
   width: 100%;
   opacity: 0.5;
+  z-index: 3;
 }
 
 .imgLeft {
