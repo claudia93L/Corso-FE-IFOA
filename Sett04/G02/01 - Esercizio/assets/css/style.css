@@ -1,10 +1,10 @@
 /* IMPOSTAZIONI GENERALI */
 
 body {
-  font-family: Poppins, "Helvetica Neue", sans-serif;
+  font-family: Poppins, 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   padding: 15px;
-  background-image: url("../img/sfondo.png");
+  background-image: url('../img/sfondo.png');
   background-position: center center;
 }
 
@@ -19,7 +19,11 @@ hr {
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -81,7 +85,7 @@ header nav li a:hover {
   color: red;
 }
 header nav li a::before {
-  content: "\22c6\0020";
+  content: '\22c6\0020';
 }
 
 /* MAIN */
@@ -122,6 +126,23 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
+}
+
+/* span {
+  position: relative;
+  z-index: 1;
+}
+
+h1 span img {
+  position: absolute;
+  top: 20px;
+  right: 160px;
+  width: 45%;
+  z-index: 0;
+} */
+
+.imgLeft {
+  float: left;
 }
 
 p,
@@ -329,7 +350,11 @@ aside div p:last-child {
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
