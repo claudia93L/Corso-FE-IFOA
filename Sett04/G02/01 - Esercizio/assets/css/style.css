@@ -150,6 +150,10 @@ h1 span img {
   z-index: 2;
 }
 
+.span-container {
+  width: 100%;
+}
+
 .imgLeft {
   float: left;
 }
