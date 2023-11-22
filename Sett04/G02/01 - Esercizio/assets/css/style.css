@@ -137,6 +137,7 @@ h1 {
 
 span {
   position: relative;
+  display: inline-block;
 }
 
 h1 span img {
@@ -373,17 +374,17 @@ aside div p:last-child {
 
 .side-icons {
   width: fit-content;
-  padding: 20px 20px 10px 20px;
+  padding: 15px 20px 10px 20px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   border: 2px solid #fff;
   backdrop-filter: blur(5px);
-  box-shadow: 10px 13px 15px -3px rgba(0,0,0,0.1);
+  box-shadow: 10px 13px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .icons .fas,
 .fa-regular {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 @media screen and (min-width: 700px) {
