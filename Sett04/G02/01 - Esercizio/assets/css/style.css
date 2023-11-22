@@ -362,6 +362,28 @@ aside div p:last-child {
   text-align: right;
 }
 
+.side-icons {
+  width: fit-content;
+  padding: 20px 20px 10px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.icons .fas,
+.fa-regular {
+  font-size: 30px;
+}
+
+.fa-square-caret-up {
+  color: purple;
+}
+
+.fa-square-plus,
+.fa-calendar-alt {
+  color: #3f6bca;
+}
+
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
