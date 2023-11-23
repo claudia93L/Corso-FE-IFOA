@@ -174,7 +174,7 @@ h1 {
 
 /* Layout XL per desktop larghi da 1280px in su */
 
-@media screen and (max-width: 1280px), (min-width: 1024px), (min-width: 768px) {
+@media screen and (max-width: 1280px), (min-width: 1024px) {
   /* CONTAINER PRINCIPALI */
   .container {
     display: flex;
@@ -189,7 +189,9 @@ h1 {
     padding-bottom: 30px;
     padding-right: 30px;
   }
+}
 
+@media screen and (max-width: 1280px), (min-width: 1024px), (min-width: 768px) {
   /* NAVBAR */
 
   .navbar-container {
@@ -325,6 +327,12 @@ h1 {
   .navbar-container img {
     width: 40px;
   }
+
+  /* ARTICLE */
+
+  .article-container {
+    overflow: hidden;
+  }
 }
 
 /* ALLINEAMENTO GENERALE ARTICLE PER MEDIUM/TABLET/MOBILE */
@@ -340,7 +348,6 @@ h1 {
 
   .article-container {
     flex-direction: column-reverse;
-    overflow: hidden;
   }
 
   .article-description {
@@ -372,6 +379,15 @@ h1 {
     display: none;
   }
 
+  .card-container h5 {
+    font-size: 0.8em;
+  }
+  
+  .card-text-left p,
+  .card-text-right p {
+    font-size: 0.6em;
+  }
+
   /* NAVBAR */
 
   .navbar-container {
@@ -395,11 +411,12 @@ h1 {
   .navbar-container img {
     width: 50px;
   }
+
 }
 
-/* Layout tablet per desktop da 768px */
+/* Layout per tablet (576px a 768px) */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 768px) {
   /* CONTAINER PRINCIPALI */
   .container {
     display: flex;
@@ -410,9 +427,45 @@ h1 {
     flex-direction: row;
     height: 100vh;
     overflow: auto;
+    padding-top: 90px;
     padding-left: 30px;
     padding-bottom: 30px;
     padding-right: 30px;
+  }
+
+  /* NAVBAR */
+
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-evenly;
+    overflow: none;
+    background-color: #faf7e3;
+    height: auto;
+    position: fixed;
+    top: 0;
+    padding-top: 20px;
+  }
+
+  .navbar-link {
+    width: 15%;
+    padding: 8px 4px;
+    border-radius: 60px;
+  }
+
+  .navbar-link:nth-of-type(3) {
+    order: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .navbar-link:nth-of-type(3) a {
+    margin-left: 20%;
+  }
+
+  .navbar-container img {
+    width: 30px;
   }
 
   /* CARDS*/
@@ -425,65 +478,34 @@ h1 {
     flex-wrap: wrap;
   }
 
-  /* NAVBAR */
-
-  .navbar-container {
+  .card-container {
     display: flex;
-    flex-direction: row;
+    max-width: 40vw;
     overflow: hidden;
-    width: 100vw;
-    justify-content: space-around;
-    background-color: #faf7e3;
-
-    height: auto;
+    margin-bottom: 30px;
   }
 
-  .navbar-link {
-    width: 20%;
-    padding: 8px 8px;
-    border-radius: 60px;
+  .card-img {
+    max-height: 20%;
   }
 
-  .navbar-link:nth-of-type(3) {
-    order: 0;
-    padding-top: 24px;
-    padding-bottom: 16px;
+  .card-description {
+    margin-top: -10px;
+    margin-bottom: -10px;
   }
 
-  /* .navbar-container a {
-    text-decoration: none;
-    font-size: 0.9em;
-    font-weight: 400;
+  .card-container h5 {
+    font-size: 0.8em;
+  }
+  
+  .card-text-left p,
+  .card-text-right p {
+    font-size: 0.6em;
   }
 
-  .navbar-container img {
-    width: 70px;
+  .card-button {
+    padding-bottom: 10px;
   }
-
-  .navbar-link {
-    display: flex;
-    background-color: #f3df85;
-    padding: 16px 32px;
-    border-radius: 30px;
-    width: fit-content;
-  }
-
-  .navbar-link:nth-of-type(3) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 2em;
-    text-transform: uppercase;
-    border-radius: 60px;
-    padding: 16px 40px;
-  }
-
-  .navbar-link:nth-of-type(3) a {
-    margin-left: 25%;
-    font-weight: 600;
-  } */
 }
 
 /* Layout per mobile (320px a 768px)*/
-
-/* Layout per tablet (576px a 768px) */
