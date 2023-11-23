@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 30vw;
+  border-radius: 30px;
+}
+
+.card-container div {
+  display: flex;
+  justify-items: center;
+}
+
+.card-description {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card-text-left {
+  flex-direction: column;
+}
+
+.card-button {
+  justify-content: center;
+}
+
+.card-container img {
+  max-width: 90%;
+  object-fit: cover;
+}
