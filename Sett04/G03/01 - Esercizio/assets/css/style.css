@@ -168,36 +168,9 @@ h1 {
   font-size: 1.3em;
 }
 
-@media screen and (max-width: 1000px) {
-  .article-container {
-    flex-direction: column-reverse;
-  }
+/* Layout XL per desktop larghi da 1280px in su */
 
-  .article-description {
-    flex-direction: column;
-    margin: 0px 30px 0px 30px;
-  }
-
-  .article-img,
-  .article-description {
-    display: flex;
-    justify-content: center;
-  }
-
-  .article-img img {
-    max-width: 100%;
-  }
-}
-
-/* Layout per tablet (576px a 768px) */
-
-/* Layout per mobile (320px a 768px)*/
-
-/* Layout per desktop 1024px */
-
-/* Layout per desktop larghi 1280px */
-
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1280px), (min-width: 1024px), (min-width: 768px) {
   /* CONTAINER PRINCIPALI */
   .container {
     display: flex;
@@ -292,13 +265,65 @@ h1 {
 
   .card-button button {
     margin-top: 10px;
-    padding: 8px 32px;
+    padding: 8px 0;
     border-radius: 30px;
   }
+}
 
+@media screen and (min-width: 1280px) {
   /* ARTICLE */
 
   .article-description h3 {
     margin-top: 0;
   }
 }
+
+/* Layout ML per desktop da 1220px */
+
+@media screen and (max-width: 1220px) {
+  .card-container:last-of-type {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1220px), (max-width: 768px) {
+  .card-container:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  .article-container {
+    flex-direction: column-reverse;
+    overflow: hidden;
+  }
+
+  .article-description {
+    flex-direction: column;
+    margin: 0px 30px;
+  }
+
+  .article-description h3 {
+    margin-bottom: 0;
+  }
+
+  .article-img,
+  .article-description {
+    display: flex;
+    justify-content: center;
+  }
+
+  .article-img img {
+    width: 100%;
+  }
+}
+
+/* Layout M per desktop da 768px */
+
+@media screen and (max-width: 768px) {
+  .card-container:last-of-type {
+    display: none;
+  }
+}
+
+/* Layout per mobile (320px a 768px)*/
+
+/* Layout per tablet (576px a 768px) */
