@@ -14,3 +14,52 @@ body,
   color: #612407;
   font-family: 'Outfit', sans-serif;
 }
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #faf7e3;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.article-img {
+  margin: 30px;
+}
+
+.article-description {
+  margin: 30px 30px 30px 0px;
+  line-height: 1.4em;
+}
+
+.article-description p {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+.article-description h2 {
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 1000px) {
+  .article-container {
+    flex-direction: column-reverse;
+  }
+
+  .article-description {
+    flex-direction: column;
+    margin: 0px 30px 0px 30px;
+  }
+
+  .article-img,
+  .article-description {
+    display: flex;
+    justify-content: center;
+  }
+
+  .article-img img {
+    max-width: 100%;
+  }
+}
