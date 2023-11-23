@@ -123,6 +123,10 @@ h1 {
   font-size: 1.3em;
 }
 
+.card-text-right p {
+  margin-left: 10px;
+}
+
 .card-button {
   justify-content: center;
   padding-bottom: 30px;
@@ -271,7 +275,6 @@ h1 {
 }
 
 @media screen and (min-width: 1280px) {
-  /* ARTICLE */
 
   .article-description h3 {
     margin-top: 0;
@@ -281,15 +284,34 @@ h1 {
 /* Layout ML per desktop da 1220px */
 
 @media screen and (max-width: 1220px) {
+  /* CARDS */
   .card-container:last-of-type {
     display: none;
+  }
+
+  /* NAVBAR */
+
+  .navbar-container {
+    width: 20vw;
+  }
+
+  .navbar-link {
+    width: 40%;
+  }
+
+  .navbar-container img {
+    margin-right: 0;
   }
 }
 
 @media screen and (max-width: 1220px), (max-width: 768px) {
+  /* CARDS */
+
   .card-container:not(:last-of-type) {
     margin-right: 20px;
   }
+
+  /* ARTICLE */
 
   .article-container {
     flex-direction: column-reverse;
@@ -316,11 +338,16 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .card-container:nth-of-type(4) {
+    display: none;
+  }
+}
+
 /* Layout M per desktop da 768px */
 
 @media screen and (max-width: 768px) {
-  .card-container:last-of-type {
-    display: none;
+  .card-description {
   }
 }
 
