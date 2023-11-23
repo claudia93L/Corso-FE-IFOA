@@ -72,6 +72,11 @@ body,
 
   .container-main {
     flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
   }
 
   /* NAVBAR */
@@ -116,21 +121,30 @@ body,
 
   /* CARDS */
 
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .card-container {
+    width: 100%;
+    max-width: none;
+  }
+
   /* ARTICLE */
+
+  .article-description h3 {
+    margin-top: 0;
+  }
 }
 
 /* CARD PRODUCT COMPONENT */
 
-.cards-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
 .card-container {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  max-width: 30vw;
   border-radius: 120px;
   overflow: hidden;
   background-color: #faf7e3;
