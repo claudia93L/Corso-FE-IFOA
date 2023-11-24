@@ -12,7 +12,7 @@ body {
   display: flex;
   width: 100%;
   background-color: #404040;
-  height: auto;
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -26,13 +26,17 @@ body {
 }
 
 .post-it {
-  width: 22%;
+  width: 20%;
   height: 30vh;
-  box-shadow: 14px 12px 7px 0px rgba(16, 15, 16, 0.1);
-  box-shadow: inset 0px -94px 68px -35px rgba(16, 15, 16, 0.1);
-  margin-right: 30px;
+  box-shadow: inset 0px -94px 37px -35px rgba(16, 15, 16, 0.241),
+    14px 12px 7px 0px rgb(16, 15, 16);
+  margin-right: 60px;
   text-align: center;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .yellow {
@@ -55,23 +59,45 @@ body {
   margin-right: 0;
 }
 
+.row:first-of-type .post-it:first-of-type,
+.row:first-of-type .post-it:nth-of-type(3),
+.row:last-of-type .post-it:first-of-type,
+.row:last-of-type .post-it:nth-of-type(3) {
+  transform: rotate(-5deg);
+}
+
+.row:first-of-type .post-it:nth-of-type(2),
+.row:last-of-type .post-it:last-of-type {
+  transform: rotate(5deg);
+}
+
+.row:first-of-type .post-it:last-of-type {
+  transform: rotate(10deg);
+}
+
+.row:last-of-type .post-it:nth-of-type(2) {
+  transform: rotate(-10deg);
+}
+
+.row:first-of-type .post-it:hover,
+.row:last-of-type .post-it:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .testo {
-  display: flex;
   text-align: center;
-  align-items: center;
-  flex-direction: column;
   width: 100%;
-  height: 100%;
 }
 
 h2 {
   margin-bottom: 0;
   font-family: 'Rock Salt', cursive;
-  font-size: 1.8em;
 }
 
 p {
   margin-top: 0;
   font-family: 'Caveat', cursive;
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
