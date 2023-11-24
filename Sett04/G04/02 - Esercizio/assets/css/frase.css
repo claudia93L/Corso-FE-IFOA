@@ -8,3 +8,10 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
