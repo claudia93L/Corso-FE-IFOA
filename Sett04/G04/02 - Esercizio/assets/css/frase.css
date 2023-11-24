@@ -28,8 +28,6 @@ main {
 #testoAlternato {
   border: 2px solid black;
   width: 50%;
-  display: flex;
-  justify-content: center;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -41,4 +39,36 @@ p {
 .parole {
   color: #6a889c;
   font-weight: 700;
+  margin-left: 5px;
+}
+
+i {
+  animation: fadeInOut 5s infinite 0s;
+}
+
+i:first-of-type {
+  animation-delay: 1s;
+  order: 1;
+}
+
+i:nth-child(2) {
+  animation-delay: 2.5s;
+  order: 2;
+}
+
+i:last-of-type {
+  animation-delay: 4s;
+  order: 3;
+}
+
+@keyframes fadeInOut {
+  0%,
+  25%,
+  50%,
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
