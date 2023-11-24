@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 /*
 1 creazione del testo e formattazione di 1 parola da far ruotare
 2 inserimento delle altre 2 parole
@@ -14,4 +16,29 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 1.2em;
+  font-family: 'Josefin Slab', serif;
+}
+
+main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#testoAlternato {
+  border: 2px solid black;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+p {
+  font-weight: 600;
+}
+
+.parole {
+  color: #6a889c;
+  font-weight: 700;
 }
