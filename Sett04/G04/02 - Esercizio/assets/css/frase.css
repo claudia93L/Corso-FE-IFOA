@@ -43,6 +43,9 @@ p {
 }
 
 i {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
   animation: fadeInOut 5s infinite 0s;
 }
 
