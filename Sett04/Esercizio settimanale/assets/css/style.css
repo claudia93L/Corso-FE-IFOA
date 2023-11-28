@@ -21,10 +21,11 @@ body {
 }
 
 .container {
-  padding-left: 180px;
-  padding-right: 180px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
 }
 
@@ -33,6 +34,10 @@ body {
 .button-cta {
   color: #fff;
   background-color: var(--secondary-color);
+  padding: 4px 8px;
+  border-radius: 30px;
+  width: 15%;
+  text-align: center;
 }
 
 .button-cta a {
@@ -48,6 +53,10 @@ ul {
   padding: 0;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .left {
 }
 
@@ -56,6 +65,13 @@ ul {
 
 .row-alignment {
   flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 .column-alignment {
@@ -69,10 +85,6 @@ ul {
 .profile-img {
   width: 30px;
   border-radius: 50%;
-}
-
-header a {
-  color: var(--secondary-color);
 }
 
 .trending-articles a,
@@ -89,12 +101,86 @@ header a {
   color: var(--text-color);
 }
 
+p,
+a {
+  font-size: 0.6em;
+  font-weight: lighter;
+}
+
 /* HEADER */
+header {
+  margin-left: 180px;
+  margin-right: 180px;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+header a {
+  color: var(--secondary-color);
+}
+
+.logo-img {
+  width: 30%;
+}
+
+.logo-img img {
+  max-width: 100%;
+}
+
+.w-80 {
+  width: 80vw;
+}
+
+.navbar {
+  width: 70%;
+  margin-right: 180px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar li a {
+  width: 100%;
+}
 
 /* HERO SECTION */
 
+.hero-section {
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+.hero-section .left {
+  margin-left: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 60px 0;
+}
+
 h1 {
   font-family: 'Ledger', serif;
+  font-size: 4em;
+  font-weight: lighter;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+.hero-section p {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+.hero-section a {
+  font-size: 0.7em;
 }
 
 /* TRENDING SECTION */
