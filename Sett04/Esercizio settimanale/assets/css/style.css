@@ -10,6 +10,7 @@ body {
   font-size: 1.2em;
   line-height: 1.2em;
   font-family: Helvetica, Arial, sans-serif;
+  color: var(--secondary-color);
 }
 
 :root {
@@ -20,9 +21,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 180px;
+  padding-right: 180px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -31,6 +31,21 @@ body {
 /* COMMON */
 
 .button-cta {
+  color: #fff;
+  background-color: var(--secondary-color);
+}
+
+.button-cta a {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .left {
@@ -52,6 +67,12 @@ body {
 }
 
 .profile-img {
+  width: 20px;
+  border-radius: 50%;
+}
+
+header a {
+  color: var(--secondary-color);
 }
 
 /* HEADER */
@@ -61,3 +82,15 @@ body {
 h1 {
   font-family: 'Ledger', serif;
 }
+
+/* TRENDING SECTION */
+
+.trending-articles a {
+  color: var(--secondary-color);
+}
+
+/* ARTICLE SECTION */
+
+/* ASIDE */
+
+/* FOOTER */
