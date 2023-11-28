@@ -80,10 +80,12 @@ header a {
   color: var(--secondary-color);
 }
 
+.article-number,
 .latest-articles a p:last-of-type,
-.latest-articles .left p,
-.latest-articles .left a, 
-aside a, footer a {
+.gray-text,
+.gray-text a,
+.empty-buttons a,
+.footer-nav a {
   color: var(--text-color);
 }
 
