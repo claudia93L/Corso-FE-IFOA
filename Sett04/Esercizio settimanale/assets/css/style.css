@@ -58,13 +58,12 @@ ul {
 }
 
 .align-center {
+  display: flex;
   align-items: center;
 }
 
-.left {
-}
-
-.right {
+.inline {
+  display: inline;
 }
 
 .row-alignment {
@@ -85,8 +84,9 @@ ul {
 }
 
 .profile-img {
-  width: 30px;
+  width: 20px;
   border-radius: 50%;
+  margin-right: 3%;
 }
 
 .trending-articles a,
@@ -94,7 +94,6 @@ ul {
   color: var(--secondary-color);
 }
 
-.article-number,
 .latest-articles a p:last-of-type,
 .gray-text,
 .gray-text a,
@@ -115,6 +114,8 @@ header {
   margin-left: 10%;
   margin-right: 10%;
   padding: 20px 0px;
+  /* position: fixed;
+  top: 0; */
 }
 
 header a {
@@ -148,6 +149,11 @@ header a {
   width: 100%;
 }
 
+.article-specs p {
+  margin-top: 0;
+  font-size: 0.5em;
+}
+
 /* HERO SECTION */
 
 .hero-section {
@@ -177,7 +183,7 @@ h1 {
   font-size: 4.5em;
   font-weight: lighter;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .hero-section p {
@@ -194,7 +200,39 @@ h1 {
 
 /* TRENDING SECTION */
 
-/* ARTICLE SECTION */
+.trending-articles {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.trending-articles h3 {
+  font-size: 0.5em;
+  margin-left: 1%;
+}
+
+.trending-articles article {
+  width: 30%;
+}
+
+.article-number {
+  font-size: 1.5em;
+  color: var(--tertiary-color);
+  margin-right: 5%;
+  font-weight: bold;
+  margin-top: 2.5%;
+}
+
+.trending-articles h2 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.article-infos a {
+  font-weight: bolder;
+  width: 100%;
+}
+
+/* LATEST ARTICLE SECTION */
 
 /* ASIDE */
 
