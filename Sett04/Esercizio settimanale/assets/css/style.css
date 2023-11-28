@@ -75,6 +75,18 @@ header a {
   color: var(--secondary-color);
 }
 
+.trending-articles a,
+.latest-articles a {
+  color: var(--secondary-color);
+}
+
+.latest-articles a p:last-of-type,
+.latest-articles .left p,
+.latest-articles .left a, 
+aside a, footer a {
+  color: var(--text-color);
+}
+
 /* HEADER */
 
 /* HERO SECTION */
@@ -84,10 +96,6 @@ h1 {
 }
 
 /* TRENDING SECTION */
-
-.trending-articles a {
-  color: var(--secondary-color);
-}
 
 /* ARTICLE SECTION */
 
