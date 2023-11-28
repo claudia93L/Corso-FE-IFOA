@@ -1,3 +1,7 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Ledger&display=swap');
+
 html,
 body {
   margin: 0;
@@ -5,4 +9,43 @@ body {
   box-sizing: border-box;
   font-size: 1.2em;
   line-height: 1.2em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --primary-color: #fec016;
+  --secondary-color: #000000;
+  --tertiary-color: #f2f2f2;
+  --text-color: #6b6b6b;
+}
+
+/* COMMON */
+
+.button-cta {
+}
+
+.left {
+}
+
+.right {
+}
+
+.row-alignment {
+}
+
+.column-alignment {
+}
+
+.bg-yellow {
+}
+
+.profile-img {
+}
+
+/* HEADER */
+
+/* HERO SECTION */
+
+h1 {
+  font-family: 'Ledger', serif;
 }
