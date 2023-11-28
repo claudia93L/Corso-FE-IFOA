@@ -161,6 +161,15 @@ header a {
   flex-direction: column;
   justify-content: space-around;
   padding: 60px 0;
+  width: 60%;
+}
+
+.hero-section .right {
+  max-width: 40%;
+}
+
+.hero-section svg {
+  width: 100%;
 }
 
 h1 {
@@ -173,7 +182,7 @@ h1 {
 
 .hero-section p {
   font-size: 0.8em;
-  width: 35%;
+  width: 55%;
   margin-bottom: 50px;
   line-height: 1em;
 }
