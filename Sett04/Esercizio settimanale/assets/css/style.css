@@ -19,6 +19,15 @@ body {
   --text-color: #6b6b6b;
 }
 
+.container {
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 /* COMMON */
 
 .button-cta {
@@ -31,12 +40,15 @@ body {
 }
 
 .row-alignment {
+  flex-direction: row;
 }
 
 .column-alignment {
+  flex-direction: column;
 }
 
 .bg-yellow {
+  background-color: var(--primary-color);
 }
 
 .profile-img {
