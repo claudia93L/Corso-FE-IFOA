@@ -29,6 +29,10 @@ body {
   width: 100%;
 }
 
+.container-margins {
+  margin: 0 10%;
+}
+
 /* COMMON */
 
 .button-cta {
@@ -64,10 +68,8 @@ ul {
 }
 
 .row-alignment {
-  flex-direction: row;
   display: flex;
   flex-direction: row;
-  
 }
 
 .wrap {
@@ -109,9 +111,9 @@ a {
 
 /* HEADER */
 header {
-  margin-left: 180px;
-  margin-right: 180px;
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 20px 0px;
 }
 
@@ -120,20 +122,15 @@ header a {
 }
 
 .logo-img {
-  width: 30%;
+  width: 20%;
 }
 
 .logo-img img {
   max-width: 100%;
 }
 
-.w-80 {
-  width: 80vw;
-}
-
 .navbar {
-  width: 70%;
-  margin-right: 180px;
+  width: 80%;
 }
 
 .navbar ul {
@@ -144,7 +141,7 @@ header a {
 }
 
 .navbar li {
-  margin-right: 20px;
+  margin-right: 2%;
 }
 
 .navbar li a {
@@ -159,7 +156,7 @@ header a {
 }
 
 .hero-section .left {
-  margin-left: 180px;
+  margin-left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -168,7 +165,7 @@ header a {
 
 h1 {
   font-family: 'Ledger', serif;
-  font-size: 4em;
+  font-size: 4.5em;
   font-weight: lighter;
   letter-spacing: -2px;
   margin-bottom: 30px;
@@ -177,10 +174,13 @@ h1 {
 .hero-section p {
   font-size: 0.8em;
   width: 35%;
+  margin-bottom: 50px;
+  line-height: 1em;
 }
 
 .hero-section a {
   font-size: 0.7em;
+  margin-bottom: 20px;
 }
 
 /* TRENDING SECTION */
