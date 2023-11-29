@@ -156,8 +156,19 @@ header a {
 
 .article-specs p,
 .trending-articles {
-  margin-top: 0;
   font-size: 0.6em;
+}
+
+.article-specs img {
+  width: 5%;
+}
+
+.article-specs {
+  margin-top: 0;
+}
+
+.article-specs img {
+  margin-left: 1%;
 }
 
 /* HERO SECTION */
