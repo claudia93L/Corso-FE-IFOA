@@ -300,6 +300,10 @@ footer ul {
   margin-right: 60px;
 }
 
+.bookmark {
+  cursor: pointer;
+}
+
 /* ASIDE */
 
 /* FOOTER */
