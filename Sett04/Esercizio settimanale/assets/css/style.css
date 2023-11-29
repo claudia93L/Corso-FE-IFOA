@@ -225,7 +225,7 @@ h1 {
   color: var(--tertiary-color);
   margin-right: 5%;
   font-weight: bold;
-  margin-top: 2.5%;
+/*   margin-top: 2.5%; */
 }
 
 .trending-articles h2 {
