@@ -323,8 +323,28 @@ footer ul {
 
 /* ASIDE */
 
+aside {
+  border-bottom: 1px solid var(--tertiary-color);
+  padding-bottom: 20px;
+}
+
 aside h3 {
   font-size: 0.6em;
+  margin-top: 0;
+}
+
+aside .button-link {
+  border: 1px solid var(--tertiary-color);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 0.6em;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 /* FOOTER */
+
+footer a {
+  font-size: 0.6em;
+  margin-right: 16px;
+}
