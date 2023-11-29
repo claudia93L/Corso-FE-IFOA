@@ -8,7 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 1.2em;
-  line-height: 1.2em;
+  line-height: 0.8em;
   font-family: Helvetica, Arial, sans-serif;
   color: var(--secondary-color);
 }
@@ -235,6 +235,7 @@ h1 {
 
 .article-infos p {
   margin-left: 5px;
+  margin-bottom: 0;
 }
 
 /* LATEST ARTICLE SECTION */
