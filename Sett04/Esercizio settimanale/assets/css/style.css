@@ -284,11 +284,20 @@ footer ul {
 }
 
 .latest-articles article .img-right img {
-  width: 80%;
+  width: 100%;
+}
+
+.latest-articles article .img-right {
+  margin-left: 20px;
 }
 
 .latest-articles .gray-text {
   justify-content: space-between;
+}
+
+.latest-articles article {
+  margin-bottom: 30px;
+  margin-right: 60px;
 }
 
 /* ASIDE */
