@@ -260,6 +260,33 @@ h1 {
 
 /* LATEST ARTICLE SECTION */
 
+.latest-articles {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.latest-articles .col-left {
+  width: 70%;
+}
+
+.latest-articles .col-right  {
+  width: 30%;
+  
+}
+
+.latest-articles .article-infos {
+  width: 100%;
+}
+
+
+
+.latest-articles aside div:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
 /* ASIDE */
 
 /* FOOTER */
