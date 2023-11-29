@@ -86,7 +86,6 @@ ul {
 .profile-img {
   width: 20px;
   border-radius: 50%;
-  margin-right: 3%;
 }
 
 .trending-articles a,
@@ -105,7 +104,7 @@ ul {
 p,
 a,
 .article-infos span {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: lighter;
 }
 
@@ -154,9 +153,9 @@ header a {
   width: 100%;
 }
 
-.article-specs p,
+.trending-articles .article-specs p,
 .trending-articles {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .article-specs img {
@@ -247,12 +246,7 @@ h1 {
   margin: 0;
 }
 
-/* .article-infos {
-  display: flex;
-  align-items: center;
-} */
-
-.article-infos p {
+.trending-articles .article-infos p {
   display: flex;
   align-items: center;
   margin: 5px;
@@ -285,6 +279,7 @@ footer ul {
 
 .latest-articles article .img-right img {
   max-width: 100%;
+  vertical-align: baseline;
 }
 
 .latest-articles article .img-right {
@@ -304,6 +299,28 @@ footer ul {
   cursor: pointer;
 }
 
+.latest-articles h2 {
+  margin-top: 0;
+  font-size: 0.9em;
+}
+
+.latest-articles .article-infos .row-alignment p,
+.latest-articles .article-infos .row-alignment a {
+  font-size: 0.6em;
+}
+
+.latest-articles .article-infos .row-alignment p:not(.article-specs p) {
+  margin-left: 5px;
+}
+
+.latest-articles .article-infos p:nth-of-type(1):not(.article-specs p) {
+  font-size: 0.8em;
+}
+
 /* ASIDE */
+
+aside h3 {
+  font-size: 0.6em;
+}
 
 /* FOOTER */
