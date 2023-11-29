@@ -103,9 +103,14 @@ ul {
 }
 
 p,
-a {
-  font-size: 0.6em;
+a,
+.article-infos span {
+  font-size: 0.8em;
   font-weight: lighter;
+}
+
+.article-infos span {
+  margin: 0 2px;
 }
 
 /* HEADER */
@@ -149,9 +154,10 @@ header a {
   width: 100%;
 }
 
-.article-specs p {
+.article-specs p,
+.trending-articles {
   margin-top: 0;
-  font-size: 0.5em;
+  font-size: 0.6em;
 }
 
 /* HERO SECTION */
@@ -227,9 +233,8 @@ h1 {
   margin: 0;
 }
 
-.article-infos a {
-  font-weight: bolder;
-  width: 100%;
+.article-infos p {
+  margin-left: 5px;
 }
 
 /* LATEST ARTICLE SECTION */
