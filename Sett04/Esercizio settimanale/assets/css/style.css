@@ -209,15 +209,18 @@ h1 {
 .trending-articles {
   margin-top: 30px;
   width: 100%;
+  margin-bottom: 60px;
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .trending-articles h3 {
-  font-size: 0.5em;
+  font-size: 0.7em;
   margin-left: 1%;
 }
 
 .trending-articles article {
   width: 30%;
+  margin-bottom: 30px;
 }
 
 .article-number {
@@ -225,7 +228,7 @@ h1 {
   color: var(--tertiary-color);
   margin-right: 5%;
   font-weight: bold;
-/*   margin-top: 2.5%; */
+  margin-top: 1%;
 }
 
 .trending-articles h2 {
@@ -233,9 +236,15 @@ h1 {
   margin: 0;
 }
 
+/* .article-infos {
+  display: flex;
+  align-items: center;
+} */
+
 .article-infos p {
-  margin-left: 5px;
-  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }
 
 /* LATEST ARTICLE SECTION */
