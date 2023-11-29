@@ -277,12 +277,19 @@ h1 {
   width: 100%;
 }
 
-.latest-articles aside div:first-of-type, footer ul {
+.latest-articles aside div:first-of-type,
+footer ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-.latest-articles 
+.latest-articles article .img-right img {
+  width: 80%;
+}
+
+.latest-articles .gray-text {
+  justify-content: space-between;
+}
 
 /* ASIDE */
 
