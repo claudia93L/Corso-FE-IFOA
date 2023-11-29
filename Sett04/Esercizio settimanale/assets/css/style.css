@@ -269,23 +269,20 @@ h1 {
   width: 70%;
 }
 
-.latest-articles .col-right  {
+.latest-articles .col-right {
   width: 30%;
-  
 }
 
 .latest-articles .article-infos {
   width: 100%;
 }
 
-
-
-.latest-articles aside div:first-of-type {
+.latest-articles aside div:first-of-type, footer ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-
+.latest-articles 
 
 /* ASIDE */
 
