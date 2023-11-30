@@ -1,4 +1,10 @@
 $textColor: #f4f4f4;
-$buttonColors: #0e6cff, #ff8700, #4caf50;
+
+$buttonColors: (
+  primary: #0e6cff,
+  secondary: #ff8700,
+  tertiary: #4caf50,
+);
+
 $backgroundColorHero: #640fc5;
 $secondaryColor: #292929;

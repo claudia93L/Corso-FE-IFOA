@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 html,
 body {
@@ -8,40 +7,123 @@ body {
   font-size: 1.2em;
 }
 
-/* 
-Questa riga inizia un ciclo @each che itera attraverso ogni elemento nella lista $buttonColors. 
+.d-block {
+  display: block;
+}
 
-La variabile $color è una variabile temporanea utilizzata all'interno del ciclo @each. Nel ciclo, @each $color in $buttonColors indica che $color rappresenterà ogni elemento della lista $buttonColors durante ogni iterazione del ciclo.
+.d-inline {
+  display: inline;
+}
 
-Quindi, nel primo ciclo, $color sarà uguale a #0e6cff, nel secondo ciclo sarà uguale a #ff8700, e nel terzo ciclo sarà uguale a #4caf50. Questo consente di eseguire operazioni o applicare stili dinamicamente a ciascun colore all'interno della lista. La variabile $color è specifica per il contesto del ciclo e assume il valore di ogni elemento della lista durante ogni iterazione.
-*/
-/*
-  Per ogni colore nella lista, stai creando una variabile $class-name che combina la stringa "button-" con l'indice del colore all'interno della lista. Questo assicura la creazione di nomi di classe unici per ogni colore.
-  */
-.button-1 {
-  /*  
-  All'interno del ciclo, stai utilizzando la variabile $class-name per definire una regola di stile per ogni colore. In questo esempio, stai impostando il colore di sfondo del bottone sul colore corrente all'interno del ciclo. Puoi aggiungere altri stili o proprietà CSS qui a seconda dei tuoi requisiti. 
-  */
+.padding-block-sm {
+  padding: sm;
+  display: block;
+}
+
+.margin-block-sm {
+  margin: sm;
+  display: block;
+}
+
+.padding-inline-sm {
+  padding: sm;
+  display: inline;
+}
+
+.margin-inline-sm {
+  margin: sm;
+  display: inline;
+}
+
+.padding-block-md {
+  padding: md;
+  display: block;
+}
+
+.margin-block-md {
+  margin: md;
+  display: block;
+}
+
+.padding-inline-md {
+  padding: md;
+  display: inline;
+}
+
+.margin-inline-md {
+  margin: md;
+  display: inline;
+}
+
+.padding-block-lg {
+  padding: lg;
+  display: block;
+}
+
+.margin-block-lg {
+  margin: lg;
+  display: block;
+}
+
+.padding-inline-lg {
+  padding: lg;
+  display: inline;
+}
+
+.margin-inline-lg {
+  margin: lg;
+  display: inline;
+}
+
+.padding-block-xl {
+  padding: xl;
+  display: block;
+}
+
+.margin-block-xl {
+  margin: xl;
+  display: block;
+}
+
+.padding-inline-xl {
+  padding: xl;
+  display: inline;
+}
+
+.margin-inline-xl {
+  margin: xl;
+  display: inline;
+}
+
+.padding-block-xxl {
+  padding: xxl;
+  display: block;
+}
+
+.margin-block-xxl {
+  margin: xxl;
+  display: block;
+}
+
+.padding-inline-xxl {
+  padding: xxl;
+  display: inline;
+}
+
+.margin-inline-xxl {
+  margin: xxl;
+  display: inline;
+}
+
+.btn-primary {
   background-color: #0e6cff;
 }
 
-/*
-  Per ogni colore nella lista, stai creando una variabile $class-name che combina la stringa "button-" con l'indice del colore all'interno della lista. Questo assicura la creazione di nomi di classe unici per ogni colore.
-  */
-.button-2 {
-  /*  
-  All'interno del ciclo, stai utilizzando la variabile $class-name per definire una regola di stile per ogni colore. In questo esempio, stai impostando il colore di sfondo del bottone sul colore corrente all'interno del ciclo. Puoi aggiungere altri stili o proprietà CSS qui a seconda dei tuoi requisiti. 
-  */
+.btn-secondary {
   background-color: #ff8700;
 }
 
-/*
-  Per ogni colore nella lista, stai creando una variabile $class-name che combina la stringa "button-" con l'indice del colore all'interno della lista. Questo assicura la creazione di nomi di classe unici per ogni colore.
-  */
-.button-3 {
-  /*  
-  All'interno del ciclo, stai utilizzando la variabile $class-name per definire una regola di stile per ogni colore. In questo esempio, stai impostando il colore di sfondo del bottone sul colore corrente all'interno del ciclo. Puoi aggiungere altri stili o proprietà CSS qui a seconda dei tuoi requisiti. 
-  */
+.btn-tertiary {
   background-color: #4caf50;
 }
 
@@ -54,4 +136,7 @@ body {
 }
 .showcase-content h1 {
   color: #f4f4f4;
+}
+.showcase-content button {
+  border: none;
 }/*# sourceMappingURL=style.css.map */
