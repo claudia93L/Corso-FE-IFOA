@@ -1,0 +1,70 @@
+div h1 {
+  color: darkblue;
+}
+div h1:hover {
+  text-transform: uppercase;
+}
+div h1::after {
+  content: " - aggiunto con ::after";
+  color: darkred;
+}
+div p {
+  font-size: 1.2em;
+}
+
+h2 {
+  color: red;
+  text-decoration: underline;
+}
+
+button {
+  border: 2px solid green;
+  color: green;
+  background-color: #fff;
+  border-radius: 30px;
+}
+button:hover {
+  border: 2px solid blue;
+  color: blue;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+div h3, div p {
+  background-color: green;
+  color: #fff;
+  text-decoration: underline;
+}
+.div-if h4 {
+  color: red;
+}
+.div-if h5 {
+  color: darkblue;
+}
+.div-if .div-each h6 {
+  font-size: 30px;
+}
+.div-if .div-each h6 {
+  font-size: 30px;
+}
+.div-if .div-each h6 {
+  font-size: 30px;
+}
+.div-if .div-each h6 {
+  font-size: 50px;
+}
+.div-if .div-each h6 {
+  font-size: 50px;
+}
+.div-if .div-each h6 {
+  font-size: 50px;
+}
+.div-if .div-each h6 {
+  font-size: 80px;
+}
+.div-if .div-each h6 {
+  font-size: 80px;
+}
+.div-if .div-each h6 {
+  font-size: 80px;
+}/*# sourceMappingURL=style.css.map */

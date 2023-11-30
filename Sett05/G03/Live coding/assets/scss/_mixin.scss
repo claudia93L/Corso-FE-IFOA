@@ -1,0 +1,27 @@
+@import 'variables';
+
+@mixin stileRosso {
+  color: red;
+  text-decoration: underline;
+}
+
+@mixin conParametro($parametro) {
+  border: 2px solid $parametro;
+  color: $parametro;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+@mixin conInterpolazione($type, $color, $colorTwo) {
+  background-#{$type}: $color;
+  color: $colorTwo;
+}
+
+@mixin stileDiv($active: false, $colore) {
+  @if $active {
+    color: $colore;
+  } @else {
+    color: red;
+  }
+}
+

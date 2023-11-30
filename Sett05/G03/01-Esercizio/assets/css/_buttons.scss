@@ -1,0 +1,23 @@
+/* 
+Questa riga inizia un ciclo @each che itera attraverso ogni elemento nella lista $buttonColors. 
+
+La variabile $color è una variabile temporanea utilizzata all'interno del ciclo @each. Nel ciclo, @each $color in $buttonColors indica che $color rappresenterà ogni elemento della lista $buttonColors durante ogni iterazione del ciclo.
+
+Quindi, nel primo ciclo, $color sarà uguale a #0e6cff, nel secondo ciclo sarà uguale a #ff8700, e nel terzo ciclo sarà uguale a #4caf50. Questo consente di eseguire operazioni o applicare stili dinamicamente a ciascun colore all'interno della lista. La variabile $color è specifica per il contesto del ciclo e assume il valore di ogni elemento della lista durante ogni iterazione.
+*/
+@each $color in $buttonColors {
+  /*
+    Per ogni colore nella lista, stai creando una variabile $class-name che combina la stringa "button-" con l'indice del colore all'interno della lista. Questo assicura la creazione di nomi di classe unici per ogni colore.
+    */
+  $class-name: button-#{index(
+      $buttonColors,
+      $color
+    )}; // Genera un nome di classe unico
+  .#{$class-name} {
+    /*  
+   All'interno del ciclo, stai utilizzando la variabile $class-name per definire una regola di stile per ogni colore. In questo esempio, stai impostando il colore di sfondo del bottone sul colore corrente all'interno del ciclo. Puoi aggiungere altri stili o proprietà CSS qui a seconda dei tuoi requisiti. 
+   */
+    background-color: $color;
+    // Altri stili dei tuoi bottoni
+  }
+}

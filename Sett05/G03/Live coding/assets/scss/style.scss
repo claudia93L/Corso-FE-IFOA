@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixin.scss';
+
+div {
+  h1 {
+    color: $primary-color;
+    &:hover {
+      text-transform: uppercase;
+    }
+    &::after {
+      content: ' - aggiunto con ::after';
+      color: darkred;
+    }
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+
+h2 {
+  @include stileRosso;
+}
+
+button {
+  @include conParametro(green);
+  &:hover {
+    @include conParametro(blue);
+  }
+}
+
+div {
+  h3 {
+    @include conInterpolazione(color, green, #fff);
+    text-decoration: underline;
+  }
+  p {
+    @extend h3;
+  }
+}
+
+.div-if {
+  h4 {
+    @include stileDiv(false, darkgreen);
+  }
+
+  h5 {
+    @include stileDiv(true, $primary-color);
+  }
+
+  @each $misura in $misure {
+    .div-each {
+        h6 {
+            font-size: $misura;
+        }
+        h6 {
+            font-size: $misura;
+        }
+        h6 {
+            font-size: $misura;
+        }
+        
+
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin floating($value1, $value2, $value3, $value4, $borderColor) {
+  border-radius: 30px;
+  box-shadow: $value1 $value2 $value3 $value4 rgba(0, 0, 0, 0.1);
+  /* box-shadow: 9px 10px 7px -2px rgba(0, 0, 0, 0.1); */
+  border: 1px solid $borderColor;
+}
+
+@mixin grid($nElementi) {
+  display: flex;
+  flex-wrap: wrap;
+}

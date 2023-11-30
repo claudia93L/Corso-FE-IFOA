@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
+/* 
+Questa riga inizia un ciclo @each che itera attraverso ogni elemento nella lista $buttonColors. 
+
+La variabile $color è una variabile temporanea utilizzata all'interno del ciclo @each. Nel ciclo, @each $color in $buttonColors indica che $color rappresenterà ogni elemento della lista $buttonColors durante ogni iterazione del ciclo.
+
+Quindi, nel primo ciclo, $color sarà uguale a #0e6cff, nel secondo ciclo sarà uguale a #ff8700, e nel terzo ciclo sarà uguale a #4caf50. Questo consente di eseguire operazioni o applicare stili dinamicamente a ciascun colore all'interno della lista. La variabile $color è specifica per il contesto del ciclo e assume il valore di ogni elemento della lista durante ogni iterazione.
+*/
+/*
+  Per ogni colore nella lista, stai creando una variabile $class-name che combina la stringa "button-" con l'indice del colore all'interno della lista. Questo assicura la creazione di nomi di classe unici per ogni colore.
+  */
+.button-1 {
+  /*  
+  All'interno del ciclo, stai utilizzando la variabile $class-name per definire una regola di stile per ogni colore. In questo esempio, stai impostando il colore di sfondo del bottone sul colore corrente all'interno del ciclo. Puoi aggiungere altri stili o proprietà CSS qui a seconda dei tuoi requisiti. 
+  */
+  background-color: #0e6cff;
+}
+
+/*
+  Per ogni colore nella lista, stai creando una variabile $class-name che combina la stringa "button-" con l'indice del colore all'interno della lista. Questo assicura la creazione di nomi di classe unici per ogni colore.
+  */
+.button-2 {
+  /*  
+  All'interno del ciclo, stai utilizzando la variabile $class-name per definire una regola di stile per ogni colore. In questo esempio, stai impostando il colore di sfondo del bottone sul colore corrente all'interno del ciclo. Puoi aggiungere altri stili o proprietà CSS qui a seconda dei tuoi requisiti. 
+  */
+  background-color: #ff8700;
+}
+
+/*
+  Per ogni colore nella lista, stai creando una variabile $class-name che combina la stringa "button-" con l'indice del colore all'interno della lista. Questo assicura la creazione di nomi di classe unici per ogni colore.
+  */
+.button-3 {
+  /*  
+  All'interno del ciclo, stai utilizzando la variabile $class-name per definire una regola di stile per ogni colore. In questo esempio, stai impostando il colore di sfondo del bottone sul colore corrente all'interno del ciclo. Puoi aggiungere altri stili o proprietà CSS qui a seconda dei tuoi requisiti. 
+  */
+  background-color: #4caf50;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.showcase-content {
+  background-color: #640fc5;
+}
+.showcase-content h1 {
+  color: #f4f4f4;
+}/*# sourceMappingURL=style.css.map */

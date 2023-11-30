@@ -1,0 +1,18 @@
+@import 'reset';
+@import 'colors';
+@import 'font';
+@import 'spacing';
+@import 'buttons';
+@import 'mixins';
+@import 'animations';
+
+body {
+  font-family: $fontFamily;
+}
+
+.showcase-content {
+  background-color: $backgroundColorHero;
+  h1 {
+    @include bigTitle;
+  }
+}
