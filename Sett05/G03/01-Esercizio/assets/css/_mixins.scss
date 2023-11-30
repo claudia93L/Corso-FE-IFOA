@@ -12,5 +12,6 @@
 
 @mixin grid($nElementi) {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }

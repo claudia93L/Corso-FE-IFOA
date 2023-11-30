@@ -10,25 +10,63 @@ body {
   font-family: $fontFamily;
 }
 
-.showcase-content {
-  background-color: $backgroundColorHero;
-  h1 {
-    @include bigTitle;
-  }
-  button {
-    border: none;
-  }
-  img {
-    @include floating($borderColor: $textColor);
+body,
+header,
+main {
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    li {
+      margin-left: 10px;
+
+      a {
+        text-decoration: none;
+        color: $secondaryColor;
+      }
+    }
   }
 }
 
+.showcase-content {
+  background-color: $backgroundColorHero;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
+  h1 {
+    @include bigTitle;
+  }
+  div {
+    width: 70vw;
+  }
+
+  button {
+    border: none;
+    border-radius: 30px;
+    padding: 8px 16px;
+    margin-right: 5%;
+  }
+
+  img {
+    @include floating($borderColor: $textColor);
+    width: 30vw;
+  }
+}
 .line-4 {
   img {
-    @include floating(5px, 5px, 10px, -2px); 
+    @include floating(5px, 5px, 10px, -2px);
     border: none;
   }
+  @include grid(3);
 }
 
 /* .container {
