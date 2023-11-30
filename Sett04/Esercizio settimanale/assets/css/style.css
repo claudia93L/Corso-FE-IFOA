@@ -120,7 +120,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: var(--primary-color);
+  transition: all 0.3s;
 }
 
 header a,
