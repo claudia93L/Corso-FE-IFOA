@@ -19,3 +19,12 @@ body {
     border: none;
   }
 }
+
+.container {
+    @include grid(3); // Ad esempio, 3 elementi per linea
+  }
+  
+  // Altri stili per gli elementi figli, se necessario
+  .container > div {
+    // Stili degli elementi figli della griglia
+  }

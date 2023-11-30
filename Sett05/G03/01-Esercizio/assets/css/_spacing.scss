@@ -4,34 +4,34 @@ $display: (
 );
 
 $screenSizes: (
-  sm: sm,
-  md: md,
-  lg: lg,
-  xl: xl,
-  xxl: xxl,
+  normal: 5px,
+  sm: 10px,
+  md: 20px,
+  lg: 30px,
+  xl: 40px,
+  xxl: 50px,
 );
 
 //creo dinamicamente le classi d-block e d-inline
 @each $key, $value in $display {
-  .d-#{$key} {
+  .display-#{$key} {
     display: $value;
   }
 }
 
 //creo dinamicamente le classi per lo screen size
 @each $size-key, $size-value in $screenSizes {
-    @each $display-key, $display-value in $display {
-      // Classi per il padding
-      .padding-#{$display-key}-#{$size-key} {
-        padding: $size-value;
-        display: $display-value;
-      }
-  
-      // Classi per i margini
-      .margin-#{$display-key}-#{$size-key} {
-        margin: $size-value;
-        display: $display-value;
-      }
+  @each $display-key, $display-value in $display {
+    // Classi per il padding
+    .padding-#{$display-key}-#{$size-key} {
+      padding: $size-value;
+      display: $display-value;
+    }
+
+    // Classi per i margini
+    .margin-#{$display-key}-#{$size-key} {
+      margin: $size-value;
+      display: $display-value;
     }
   }
-  
+}

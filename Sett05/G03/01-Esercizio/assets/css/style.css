@@ -7,111 +7,131 @@ body {
   font-size: 1.2em;
 }
 
-.d-block {
+.display-block {
   display: block;
 }
 
-.d-inline {
+.display-inline {
+  display: inline;
+}
+
+.padding-block-normal {
+  padding: 5px;
+  display: block;
+}
+
+.margin-block-normal {
+  margin: 5px;
+  display: block;
+}
+
+.padding-inline-normal {
+  padding: 5px;
+  display: inline;
+}
+
+.margin-inline-normal {
+  margin: 5px;
   display: inline;
 }
 
 .padding-block-sm {
-  padding: sm;
+  padding: 10px;
   display: block;
 }
 
 .margin-block-sm {
-  margin: sm;
+  margin: 10px;
   display: block;
 }
 
 .padding-inline-sm {
-  padding: sm;
+  padding: 10px;
   display: inline;
 }
 
 .margin-inline-sm {
-  margin: sm;
+  margin: 10px;
   display: inline;
 }
 
 .padding-block-md {
-  padding: md;
+  padding: 20px;
   display: block;
 }
 
 .margin-block-md {
-  margin: md;
+  margin: 20px;
   display: block;
 }
 
 .padding-inline-md {
-  padding: md;
+  padding: 20px;
   display: inline;
 }
 
 .margin-inline-md {
-  margin: md;
+  margin: 20px;
   display: inline;
 }
 
 .padding-block-lg {
-  padding: lg;
+  padding: 30px;
   display: block;
 }
 
 .margin-block-lg {
-  margin: lg;
+  margin: 30px;
   display: block;
 }
 
 .padding-inline-lg {
-  padding: lg;
+  padding: 30px;
   display: inline;
 }
 
 .margin-inline-lg {
-  margin: lg;
+  margin: 30px;
   display: inline;
 }
 
 .padding-block-xl {
-  padding: xl;
+  padding: 40px;
   display: block;
 }
 
 .margin-block-xl {
-  margin: xl;
+  margin: 40px;
   display: block;
 }
 
 .padding-inline-xl {
-  padding: xl;
+  padding: 40px;
   display: inline;
 }
 
 .margin-inline-xl {
-  margin: xl;
+  margin: 40px;
   display: inline;
 }
 
 .padding-block-xxl {
-  padding: xxl;
+  padding: 50px;
   display: block;
 }
 
 .margin-block-xxl {
-  margin: xxl;
+  margin: 50px;
   display: block;
 }
 
 .padding-inline-xxl {
-  padding: xxl;
+  padding: 50px;
   display: inline;
 }
 
 .margin-inline-xxl {
-  margin: xxl;
+  margin: 50px;
   display: inline;
 }
 
@@ -139,4 +159,9 @@ body {
 }
 .showcase-content button {
   border: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
