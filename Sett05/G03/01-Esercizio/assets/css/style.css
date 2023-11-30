@@ -16,122 +16,122 @@ body {
 }
 
 .padding-block-normal {
-  padding: 5px;
+  padding: 10px;
   display: block;
 }
 
 .margin-block-normal {
-  margin: 5px;
+  margin: 10px;
   display: block;
 }
 
 .padding-inline-normal {
-  padding: 5px;
+  padding: 10px;
   display: inline;
 }
 
 .margin-inline-normal {
-  margin: 5px;
+  margin: 10px;
   display: inline;
 }
 
 .padding-block-sm {
-  padding: 10px;
+  padding: 20px;
   display: block;
 }
 
 .margin-block-sm {
-  margin: 10px;
+  margin: 20px;
   display: block;
 }
 
 .padding-inline-sm {
-  padding: 10px;
+  padding: 20px;
   display: inline;
 }
 
 .margin-inline-sm {
-  margin: 10px;
+  margin: 20px;
   display: inline;
 }
 
 .padding-block-md {
-  padding: 20px;
+  padding: 30px;
   display: block;
 }
 
 .margin-block-md {
-  margin: 20px;
+  margin: 30px;
   display: block;
 }
 
 .padding-inline-md {
-  padding: 20px;
+  padding: 30px;
   display: inline;
 }
 
 .margin-inline-md {
-  margin: 20px;
+  margin: 30px;
   display: inline;
 }
 
 .padding-block-lg {
-  padding: 30px;
+  padding: 40px;
   display: block;
 }
 
 .margin-block-lg {
-  margin: 30px;
+  margin: 40px;
   display: block;
 }
 
 .padding-inline-lg {
-  padding: 30px;
+  padding: 40px;
   display: inline;
 }
 
 .margin-inline-lg {
-  margin: 30px;
+  margin: 40px;
   display: inline;
 }
 
 .padding-block-xl {
-  padding: 40px;
+  padding: 60px;
   display: block;
 }
 
 .margin-block-xl {
-  margin: 40px;
+  margin: 60px;
   display: block;
 }
 
 .padding-inline-xl {
-  padding: 40px;
+  padding: 60px;
   display: inline;
 }
 
 .margin-inline-xl {
-  margin: 40px;
+  margin: 60px;
   display: inline;
 }
 
 .padding-block-xxl {
-  padding: 50px;
+  padding: 80px;
   display: block;
 }
 
 .margin-block-xxl {
-  margin: 50px;
+  margin: 80px;
   display: block;
 }
 
 .padding-inline-xxl {
-  padding: 50px;
+  padding: 80px;
   display: inline;
 }
 
 .margin-inline-xxl {
-  margin: 50px;
+  margin: 80px;
   display: inline;
 }
 
