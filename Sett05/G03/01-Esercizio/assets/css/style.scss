@@ -18,13 +18,24 @@ body {
   button {
     border: none;
   }
+  img {
+    @include floating($borderColor: $textColor);
+  }
 }
 
-.container {
+
+.line-4 {
+  img {
+    @include floating(5px, 5px, 10px, -2px); 
+    border: none;
+  }
+}
+
+/* .container {
     @include grid(3); // Ad esempio, 3 elementi per linea
   }
   
   // Altri stili per gli elementi figli, se necessario
   .container > div {
     // Stili degli elementi figli della griglia
-  }
+  } */
