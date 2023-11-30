@@ -49,13 +49,6 @@ nav {
     width: 70vw;
   }
 
-  button {
-    border: none;
-    border-radius: 30px;
-    padding: 8px 16px;
-    margin-right: 5%;
-  }
-
   img {
     @include floating($borderColor: $textColor);
     width: 30vw;
@@ -66,14 +59,6 @@ nav {
     @include floating(5px, 5px, 10px, -2px);
     border: none;
   }
+
   @include grid(3);
 }
-
-/* .container {
-    @include grid(3); // Ad esempio, 3 elementi per linea
-  }
-  
-  // Altri stili per gli elementi figli, se necessario
-  .container > div {
-    // Stili degli elementi figli della griglia
-  } */

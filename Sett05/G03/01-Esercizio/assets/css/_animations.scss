@@ -1,0 +1,3 @@
+@mixin fadeInTop($durata, $inizio, $fine, $delay, $nome) {
+  animation: $durata $nome;
+}
