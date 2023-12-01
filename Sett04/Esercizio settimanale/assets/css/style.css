@@ -8,7 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 1.2em;
-  line-height: 0.8em;
+  line-height: 1em;
   font-family: Helvetica, Arial, sans-serif;
   color: var(--secondary-color);
 }
@@ -123,9 +123,9 @@ header {
   transition: all 0.3s; 
 }
 
-.bg-scroll {
+/* .bg-scroll {
   background-color: #FFF !important;
-}
+} */
 
 header a,
 .hero-section a {
