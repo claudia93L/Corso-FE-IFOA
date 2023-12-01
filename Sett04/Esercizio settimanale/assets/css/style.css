@@ -18,6 +18,7 @@ body {
   --secondary-color: #000000;
   --tertiary-color: #f2f2f2;
   --text-color: #6b6b6b;
+  --button-scroll-color: #1b8917;
 }
 
 .container {
@@ -123,10 +124,6 @@ header {
   transition: all 0.3s; 
 }
 
-/* .bg-scroll {
-  background-color: #FFF !important;
-} */
-
 header a,
 .hero-section a {
   color: var(--secondary-color);
@@ -175,6 +172,10 @@ header a,
 .article-specs {
   margin-top: 0;
   width: 100%;
+}
+
+.button-header-scroll {
+  background-color: var(--button-scroll-color);
 }
 
 /* HERO SECTION */
