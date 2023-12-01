@@ -1,16 +1,20 @@
+button {
+  display: inline-block;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 // Usiamo @each per creare classi di colore
 @each $color-name, $color-value in $buttonColors {
-    .btn-#{$color-name} {
-      background-color: $color-value;
-      // Altri stili, se necessario
-    }
+  .btn-#{$color-name} {
+    background-color: $color-value;
+    color: $textColor;
   }
-
-  button {
-    border: none;
-    border-radius: 30px;
-    padding: 8px 16px;
-    margin-right: 5%;
-  }
-
-  
+}

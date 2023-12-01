@@ -1,7 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+h2,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin-top: 0;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
   font-size: 1.2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
 }

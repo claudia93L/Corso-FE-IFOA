@@ -1,15 +1,18 @@
+$padding-default: 20px;
+$margin-default: 0 auto;
+
 $display: (
   block: block,
   inline: inline,
 );
 
 $screenSizes: (
-  normal: 10px,
-  sm: 20px,
-  md: 30px,
-  lg: 40px,
-  xl: 60px,
-  xxl: 80px,
+  sm: 12px,
+  normal: 16px,
+  md: 24px,
+  lg: 36px,
+  xl: 48px,
+  xxl: 160px,
 );
 
 //creo dinamicamente le classi d-block e d-inline

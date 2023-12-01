@@ -8,3 +8,20 @@ $buttonColors: (
 
 $backgroundColorHero: #640fc5;
 $secondaryColor: #292929;
+
+// versione alternativa. per richiamare i colori, dovremo scrivere --> map-get($setColors, buttonColorsPrimary)
+$setColors: (
+  $textColor: #f4f4f4,
+  $buttonColorsPrimary: #0e6cff,
+  $buttonColorsSecondary: #ff8700,
+  $buttonColorsTertiary: #4caf50,
+  $backgroundColorHero: #640fc5,
+  $secondaryColor: #292929,
+);
+
+// esempio di applicazione
+/* @mixin buttonColors($color) {
+  background-color: map-get($setColors, $color);
+  color: map-get($setColors, $textColor);
+}
+ */

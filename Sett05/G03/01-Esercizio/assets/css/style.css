@@ -1,10 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+h2,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin-top: 0;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-size: 1.2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .display-block {
@@ -135,25 +165,38 @@ body {
   display: inline;
 }
 
-.btn-primary {
-  background-color: #0e6cff;
-}
-
-.btn-secondary {
-  background-color: #ff8700;
-}
-
-.btn-tertiary {
-  background-color: #4caf50;
-}
-
 button {
   border: none;
   border-radius: 30px;
   padding: 8px 16px;
-  margin-right: 5%;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.1);
 }
 
+.btn-primary {
+  background-color: #0e6cff;
+  color: #f4f4f4;
+}
+
+.btn-secondary {
+  background-color: #ff8700;
+  color: #f4f4f4;
+}
+
+.btn-tertiary {
+  background-color: #4caf50;
+  color: #f4f4f4;
+}
+
+/* @mixin grid($nElementi) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+ */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -178,7 +221,6 @@ nav ul li {
   margin-left: 10px;
 }
 nav ul li a {
-  text-decoration: none;
   color: #292929;
 }
 
@@ -189,7 +231,11 @@ nav ul li a {
   justify-content: space-between;
 }
 .showcase-content h1 {
-  color: #f4f4f4;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 1rem;
+  color: #b4b4b4;
 }
 .showcase-content div {
   width: 70vw;
@@ -201,11 +247,6 @@ nav ul li a {
   width: 30vw;
 }
 
-.line-4 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 .line-4 img {
   border-radius: 30px;
   box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.1);
