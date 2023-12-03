@@ -277,6 +277,11 @@ h1 {
   width: 30%;
 }
 
+.sticky {
+  position: sticky;
+  top: 20%;
+}
+
 .latest-articles .article-infos {
   width: 100%;
 }
@@ -360,3 +365,5 @@ footer a {
   font-size: 0.6em;
   margin-right: 16px;
 }
+
+
