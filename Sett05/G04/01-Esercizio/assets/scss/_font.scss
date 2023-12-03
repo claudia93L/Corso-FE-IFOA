@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2em;
+}
+
+header {
+  font-size: 0.8em;
+}
+
+@mixin grayText {
+  font-size: 0.7em;
+  color: $gray;
+}
+

@@ -1,0 +1,49 @@
+aside {
+  i {
+    color: rgb(174, 111, 34);
+  }
+}
+
+header {
+  padding-left: 10px;
+  padding-right: 10px;
+  i {
+    color: $gray;
+  }
+  .cerchietto {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    z-index: 1;
+
+    &.violet {
+      background-color: $violet;
+      top: 0;
+      right: 0;
+    }
+
+    &.green {
+      background-color: $accent;
+      top: 40px;
+      right: 10px;
+    }
+  }
+}
+
+.card {
+  i {
+    color: $gray;
+  }
+
+  .ratings {
+    i,
+    p {
+      color: rgb(255, 149, 0);
+      font-size: 0.8em;
+    }
+  }
+
+  .bi-bar-chart-fill {
+    color: $violet;
+  }
+}

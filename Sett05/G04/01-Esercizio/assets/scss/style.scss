@@ -1,0 +1,93 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css');
+
+@import 'reset';
+@import 'colors';
+@import 'font';
+@import 'circle-icon';
+@import 'icons';
+@import 'buttons';
+
+main {
+  h2 {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .card-body a {
+    color: black;
+  }
+
+  .hero-section {
+    background-color: $violet;
+
+    .hero-content {
+      @extend .aside-content;
+      color: $white;
+      font-size: 0.8em;
+      p {
+        opacity: 0.4;
+      }
+      button {
+        font-size: 0.7em;
+        padding: 12px 24px;
+      }
+    }
+  }
+
+  aside {
+    background-color: $white;
+    .aside-content {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h6 {
+      margin-bottom: 0;
+      font-size: 0.8em;
+    }
+    p {
+      @include grayText;
+    }
+  }
+
+  .hero-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.card {
+  .card-title {
+    font-size: 0.8em;
+  }
+  p {
+    @include grayText;
+  }
+  ins {
+    color: black;
+    font-size: 1.2em;
+  }
+}
+
+.recommended-section,
+.most-popular-section,
+.trending-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+footer {
+  a {
+    color: $gray;
+  }
+    @include grayText;
+    
+    .footer-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

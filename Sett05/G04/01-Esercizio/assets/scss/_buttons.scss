@@ -1,0 +1,48 @@
+.custom-carousel-btn {
+  background-color: $violet;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 280px;
+}
+
+.custom-carousel-btn span {
+  width: 15px;
+}
+
+/* Posizionamento laterale del controllo precedente */
+.carousel-control-prev {
+  left: 100px;
+}
+
+/* Posizionamento laterale del controllo successivo */
+.carousel-control-next {
+  right: 100px;
+}
+
+.hero-section {
+  button {
+    border-radius: 5px;
+  }
+  .accent-btn {
+    background-color: $accent;
+    color: $white;
+    margin-right: 10px;
+  }
+  .secondary {
+    background-color: $white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Posizionamento laterale del controllo precedente */
+.carousel-control-prev {
+  left: 20px;
+}
+
+/* Posizionamento laterale del controllo successivo */
+.carousel-control-next {
+  right: 20px;
+}
+}

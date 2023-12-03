@@ -1,0 +1,21 @@
+.circle-icon {
+  width: 40px;
+  height: 40px;
+}
+
+header .circle-icon {
+  &:first-of-type {
+    margin-right: 10px;
+  }
+}
+
+aside .circle-icon {
+  background-color: rgb(255, 214, 164);
+}
+
+.card {
+  .rounded-circle {
+    width: 30px;
+    height: 30px;
+  }
+}
