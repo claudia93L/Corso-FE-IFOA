@@ -6,11 +6,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 1.2em;
-  color: #fff;
 }
 
 a {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -36,7 +34,11 @@ a {
 .navbar-nav .nav-link.show,
 .dropdown-toggle,
 .dropdown-toggle:hover,
-.dropdown-toggle.show {
+.dropdown-toggle.show,
+footer a:hover,
+header a,
+footer .social-media-section i:hover,
+footer .button-link a:hover {
   color: #fff;
 }
 
@@ -45,7 +47,8 @@ footer,
 footer li a,
 footer button,
 footer p,
-footer .button-link a {
+footer .button-link a,
+footer .social-media-section a {
   color: gray;
 }
 
@@ -83,7 +86,12 @@ header i {
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link .checked {
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.nav-item a:hover,
+header a:hover {
+  color: red;
 }
 
 /* FILTER SECTION */
