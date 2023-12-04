@@ -139,7 +139,7 @@ h2 {
 /* FOOTER */
 
 footer i {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 footer .social-media-section,
@@ -172,5 +172,5 @@ footer p {
 }
 
 footer .button-link {
-    --bs-border-color: gray;
+  --bs-border-color: gray;
 }
