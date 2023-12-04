@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+.navbar-brand {
+  width: 10%;
+}
+
+.navbar-brand img {
+  max-width: 100%;
+}
+
+.nav-item a, .navbar-nav i,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #fff;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  font-weight: 700;
+}
+
