@@ -40,6 +40,12 @@ a {
   color: #fff;
 }
 
+.squared i,
+footer {
+  font-size: 0.7em;
+  color: gray;
+}
+
 /* HEADER */
 
 header,
@@ -90,11 +96,6 @@ h1 {
   padding: 5px;
   display: flex;
   justify-content: center;
-}
-
-.squared i {
-  font-size: 0.7em;
-  color: gray;
 }
 
 /* MOVIES SECTION */
