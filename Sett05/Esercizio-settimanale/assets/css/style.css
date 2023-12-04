@@ -40,16 +40,16 @@ a {
   color: #fff;
 }
 
-section {
-  margin: 16px 0;
-}
-
 /* HEADER */
 
 header,
 .navbar .right {
   font-size: 0.7em;
   font-weight: 300;
+}
+
+header {
+  margin-bottom: 8px;
 }
 
 header .dropdown-menu,
@@ -124,5 +124,6 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  margin-top: 32px;
+  font-size: 0.9em;
 }
