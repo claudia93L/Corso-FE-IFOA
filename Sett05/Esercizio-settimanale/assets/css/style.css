@@ -41,8 +41,11 @@ a {
 }
 
 .squared i,
-footer {
-  font-size: 0.7em;
+footer,
+footer li a,
+footer button,
+footer p,
+footer .button-link a {
   color: gray;
 }
 
@@ -90,12 +93,16 @@ h1 {
 }
 
 .squared {
-  border: 1px solid #fff;
+  border: 1px solid gray;
   border-radius: 5px;
   width: 100%;
   padding: 5px;
   display: flex;
   justify-content: center;
+}
+
+.squared i {
+  font-size: 0.7em;
 }
 
 /* MOVIES SECTION */
@@ -127,4 +134,43 @@ h1 {
 h2 {
   margin-top: 32px;
   font-size: 0.9em;
+}
+
+/* FOOTER */
+
+footer i {
+  font-size: 1.4em;
+}
+
+footer .social-media-section,
+footer li,
+footer .button-link {
+  margin-bottom: 16px;
+}
+
+footer li,
+footer .button-link {
+  font-size: 0.6em;
+  text-wrap: nowrap;
+}
+
+footer .social-media-section i {
+  margin-right: 16px;
+}
+
+footer div,
+footer p {
+  width: fit-content;
+}
+
+.footer-content {
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.5em;
+}
+
+footer .button-link {
+    --bs-border-color: gray;
 }
