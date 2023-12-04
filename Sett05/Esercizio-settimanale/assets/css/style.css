@@ -11,27 +11,47 @@ a {
   text-decoration: none;
 }
 
-header {
+header,
+.navbar .right {
   font-size: 0.7em;
   font-weight: 300;
 }
 
-.navbar-brand {
+.dropdown-menu {
+  font-size: 1.2em;
+}
+
+.navbar-brand,
+.dropdown {
   width: 10%;
 }
 
-.navbar-brand img {
+.navbar-brand img,
+.dropdown img {
   max-width: 100%;
 }
 
-.nav-item a, .navbar-nav i,
+.nav-item a,
 .navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
+.navbar-nav .nav-link.show,
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle.show {
   color: #fff;
 }
 
 .navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
+.navbar-nav .nav-link .checked {
   font-weight: 700;
 }
 
+.btn {
+  border: none;
+}
+
+.dropdown-menu li:hover {
+  --bs-dropdown-link-hover-color: #fff;
+  --bs-dropdown-link-hover-bg: red;
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: red;
+}
