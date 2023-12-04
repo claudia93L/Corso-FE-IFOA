@@ -29,29 +29,160 @@
       <main>
         <section>
           <div class="container-fluid">
-            <div class="row">
-          <div class="profile-content">
-            <div class="row">
-              <h1>Edit Profile</h1>
-            </div>
-           
-            <div class="row d-flex flex-row">
-              <div class="profile-details border border-top-1 border-bottom-1 border-start-0 border-end-0">
-                <div class="left">
-                  <img src="assets/imgs/avatar.png" alt="Immagine profilo" />
+            <div class="row p-0">
+              <div class="row p-0">
+                <div class="col-4"></div>
+                <div class="col-4 p-0">
+                  <div class="row d-flex flex-column profile-content">
+                    <div class="row p-0">
+                      <div class="col-12 p-0 mb-1">
+                        <h1>Edit Profile</h1>
+                      </div>
+                    </div>
+                    <div
+                      class="row p-0 profile-details border border-top-1 border-bottom-1 border-start-0 border-end-0 py-3"
+                    >
+                      <div class="col-3 p-0 img">
+                        <img
+                          src="assets/imgs/avatar.png"
+                          alt="Immagine profilo"
+                        />
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-pencil-square"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="col-9">
+                        <form class="form-control">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="username"
+                            placeholder="Strive Student"
+                          />
+                          <label for="language" aria-label="language"
+                            >Language:</label
+                          >
+                          <select
+                            class="form-select"
+                            aria-label="English:"
+                            id="language"
+                          >
+                            <option selected value="1">English</option>
+                            <option value="2">Italian</option>
+                            <option value="3">Spanish</option>
+                            <option value="4">Japanese</option>
+                            <option value="5">German</option>
+                          </select>
+                          <div
+                            class="divider border border-top-1 border-bottom-0 opacity-50 mt-3 mb-2"
+                          ></div>
+                          <h6 class="fw-normal">Maturity Settings:</h6>
+                          <select
+                            class="d-block maturity-settings mb-2"
+                            name="maturity-settings"
+                            id="maturity-settings"
+                            disabled
+                          >
+                            <option value="1" selected>
+                              ALL MATURITY RATINGS
+                            </option>
+                            <option value="2">CHILDREN MATURITY RATINGS</option>
+                            <option value="3">
+                              TEENAGERS MATURITY RATINGS
+                            </option>
+                            <option value="4">ADULTS MATURITY RATINGS</option>
+                          </select>
+                          <p>
+                            Show titles of <span>all maturity ratings</span> for
+                            this profile.
+                          </p>
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary border border-1 pointer"
+                            id="btn-edit"
+                            onclick="enableButton()"
+                          >
+                            EDIT
+                          </button>
+                          <div
+                            class="divider border border-top-1 border-bottom-0 opacity-50 mt-3 mb-2"
+                          ></div>
+                          <h6 class="fw-normal">Autoplay controls</h6>
+                          <div class="d-flex flex-column align-items-start">
+                            <div class="row-checkbox d-flex flex-row">
+                              <input
+                                class="checkbox form-check-input bg-transparent p-2 border-secondary"
+                                type="checkbox"
+                                name="autoplay-episode"
+                                id="autoplay-episode"
+                              />
+                              <label for="autoplay-episode">
+                                Autoplay next episode in a series on all
+                                devices.
+                              </label>
+                            </div>
+                            <div class="row-checkbox d-flex flex-row">
+                              <input
+                                class="checkbox form-check-input bg-transparent p-2 border-secondary"
+                                type="checkbox"
+                                name="autoplay-previews"
+                                id="autoplay-previews"
+                              />
+                              <label for="autoplay-previews">
+                                Autoplay previews while browsing on all devices.
+                              </label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div buttons d-flex flex-row mt-3">
+                    <button
+                      type="button"
+                      class="btn pointer"
+                      id="btn-save"
+                      onclick="window.location.href = 'homepage.html';"
+                    >
+                      SAVE
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary border border-1 pointer"
+                      id="btn-cancel"
+                      onclick="window.location.href = 'homepage.html';"
+                    >
+                      CANCEL
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary border border-1 pointer"
+                      id="btn-cancel"
+                      onclick="window.location.href = 'homepage.html';"
+                    >
+                      DELETE PROFILE
+                    </button>
+                  </div>
                 </div>
-                <div class="right">
-                  CIAO CIAO CIAO
-                </div>
+                <div class="col-4"></div>
               </div>
             </div>
-            
           </div>
-        </div>
-        </div>
         </section>
-        
-        
       </main>
     </div>
 
@@ -60,5 +191,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
