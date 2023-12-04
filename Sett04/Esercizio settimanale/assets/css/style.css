@@ -73,6 +73,7 @@ ul {
 }
 
 .wrap {
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -121,7 +122,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 }
 
 header a,
@@ -162,6 +163,10 @@ header a,
 .trending-articles .article-specs p,
 .trending-articles {
   font-size: 0.7em;
+}
+
+.trending-articles .article-specs p {
+  width: 100%;
 }
 
 .article-specs img {
@@ -366,4 +371,25 @@ footer a {
   margin-right: 16px;
 }
 
+@media screen and (max-width: 1320px) {
+  .trending-articles article {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  .trending-articles article:nth-of-type(odd) {
+    margin-right: 10%;
+  }
 
+  .trending-articles .article-infos p,
+  .trending-articles .article-infos a {
+    font-size: 0.8em;
+  }
+  .trending-articles .article-specs span {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .trending-articles .article-specs img {
+    display: none;
+  }
+}
