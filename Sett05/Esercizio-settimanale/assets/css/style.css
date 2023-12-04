@@ -116,6 +116,11 @@ h1 {
   border: none;
 }
 
+.card:hover {
+  transform: scale(0.9);
+  transition: 0.5s ease-in-out;
+}
+
 h2 {
   margin-top: 32px;
   font-size: 0.9em;
@@ -159,9 +164,13 @@ footer p {
 /* PROFILE PAGE */
 
 .profile-content .left {
-    width: 30%;
+  width: 30%;
 }
 
 .profile-content .right {
-    width: 70%;
+  width: 70%;
+}
+
+.profile-content img {
+  width: 100%;
 }
