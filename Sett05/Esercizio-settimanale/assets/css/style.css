@@ -49,6 +49,11 @@ footer .button-link a {
   color: gray;
 }
 
+footer .button-link,
+.profile-details {
+  --bs-border-color: gray;
+}
+
 /* HEADER */
 
 header,
@@ -111,26 +116,6 @@ h1 {
   border: none;
 }
 
-.custom-carousel-btn {
-  background-color: red;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  top: 40%;
-}
-
-.custom-carousel-btn span {
-  width: 15px;
-}
-
-.carousel-control-prev {
-  right: 90vw;
-}
-
-.carousel-control-next {
-  left: 90vw;
-}
-
 h2 {
   margin-top: 32px;
   font-size: 0.9em;
@@ -171,6 +156,12 @@ footer p {
   font-size: 0.5em;
 }
 
-footer .button-link {
-  --bs-border-color: gray;
+/* PROFILE PAGE */
+
+.profile-content .left {
+    width: 30%;
+}
+
+.profile-content .right {
+    width: 70%;
 }
