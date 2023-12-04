@@ -1,3 +1,5 @@
+/* GENERAL */
+
 html,
 body {
   margin: 0;
@@ -12,6 +14,34 @@ a {
   text-decoration: none;
 }
 
+/* COMMON */
+
+.btn {
+  border: none;
+}
+
+.dropdown-menu {
+  --bs-dropdown-min-width: 10%;
+}
+
+.dropdown-menu li:hover {
+  --bs-dropdown-link-hover-color: #fff;
+  --bs-dropdown-link-hover-bg: red;
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: red;
+}
+
+.nav-item a,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle.show {
+  color: #fff;
+}
+
+/* HEADER */
+
 header,
 .navbar .right {
   font-size: 0.7em;
@@ -21,10 +51,6 @@ header,
 header .dropdown-menu,
 header i {
   font-size: 1.2em;
-}
-
-.dropdown-menu {
-  --bs-dropdown-min-width: 10%;
 }
 
 .navbar-brand,
@@ -37,30 +63,12 @@ header i {
   max-width: 100%;
 }
 
-.nav-item a,
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show,
-.dropdown-toggle,
-.dropdown-toggle:hover,
-.dropdown-toggle.show {
-  color: #fff;
-}
-
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link .checked {
   font-weight: 700;
 }
 
-.btn {
-  border: none;
-}
-
-.dropdown-menu li:hover {
-  --bs-dropdown-link-hover-color: #fff;
-  --bs-dropdown-link-hover-bg: red;
-  --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: red;
-}
+/* FILTER SECTION */
 
 h1 {
   font-size: 1.6em;
@@ -83,4 +91,31 @@ h1 {
 .squared i {
   font-size: 0.7em;
   color: gray;
+}
+
+/* MOVIES SECTION */
+
+.card {
+  border: none;
+}
+
+.custom-carousel-btn {
+  background-color: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 40%;
+}
+
+.custom-carousel-btn span {
+  width: 15px;
+}
+
+.carousel-control-prev {
+  right: 90vw;
+}
+
+.carousel-control-next {
+  left: 90vw;
 }
