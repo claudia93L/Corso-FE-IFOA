@@ -88,19 +88,16 @@ sendButton.onclick = () => {
   createPet(petName, ownerName, selectedSpecies, selectedBreed);
 };
 
-// la select ha un problema da correggere
-
 selectedSpeciesSelect.onchange = () => {
   selectedBreedSelect.innerHTML = '';
   let selectedSpecies = getSpeciesValue();
 
   speciesAndBreeds.forEach((el) => {
     if (el.species === selectedSpecies) {
-      toggleDiv(divSelect);
-      selectedBreedLabel.innerText = `Choose your pet's breed ${selectedSpecies}`;
+      selectedBreedLabel.innerText = `Choose your ${selectedSpecies}'s breed `;
 
       let option = document.createElement('option');
-      option.innerText = "Choose your pet's breed";
+      option.innerText = `Choose your ${selectedSpecies}'s breed`;
       selectedBreedSelect.appendChild(option);
 
       el.breeds.forEach((breed) => {
