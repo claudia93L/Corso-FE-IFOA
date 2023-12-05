@@ -47,4 +47,9 @@ const pets = [
   },
 ];
 
+const petName = document.getElementById('petName');
+const ownerName = document.getElementById('ownerName');
+const selectedSpecies = document.getElementById('selectedSpecies');
+const selectedBreed = document.getElementById('selectedBreed');
+
 

@@ -35,18 +35,23 @@
           />
         </div>
         <div class="mb-3">
+          <label for="selectedSpecies">Choose your pet's species</label>
           <select
+            id="selectedSpecies"
             class="form-select border-0 rounded-5"
             aria-label="Default select example"
+            onchange="getSelectedOption()"
           >
-            <option selected>Choose your pet's species</option>
+            <option selected>Pet's species</option>
             <option value="1">Dog</option>
             <option value="2">Cat</option>
             <option value="3">Rabbit</option>
           </select>
         </div>
         <div class="mb-3 d-none">
+          <label for="selectedBreed"></label>
           <select
+            id="selectedBreed"
             class="form-select border-0 rounded-5"
             aria-label="Default select example"
           >
@@ -58,7 +63,7 @@
         </div>
 
         <button type="button" class="mt-4 w-50 btn btn-primary rounded-5">
-          Submit
+          Invia
         </button>
         <!-- <div class="mb-3 d-none">
           <select
