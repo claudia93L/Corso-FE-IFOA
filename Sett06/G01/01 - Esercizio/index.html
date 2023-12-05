@@ -14,6 +14,7 @@
   <body>
     <div class="container-fluid m-0 p-0">
       <div
+        id="divForm"
         class="form-container mt-5 w-25 py-5 mx-auto form d-flex align-items-center flex-column bg-info rounded-3 text-center"
       >
         <div class="mb-3">
@@ -48,45 +49,32 @@
             <option value="3">Rabbit</option>
           </select>
         </div>
-        <div class="mb-3 d-none">
-          <label for="selectedBreed"></label>
+        <div id="divSelect" class="mb-3 d-none">
+          <label id="selectedBreedLabel" for="selectedBreed"></label>
           <select
             id="selectedBreed"
             class="form-select border-0 rounded-5"
             aria-label="Default select example"
           >
             <option selected></option>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
           </select>
         </div>
 
-        <button type="button" class="mt-4 w-50 btn btn-primary rounded-5">
+        <button
+          id="sendButton"
+          type="button"
+          onclick="getList()"
+          class="mt-4 w-50 btn btn-primary rounded-5"
+        >
           Invia
         </button>
-        <!-- <div class="mb-3 d-none">
-          <select
-            class="form-select border-0 rounded-5 cat-select"
-            aria-label="Default select example"
-          >
-            <option selected>Choose your cat's breed</option>
-            <option value="1">European</option>
-            <option value="2">Norwegian</option>
-            <option value="3">Maine Coon</option>
-          </select>
-        </div>
-        <div class="mb-3 d-none">
-          <select
-            class="form-select border-0 rounded-5 rabbit-select"
-            aria-label="Default select example"
-          >
-            <option selected>Choose your rabbit's breed</option>
-            <option value="1">Nano</option>
-            <option value="2">Ariete</option>
-            <option value="3">Gigante</option>
-          </select>
-        </div> -->
+      </div>
+      <div
+        id="divList"
+        class="list-container mt-5 w-25 p-5 mx-auto form d-flex align-items-center flex-column bg-info rounded-3 text-left"
+      >
+        <h1>Pets'list</h1>
+        <ul id="ul" class="list-unstyled"></ul>
       </div>
     </div>
     <script
