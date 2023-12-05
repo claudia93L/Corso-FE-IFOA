@@ -79,10 +79,10 @@ sendButton.onclick = () => {
   let selectedSpecies = getSpeciesValue();
   let selectedBreed = selectedBreedSelect.value;
 
-  console.log(petName);
+  /* console.log(petName);
   console.log(ownerName);
   console.log(selectedSpecies);
-  console.log(selectedBreed);
+  console.log(selectedBreed); */
 
   clearInputs();
   createPet(petName, ownerName, selectedSpecies, selectedBreed);
@@ -137,24 +137,6 @@ const clearInputs = () => {
   selectedBreedSelect.value = '';
 };
 
-/* const writeList = (petName, ownerName, selectedSpecies, selectedBreed) => {
-  const formData = [
-    `Nome dell'animale: ${petName}`,
-    `Nome del proprietario: ${ownerName}`,
-    `Specie dell'animale: ${selectedSpecies}`,
-    `Razza dell'animale: ${selectedBreed}`,
-  ];
-
-  formData.forEach((el) => {
-    let li = document.createElement('li');
-    li.innerText = el;
-    ul.appendChild(li);
-  });
-
-  toggleDiv(divForm);
-  toggleDiv(divList);
-}; */
-
 const createPet = (petName, ownerName, selectedSpecies, selectedBreed) => {
   let newPet = new Pet(petName, ownerName, selectedSpecies, selectedBreed);
   pets.push(newPet);
@@ -169,5 +151,3 @@ const updatePetList = () => {
     ul.appendChild(li);
   });
 };
-
-console.log(checkMatchingOwner());
