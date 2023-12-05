@@ -29,3 +29,20 @@ const user2 = new User('Bruno', 'Verdi', 30, 'Milano');
 user1.getOlderUser(user2.age);
 
 // ESERCIZIO 2
+
+// base dati per inserire le options corrette nella select
+const pets = [
+  {
+    species: 'dog',
+    breeds: ['Golden Retriever', 'Rottweiler', 'Samoiedo'],
+  },
+
+  {
+    species: 'cat',
+    breeds: ['European', 'Norwegian', 'Maine Coon'],
+  },
+  {
+    species: 'rabbit',
+    breeds: ['Nano', 'Ariete', 'Gigante'],
+  },
+];
