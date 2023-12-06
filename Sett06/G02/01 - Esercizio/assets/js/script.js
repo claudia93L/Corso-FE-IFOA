@@ -37,6 +37,7 @@ const manageCounter = () => {
   function updateCounter() {
     counterValue++;
     counter.innerText = counterValue;
+    setSessionValue();
   }
 
   setInterval(updateCounter, 1000);
@@ -49,4 +50,3 @@ function setSessionValue() {
 }
 
 manageCounter();
-setSessionValue();
