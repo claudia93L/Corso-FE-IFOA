@@ -35,6 +35,11 @@ let counterValue = sessionStorage.getItem('counter')
   ? parseInt(sessionStorage.getItem('counter'))
   : 0;
 
+// Verifica se counterValue è NaN o non è un numero valido
+if (isNaN(counterValue) || !isFinite(counterValue)) {
+  counterValue = 0; // Imposta il valore predefinito a 0 se non è un numero valido
+}
+
 const manageCounter = () => {
   function updateCounter() {
     counterValue++;
