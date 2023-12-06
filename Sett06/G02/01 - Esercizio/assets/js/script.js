@@ -31,7 +31,9 @@ function removeNomeUtente() {
 
 // ESERCIZIO 2
 const counter = document.getElementById('counter');
-let counterValue = 0;
+let counterValue = sessionStorage.getItem('counter')
+  ? parseInt(sessionStorage.getItem('counter'))
+  : 0;
 
 const manageCounter = () => {
   function updateCounter() {
