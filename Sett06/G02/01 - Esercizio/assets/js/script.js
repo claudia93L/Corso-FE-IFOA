@@ -30,3 +30,23 @@ function removeNomeUtente() {
 }
 
 // ESERCIZIO 2
+const counter = document.getElementById('counter');
+let counterValue = 0;
+
+const manageCounter = () => {
+  function updateCounter() {
+    counterValue++;
+    counter.innerText = counterValue;
+  }
+
+  setInterval(updateCounter, 1000);
+
+  return counterValue;
+};
+
+function setSessionValue() {
+  sessionStorage.setItem('counter', counterValue);
+}
+
+manageCounter();
+setSessionValue();
