@@ -15,7 +15,7 @@
   <body>
     <div class="container-fluid m-0 p-0">
       <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">BookShop</a>
             <button
@@ -48,9 +48,27 @@
         </nav>
       </header>
       <div class="books-container">
-        <div class="row"></div>
+        <div id="row"
+          class="row d-flex justify-content-center row-gap-3 column-gap-3 flex-wrap"
+        >
+          <!-- <div class="card" style="width: 18rem">
+            <img src="" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h5 class="card-title book-title">Card title</h5>
+              <h5 class="book-price"></h5>
+              <button type="button" id="buyBtn" class="btn btn-primary">
+                Compra ora
+              </button>
+              <button type="button" id="removeBtn" class="btn btn-danger">
+                Scarta
+              </button>
+            </div>
+          </div> -->
+        </div>
       </div>
-      <footer>
+      <footer
+        class="mt-5 text-center text-white bg-dark py-3 d-flex justify-content-center align-items-center"
+      >
         <p>&copy; 2023 Copyright</p>
       </footer>
     </div>
