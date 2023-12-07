@@ -1,11 +1,12 @@
 const url = 'https://striveschool-api.herokuapp.com/books';
 const row = document.getElementById('row');
+const savedBookIds = JSON.parse(localStorage.getItem('bookIds')) || [];
 
 fetch(url)
   .then((response) => response.json())
-  .then((data) => sendDataToHomepage(data));
+  .then((data) => createHomepage(data));
 
-function sendDataToHomepage(data) {
+function createHomepage(data) {
   data.forEach((el) => {
     const column = createColumn();
     row.appendChild(column);
@@ -58,6 +59,15 @@ function createCard(el) {
   btnRemove.classList.add('btn', 'btn-danger');
   btnRemove.textContent = 'Scarta';
   cardFooter.appendChild(btnRemove);
+
+  btnRemove.onclick = () => {
+    card.remove();
+  };
+
+  btnBuy.onclick = () => {
+    savedBookIds.push(el.asin);
+    localStorage.setItem('bookIds', JSON.stringify(savedBookIds));
+  };
 
   return card;
 }
