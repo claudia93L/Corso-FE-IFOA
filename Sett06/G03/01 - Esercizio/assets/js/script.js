@@ -56,18 +56,36 @@ function createCard(el) {
 
   const btnRemove = document.createElement('button');
   btnRemove.type = 'button';
-  btnRemove.classList.add('btn', 'btn-danger');
+  btnRemove.classList.add('btn', 'btn-warning');
   btnRemove.textContent = 'Scarta';
   cardFooter.appendChild(btnRemove);
+
+  const btnCartDelete = document.createElement('button');
+  btnCartDelete.type = 'button';
+  btnCartDelete.classList.add('btn', 'btn-danger');
+  btnCartDelete.textContent = 'X';
+  cardFooter.appendChild(btnCartDelete);
 
   btnRemove.onclick = () => {
     card.remove();
   };
 
   btnBuy.onclick = () => {
-    savedBookIds.push(el.asin);
-    localStorage.setItem('bookIds', JSON.stringify(savedBookIds));
+    if (!savedBookIds.includes(el.asin)) {
+      savedBookIds.push(el.asin);
+      localStorage.setItem('bookIds', JSON.stringify(savedBookIds));
+    }
+  };
+
+  btnRemove.onclick = () => {
+    removeFromCart(el.asin);
   };
 
   return card;
+}
+
+function removeFromCart(bookId) {
+  const updatedBookIds = savedBookIds.filter((id) => id !== bookId);
+
+  localStorage.setItem('bookIds', JSON.stringify(updatedBookIds));
 }
