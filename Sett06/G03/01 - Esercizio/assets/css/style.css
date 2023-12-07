@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0.6em;
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 40%;
+}
