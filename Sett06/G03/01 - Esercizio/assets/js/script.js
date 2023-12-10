@@ -1,6 +1,8 @@
 const url = 'https://striveschool-api.herokuapp.com/books';
 const row = document.getElementById('row');
-const savedBookIds = JSON.parse(localStorage.getItem('bookIds')) || [];
+const savedBookIds = localStorage.getItem('bookIds')
+  ? JSON.parse(localStorage.getItem('shoppingCart'))
+  : [];
 const cart = document.getElementById('cart');
 
 fetch(url)
@@ -70,7 +72,7 @@ function createCard(el) {
   cardFooter.appendChild(btnCartDelete);
 
   btnRemove.onclick = () => {
-    card.remove();
+    card.closest('.col-md-4').remove();
   };
 
   btnBuy.onclick = () => {
@@ -91,6 +93,9 @@ function createCard(el) {
 
 function removeFromCart(bookId) {
   const updatedBookIds = savedBookIds.filter((id) => id !== bookId);
+  localStorage.setItem('bookIds', JSON.stringify(updatedBookIds));
+  console.log(updatedBookIds);
+
 }
 
 // CARICAMENTO LISTA CARRELLO SU ALTRA PAGINA
