@@ -1,8 +1,9 @@
 const url = 'https://striveschool-api.herokuapp.com/books';
 const row = document.getElementById('row');
-const savedBookIds = localStorage.getItem('bookIds')
-  ? JSON.parse(localStorage.getItem('shoppingCart'))
+let savedBookIds = localStorage.getItem('bookIds')
+  ? JSON.parse(localStorage.getItem('bookIds'))
   : [];
+const cartContainer = document.getElementById('cart-container');
 const cart = document.getElementById('cart');
 
 fetch(url)
@@ -57,8 +58,6 @@ function createCard(el) {
   btnBuy.textContent = 'Compra ora';
   cardFooter.appendChild(btnBuy);
 
-  // USARE CLOSEST() PER RIMUOVERE LA COLONNA
-
   const btnRemove = document.createElement('button');
   btnRemove.type = 'button';
   btnRemove.classList.add('btn', 'btn-warning');
@@ -79,6 +78,9 @@ function createCard(el) {
     if (!savedBookIds.includes(el.asin)) {
       savedBookIds.push(el.asin);
       localStorage.setItem('bookIds', JSON.stringify(savedBookIds));
+      if (savedBookIds.length > 0) {
+        cartContainer.classList.remove('d-none');
+      }
     }
   };
 
@@ -86,31 +88,25 @@ function createCard(el) {
 
   btnCartDelete.onclick = () => {
     removeFromCart(el.asin);
+    createCart();
   };
 
   return card;
 }
 
 function removeFromCart(bookId) {
-  const updatedBookIds = savedBookIds.filter((id) => id !== bookId);
-  localStorage.setItem('bookIds', JSON.stringify(updatedBookIds));
-  console.log(updatedBookIds);
-
+  savedBookIds = savedBookIds.filter((id) => id !== bookId);
+  localStorage.setItem('bookIds', JSON.stringify(savedBookIds));
+  console.log(savedBookIds);
 }
-
-// CARICAMENTO LISTA CARRELLO SU ALTRA PAGINA
-
-/* cart.onclick = () => {
-  createCart();
-};
 
 function createCart() {
   const ul = document.createElement('ul');
-  cart.appendChild(ul);
+  cartContainer.appendChild(ul);
 
   savedBookIds.forEach((el) => {
     const li = document.createElement('li');
     li.innerText = el;
     ul.appendChild(li);
   });
-} */
+}
