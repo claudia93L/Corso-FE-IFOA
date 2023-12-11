@@ -95,6 +95,26 @@
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input
+                id="search-box"
+                placeholder="Search something..."
+                autocomplete="off"
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success"
+                type="button"
+                id="searchBtn"
+              >
+                Search
+              </button>
+            </form>
+          </div>
           <h1 class="jumbotron-heading">Album API example</h1>
           <p class="lead text-muted">
             This page will dynamically load pictures from the web, and display

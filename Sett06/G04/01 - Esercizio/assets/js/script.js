@@ -12,6 +12,7 @@ const loadImagesBtn = document.getElementById('loadImagesBtn');
 const loadSecondaryImagesBtn = document.getElementById(
   'loadSecondaryImagesBtn'
 );
+const searchBtn = document.getElementById('searchBtn');
 
 const getPhotos = (query) => {
   fetch(url + query, {
@@ -71,6 +72,13 @@ function loadPhotos(photos) {
 function hideCard(card) {
   card.closest('.col-4').remove();
 }
+
+searchBtn.onclick = () => {
+  const searchInput = document.getElementById('search-box');
+  const searchedQuery = searchInput.value;
+  getPhotos(searchedQuery);
+  loadPhotos(photos);
+};
 
 window.onload = () => {
   getPhotos();
