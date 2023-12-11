@@ -40,6 +40,7 @@ function loadPhotos(photos) {
 
   photos.forEach((el) => {
     const card = document.createElement('div');
+    card.classList.add('col-4');
     card.innerHTML = `<div class="card mb-4 shadow-sm">
       <img class="card-img-top" src="${el.src.medium}" alt="${el.alt}" />  
       <div class="card-body">
@@ -49,7 +50,7 @@ function loadPhotos(photos) {
             <button type="button" class="btn btn-sm btn-outline-secondary">
               View
             </button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
+            <button type="button" class="btn btn-sm btn-outline-secondary hideBtn">
               Hide
             </button>
           </div>
@@ -58,7 +59,17 @@ function loadPhotos(photos) {
       </div>
     </div>`;
     photoRow.appendChild(card);
+
+    const hideBtn = card.querySelector('.hideBtn');
+
+    hideBtn.onclick = () => {
+      hideCard(card);
+    };
   });
+}
+
+function hideCard(card) {
+  card.closest('.col-4').remove();
 }
 
 window.onload = () => {
