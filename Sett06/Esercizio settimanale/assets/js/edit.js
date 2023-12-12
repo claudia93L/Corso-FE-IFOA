@@ -1,7 +1,7 @@
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
 
-console.log('Product ID:', id);
+//console.log('Product ID:', id);
 
 window.onload = async () => {
   try {
@@ -11,8 +11,6 @@ window.onload = async () => {
     if (product) {
       populateForm(product);
       addEditDeleteButtons(product);
-    } else {
-      alert('Product not found');
     }
   } catch (error) {
     console.error('Error fetching products:', error);
@@ -31,14 +29,33 @@ const addEditDeleteButtons = (product) => {
   const editBtn = document.getElementById('editButton');
   const deleteBtn = document.getElementById('deleteButton');
 
+  const pageTitle = document.querySelector('h1');
+  pageTitle.innerText = "Product's management form";
   editBtn.classList.remove('d-none');
   deleteBtn.classList.remove('d-none');
 
-  editBtn.addEventListener('click', () => {
-    editProduct(product._id);
-  });
+  editBtn.onclick = () => {
+    saveEditProduct(product._id);
+  };
 
-  deleteBtn.addEventListener('click', () => {
+  deleteBtn.onclick = () => {
     deleteProduct(product._id);
-  });
+  };
+};
+
+const deleteProduct = (id) => {
+  if (confirm('Confermi la tua scelta?')) {
+    const finalUrl = url + id;
+    fetch(finalUrl, {
+      method: 'DELETE',
+      headers: header,
+    }).then(() => {
+      products.splice(
+        products.findIndex((product) => product._id === id),
+        1
+      );
+      alert('Product deleted successfully');
+      resetForm();
+    });
+  }
 };

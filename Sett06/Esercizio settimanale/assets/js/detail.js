@@ -42,7 +42,5 @@ const loadProduct = (products) => {
         <p>${product.brand}</p>
         <p>€ ${product.price}</p>
       `;
-  } else {
-    alert('Product not found');
-  }
+  } 
 };
