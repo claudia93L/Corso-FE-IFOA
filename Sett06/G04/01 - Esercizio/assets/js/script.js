@@ -43,9 +43,9 @@ function loadPhotos(photos) {
     const card = document.createElement('div');
     card.classList.add('col-4');
     card.innerHTML = `<div class="card mb-4 shadow-sm">
-    <img class="card-img-top" src="${el.src.medium}" alt="${el.alt}" data-bs-toggle="modal" data-bs-target="#modal" />
+    <img class="card-img-top cursor-pointer" src="${el.src.medium}" alt="${el.alt}" onclick="goToDetails(${el.id})" />
       <div class="card-body">
-        <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#modal">${el.alt}</h5>
+        <h5 class="card-title cursor-pointer" onclick="goToDetails(${el.id})">${el.alt}</h5>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
             <button type="button" class="btn btn-sm btn-outline-secondary viewImgBtn">
@@ -67,21 +67,14 @@ function loadPhotos(photos) {
     const hideBtn = card.querySelector('.hideBtn');
     const viewImgBtn = card.querySelector('.viewImgBtn');
 
-    img.onclick = () => {
-      createModalDetails(el);
-    };
-
-    h5.onclick = () => {
-      createModalDetails(el);
-    };
-
     hideBtn.onclick = () => {
       hideCard(card);
     };
 
     viewImgBtn.onclick = () => {
-      createModalPhoto(el);
+        createModalDetails(el);
     };
+
   });
 }
 
@@ -96,21 +89,25 @@ searchBtn.onclick = () => {
   loadPhotos(photos);
 };
 
-function createModalDetails(el) {
+/* function createModalDetails(el) {
   const modalContent = document.getElementById('modal-content');
   modalContent.innerHTML = `
   <img class="card-img-top" src="${el.src.medium}" alt="${el.alt}" />
   <h5 class="card-title">${el.photographer}</h5>
   <a href="${el.photographer_url}" target="_blank">${el.photographer_url}</a>
 `;
-}
+} */
 
 // sistemare apertura della seconda modale
 
-function createModalPhoto(el) {
+function createModalDetails(el) {
   const modalContent = document.getElementById('modal-content');
-  modalContent.innerHTML = `<img class="card-img-top" src="${el.src.landscape}" alt="${el.alt}" />`;
+  modalContent.innerHTML = `<img class="card-img-top" src="${el.src.medium}" alt="${el.alt}" />`;
 }
+
+const goToDetails = (id) => {
+  window.location.assign('./details.html?picId=' + id);
+};
 
 window.onload = () => {
   getPhotos();
