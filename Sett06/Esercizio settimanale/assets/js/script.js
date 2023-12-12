@@ -10,6 +10,12 @@ const header = {
 
 let products = [];
 
+const productName = document.getElementById('productName');
+const productDescription = document.getElementById('productDescription');
+const productBrand = document.getElementById('productBrand');
+const productImageUrl = document.getElementById('productImageUrl');
+const productPrice = document.getElementById('productPrice');
+
 const getProducts = () => {
   fetch(url, {
     method: 'GET',
@@ -24,11 +30,11 @@ const getProducts = () => {
 
 const createProduct = () => {
   const newProduct = {
-    name: document.getElementById('productName').value,
-    description: document.getElementById('productDescription').value,
-    brand: document.getElementById('productBrand').value,
-    imageUrl: document.getElementById('productImageUrl').value,
-    price: document.getElementById('productPrice').value,
+    name: productName.value,
+    description: productDescription.value,
+    brand: productBrand.value,
+    imageUrl: productImageUrl.value,
+    price: productPrice.value,
   };
 
   fetch(url, {
@@ -45,10 +51,44 @@ const createProduct = () => {
 
 loadProducts = (data) => {
   data.forEach((el) => {
-    console.log(el.name);
+    console.log(el);
   });
+};
+
+resetForm = () => {
+  productName.value = '';
+  productDescription.value = '';
+  productBrand.value = '';
+  productImageUrl.value = '';
+  productPrice.value = '';
 };
 
 window.onload = () => {
   getProducts();
+};
+
+verifyForm = () => {
+  if (productName.value === '') {
+    /* const productNameAlert = document.getElementById('productNameAlert');
+    productNameAlert.classList.remove('d-none');
+    productNameAlert.innerText = 'Please enter a product name'; */
+    alert('Please enter a product name');
+    return false;
+  } else if (productDescription.value === '') {
+    alert('Please enter a product description');
+    return false;
+  } else if (productBrand.value === '') {
+    alert('Please enter a product brand');
+    return false;
+  } else if (productImageUrl.value === '') {
+    alert('Please enter a product image url');
+    return false;
+  } else if (productPrice.value === '') {
+    alert('Please enter a product price');
+    return false;
+  } else {
+    createProduct();
+    resetForm();
+    return true;
+  }
 };

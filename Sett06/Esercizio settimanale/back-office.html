@@ -46,7 +46,13 @@
                 class="form-control border-0 rounded-5"
                 id="productName"
                 placeholder="iPhone SE"
+                required
               />
+              <!-- <div
+                id="productNameAlert"
+                class="alert alert-danger d-none"
+                role="alert"
+              ></div> -->
             </div>
             <div class="mb-3">
               <label for="productDescription" class="form-label"
@@ -57,7 +63,13 @@
                 class="form-control border-0 rounded-5"
                 id="productDescription"
                 placeholder="Smartphone"
+                required
               />
+              <!-- <div
+                id="productDescription"
+                class="alert alert-danger"
+                role="alert"
+              ></div> -->
             </div>
             <div class="mb-3">
               <label for="productBrand" class="form-label">Product Brand</label>
@@ -66,7 +78,13 @@
                 class="form-control border-0 rounded-5"
                 id="productBrand"
                 placeholder="iPhone"
+                required
               />
+              <!-- <div
+                id="productBrand"
+                class="alert alert-danger"
+                role="alert"
+              ></div> -->
             </div>
             <div class="mb-3">
               <label for="productImageUrl" class="form-label"
@@ -78,6 +96,11 @@
                 id="productImageUrl"
                 placeholder="www.google.com"
               />
+              <!-- <div
+                id="productImageUrl"
+                class="alert alert-danger"
+                role="alert"
+              ></div> -->
             </div>
             <div class="mb-3">
               <label for="productPrice" class="form-label">Product Price</label>
@@ -87,17 +110,32 @@
                 id="productPrice"
                 placeholder="99"
                 min="1"
+                required
               />
+              <!-- <div
+                id="productPrice"
+                class="alert alert-danger"
+                role="alert"
+              ></div> -->
             </div>
-
-            <button
-              id="saveButton"
-              type="button"
-              class="mt-4 w-50 btn btn-primary rounded-5"
-              onclick="createProduct()"
-            >
-              Salva
-            </button>
+            <div class="buttons d-flex flex-row">
+              <button
+                id="resetButton"
+                type="button"
+                class="mt-4 mx-2 w-50 btn btn-warning rounded-5"
+                onclick="resetForm()"
+              >
+                Reset
+              </button>
+              <button
+                id="saveButton"
+                type="button"
+                class="mt-4 w-50 btn btn-primary rounded-5"
+                onclick="verifyForm()"
+              >
+                Salva
+              </button>
+            </div>
           </div>
         </div>
       </main>
