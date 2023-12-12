@@ -1,12 +1,22 @@
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
 
-//console.log('Product ID:', id);
+console.log('Product ID:', id);
 
 window.onload = async () => {
   try {
-    const data = await getProducts();
-    const product = data.find((el) => el._id === id);
+    // Recupera i dati da sessionStorage
+    const storedProducts = JSON.parse(sessionStorage.getItem('products'));
+
+    // Se ci sono dati salvati in sessionStorage, assegna a products
+    if (storedProducts) {
+      products = storedProducts;
+    } else {
+      // Altrimenti, carica i dati dal server
+      products = await getProducts();
+    }
+
+    const product = products.find((el) => el._id === id);
 
     if (product) {
       populateForm(product);
@@ -61,7 +71,7 @@ const deleteProduct = (id) => {
 };
 
 const saveEditProduct = async (id) => {
-  if (confirm('Do you want to edit this product?')) {
+  if (confirm('Do you want to save your edits?')) {
     const finalUrl = url + id;
 
     const newProductInfos = {
@@ -76,9 +86,7 @@ const saveEditProduct = async (id) => {
       const response = await fetch(finalUrl, {
         method: 'PUT',
         headers: header,
-        body: JSON.stringify({
-          newProductInfos,
-        }),
+        body: JSON.stringify(newProductInfos),
       });
 
       if (!response.ok) {
@@ -89,14 +97,19 @@ const saveEditProduct = async (id) => {
 
       const updatedProduct = await response.json();
 
-      // Trova e sostituisci il prodotto nella tua array products
+      // Trova e sostituisci il prodotto nell'array products
       const index = products.findIndex((product) => product._id === id);
       products[index] = updatedProduct;
+
+      console.log('Updated products:', products);
+
+      // Salva nuovamente i dati aggiornati nella sessionStorage
+      sessionStorage.setItem('products', JSON.stringify(products));
 
       // Carica nuovamente i prodotti solo se productGrid esiste
       const productGrid = document.getElementById('productGrid');
       if (productGrid) {
-        await loadProducts(products);
+        loadProducts(products);
       }
     } catch (error) {
       console.error('Error updating product:', error);

@@ -103,13 +103,13 @@ const loadProducts = async (data) => {
 };
 
 const resetForm = () => {
-  if (confirm('Do you want to reset the form data?')) {
-    productName.value = '';
-    productDescription.value = '';
-    productBrand.value = '';
-    productImageUrl.value = '';
-    productPrice.value = '';
-  }
+  /* if (confirm('Do you want to reset the form data?')) { */
+  productName.value = '';
+  productDescription.value = '';
+  productBrand.value = '';
+  productImageUrl.value = '';
+  productPrice.value = '';
+  //}
 };
 
 const verifyForm = () => {
