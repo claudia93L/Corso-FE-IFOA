@@ -97,11 +97,13 @@ const loadProducts = (data) => {
 };
 
 const resetForm = () => {
-  productName.value = '';
-  productDescription.value = '';
-  productBrand.value = '';
-  productImageUrl.value = '';
-  productPrice.value = '';
+  if (confirm('Confermi la tua scelta?')) {
+    productName.value = '';
+    productDescription.value = '';
+    productBrand.value = '';
+    productImageUrl.value = '';
+    productPrice.value = '';
+  }
 };
 
 const verifyForm = () => {
