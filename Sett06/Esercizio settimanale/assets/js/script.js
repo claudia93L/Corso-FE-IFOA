@@ -69,6 +69,11 @@ const createProduct = () => {
 };
 
 const loadProducts = (data) => {
+  if (!productGrid) {
+    console.error('Error: productGrid not found');
+    return;
+  }
+
   productGrid.innerHTML = '';
   data.forEach((el) => {
     const productCard = document.createElement('div');
@@ -131,10 +136,4 @@ const goToDetails = (productId) => {
 
 const editProduct = (productId) => {
   window.location.href = './back-office.html?id=' + productId;
-  const product = products.find((el) => el._id === productId);
-  productName.value = product.name;
-  productDescription.value = product.description;
-  productBrand.value = product.brand;
-  productImageUrl.value = product.imageUrl;
-  productPrice.value = product.price;
 };
