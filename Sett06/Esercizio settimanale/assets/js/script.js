@@ -42,3 +42,13 @@ const createProduct = () => {
       loadProducts(products);
     });
 };
+
+loadProducts = (data) => {
+  data.forEach((el) => {
+    console.log(el.name);
+  });
+};
+
+window.onload = () => {
+  getProducts();
+};
