@@ -50,8 +50,24 @@ const createProduct = () => {
 };
 
 loadProducts = (data) => {
+  const productGrid = document.getElementById('productGrid');
   data.forEach((el) => {
-    console.log(el);
+    productGrid.innerHTML += `
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img class="card-img-top w-25 mx-auto my-2" src="assets/img/img-cellphone.webp" alt="${el.description}">
+        <div class="card-body">
+          <h5 class="card-title">${el.name}</h5>
+          <p class="card-text">${el.description}</p>
+          <p class="card-text">${el.brand}</p>
+          <p class="card-text">$${el.price}</p>
+          <button type="button" class="btn btn-warning" onclick="editProduct(${el.id})">Edit</button>
+          <button type="button" class="btn btn-primary" onclick="getDetails(${el.id})">See details</button>
+        </div>
+      </div>
+    </div>
+    `;
+    productGrid.appendChild(el);
   });
 };
 
