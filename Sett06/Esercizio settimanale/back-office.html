@@ -120,9 +120,25 @@
             </div>
             <div class="buttons d-flex flex-row">
               <button
+                id="editButton"
+                type="button"
+                class="mt-4 mx-2 w-50 btn btn-warning rounded-5 d-none"
+                onclick="editProduct()"
+              >
+                Edit
+              </button>
+              <button
+                id="deleteButton"
+                type="button"
+                class="mt-4 mx-2 w-50 btn btn-danger rounded-5 d-none"
+                onclick="deletProduct()"
+              >
+                Delete
+              </button>
+              <button
                 id="resetButton"
                 type="button"
-                class="mt-4 mx-2 w-50 btn btn-warning rounded-5"
+                class="mt-4 mx-2 w-50 btn btn-secondary rounded-5"
                 onclick="resetForm()"
               >
                 Reset
