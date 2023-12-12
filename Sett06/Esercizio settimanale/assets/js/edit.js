@@ -44,7 +44,7 @@ const addEditDeleteButtons = (product) => {
 };
 
 const deleteProduct = (id) => {
-  if (confirm('Confermi la tua scelta?')) {
+  if (confirm('Do you want to delete this product?')) {
     const finalUrl = url + id;
     fetch(finalUrl, {
       method: 'DELETE',
@@ -57,5 +57,49 @@ const deleteProduct = (id) => {
       alert('Product deleted successfully');
       resetForm();
     });
+  }
+};
+
+const saveEditProduct = async (id) => {
+  if (confirm('Do you want to edit this product?')) {
+    const finalUrl = url + id;
+
+    const newProductInfos = {
+      name: productName.value,
+      description: productDescription.value,
+      brand: productBrand.value,
+      imageUrl: productImageUrl.value,
+      price: productPrice.value,
+    };
+
+    try {
+      const response = await fetch(finalUrl, {
+        method: 'PUT',
+        headers: header,
+        body: JSON.stringify({
+          newProductInfos,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `Error updating product: ${response.status} - ${response.statusText}`
+        );
+      }
+
+      const updatedProduct = await response.json();
+
+      // Trova e sostituisci il prodotto nella tua array products
+      const index = products.findIndex((product) => product._id === id);
+      products[index] = updatedProduct;
+
+      // Carica nuovamente i prodotti solo se productGrid esiste
+      const productGrid = document.getElementById('productGrid');
+      if (productGrid) {
+        await loadProducts(products);
+      }
+    } catch (error) {
+      console.error('Error updating product:', error);
+    }
   }
 };

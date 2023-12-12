@@ -19,9 +19,9 @@ const productGrid = document.getElementById('productGrid');
 
 window.onload = async () => {
   try {
-    const data = await getProducts();
-    sessionStorage.setItem('products', JSON.stringify(data));
-    loadProducts(data);
+    products = await getProducts();
+    sessionStorage.setItem('products', JSON.stringify(products));
+    loadProducts(products);
   } catch (error) {
     console.error('Error fetching products:', error);
   }
@@ -68,13 +68,19 @@ const createProduct = () => {
     });
 };
 
-const loadProducts = (data) => {
+const loadProducts = async (data) => {
   if (!productGrid) {
     console.error('Error: productGrid not found');
     return;
   }
 
   productGrid.innerHTML = '';
+
+  if (!data) {
+    console.error('Error: Products data is null or undefined');
+    return;
+  }
+
   data.forEach((el) => {
     const productCard = document.createElement('div');
     productCard.classList.add('col-md-3');
@@ -97,7 +103,7 @@ const loadProducts = (data) => {
 };
 
 const resetForm = () => {
-  if (confirm('Confermi la tua scelta?')) {
+  if (confirm('Do you want to reset the form data?')) {
     productName.value = '';
     productDescription.value = '';
     productBrand.value = '';
