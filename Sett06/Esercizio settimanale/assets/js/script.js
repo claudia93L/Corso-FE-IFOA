@@ -17,9 +17,14 @@ const productImageUrl = document.getElementById('productImageUrl');
 const productPrice = document.getElementById('productPrice');
 const productGrid = document.getElementById('productGrid');
 
-window.onload = () => {
-  /* document.getElementById('alert').style.display = 'none'; */
-  getProducts();
+window.onload = async () => {
+  try {
+    const data = await getProducts();
+    sessionStorage.setItem('products', JSON.stringify(data));
+    loadProducts(data);
+  } catch (error) {
+    console.error('Error fetching products:', error);
+  }
 };
 
 const getProducts = async () => {

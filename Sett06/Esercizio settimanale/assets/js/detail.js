@@ -3,11 +3,21 @@ const id = searchParams.get('id');
 //console.log('Product ID:', id);
 
 window.onload = async () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const id = searchParams.get('id');
+  console.log('Product ID:', id);
+
   try {
-    const data = await getProducts();
-    loadProduct(data);
+    const storedProducts = sessionStorage.getItem('products');
+    if (!storedProducts) {
+      throw new Error('Products not found in sessionStorage');
+    }
+
+    const data = JSON.parse(storedProducts);
+    loadProduct(data, id);
   } catch (error) {
-    console.error('Error fetching products:', error);
+    console.error('Error loading product details:', error);
+    alert('Product details not available');
   }
 };
 
