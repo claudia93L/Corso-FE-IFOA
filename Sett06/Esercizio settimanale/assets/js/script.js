@@ -15,17 +15,31 @@ const productDescription = document.getElementById('productDescription');
 const productBrand = document.getElementById('productBrand');
 const productImageUrl = document.getElementById('productImageUrl');
 const productPrice = document.getElementById('productPrice');
+const productGrid = document.getElementById('productGrid');
 
-const getProducts = () => {
-  fetch(url, {
-    method: 'GET',
-    headers: header,
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      products = data;
-      loadProducts(products);
+window.onload = () => {
+  /* document.getElementById('alert').style.display = 'none'; */
+  getProducts();
+};
+
+const getProducts = async () => {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: header,
     });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    return data || []; // Restituisci un array vuoto nel caso in cui i dati siano undefined
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    throw error; // Rilancia l'errore per gestirlo nel chiamante (in questo caso, nell'onload)
+  }
 };
 
 const createProduct = () => {
@@ -49,29 +63,30 @@ const createProduct = () => {
     });
 };
 
-loadProducts = (data) => {
-  const productGrid = document.getElementById('productGrid');
+const loadProducts = (data) => {
+  productGrid.innerHTML = '';
   data.forEach((el) => {
-    productGrid.innerHTML += `
-    <div class="col-md-4">
-      <div class="card text-center">
-        <img class="card-img-top w-25 mx-auto my-2" src="assets/img/img-cellphone.webp" alt="${el.description}">
-        <div class="card-body">
-          <h5 class="card-title">${el.name}</h5>
-          <p class="card-text">${el.description}</p>
-          <p class="card-text">${el.brand}</p>
-          <p class="card-text">$${el.price}</p>
-          <button type="button" class="btn btn-warning" onclick="editProduct(${el.id})">Edit</button>
-          <button type="button" class="btn btn-primary" onclick="getDetails(${el.id})">See details</button>
+    const productCard = document.createElement('div');
+    productCard.classList.add('col-md-3');
+    productCard.innerHTML = `
+        <div class="card text-center">
+          <img class="card-img-top w-25 mx-auto my-2" src="assets/img/img-cellphone.webp" alt="${el.description}">
+          <div class="card-body">
+            <h5 class="card-title">${el.name}</h5>
+            <p class="card-text">${el.description}</p>
+            <p class="card-text">${el.brand}</p>
+            <p class="card-text">€ ${el.price}</p>
+            <button type="button" class="btn btn-warning" onclick="editProduct('${el._id}')">Edit</button>
+            <button type="button" class="btn btn-primary" onclick="goToDetails('${el._id}')">See details</button>
+          </div>
         </div>
-      </div>
-    </div>
     `;
-    productGrid.appendChild(el);
+    productGrid.appendChild(productCard);
   });
+  return data;
 };
 
-resetForm = () => {
+const resetForm = () => {
   productName.value = '';
   productDescription.value = '';
   productBrand.value = '';
@@ -79,11 +94,7 @@ resetForm = () => {
   productPrice.value = '';
 };
 
-window.onload = () => {
-  getProducts();
-};
-
-verifyForm = () => {
+const verifyForm = () => {
   if (productName.value === '') {
     /* const productNameAlert = document.getElementById('productNameAlert');
     productNameAlert.classList.remove('d-none');
@@ -107,4 +118,18 @@ verifyForm = () => {
     resetForm();
     return true;
   }
+};
+
+const goToDetails = (productId) => {
+  window.location.href = './details.html?id=' + productId;
+};
+
+const editProduct = (productId) => {
+  window.location.href = './back-office.html?id=' + productId;
+  const product = products.find((el) => el._id === productId);
+  productName.value = product.name;
+  productDescription.value = product.description;
+  productBrand.value = product.brand;
+  productImageUrl.value = product.imageUrl;
+  productPrice.value = product.price;
 };
