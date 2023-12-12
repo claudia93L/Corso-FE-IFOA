@@ -35,7 +35,7 @@ const loadProduct = (products) => {
   //console.log('Product:', product); // Aggiunto per debug
 
   if (product) {
-    detailImg.innerHTML = `<img class="card-img-top w-25 mx-auto" src="assets/img/img-cellphone.webp" alt="${product.description}">`;
+    detailImg.innerHTML = `<img class="card-img-top w-25 mx-auto" src="${product.imageUrl}" alt="${product.description}">`;
     detailInfos.innerHTML = `
         <h3>${product.name}</h3>
         <p>${product.description}</p>

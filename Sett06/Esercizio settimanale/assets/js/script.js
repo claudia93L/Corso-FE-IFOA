@@ -86,7 +86,7 @@ const loadProducts = async (data) => {
     productCard.classList.add('col-md-3');
     productCard.innerHTML = `
         <div class="card text-center">
-          <img class="card-img-top w-25 mx-auto my-2" src="assets/img/img-cellphone.webp" alt="${el.description}">
+          <img class="card-img-top w-25 mx-auto my-2" src="${el.imageUrl}" alt="${el.description}">
           <div class="card-body">
             <h5 class="card-title">${el.name}</h5>
             <p class="card-text">${el.description}</p>
