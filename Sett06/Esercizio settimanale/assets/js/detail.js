@@ -37,10 +37,10 @@ const loadProduct = (products) => {
   if (product) {
     detailImg.innerHTML = `<img class="card-img-top w-25 mx-auto" src="assets/img/img-cellphone.webp" alt="${product.description}">`;
     detailInfos.innerHTML = `
-        <h1>${product.name}</h1>
+        <h2>${product.name}</h2>
         <p>${product.description}</p>
         <p>${product.brand}</p>
         <p>€ ${product.price}</p>
       `;
-  } 
+  }
 };
