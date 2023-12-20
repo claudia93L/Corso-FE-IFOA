@@ -5,14 +5,6 @@ class classNumbers {
     }
   }
 
-  /*  checkProperty() {
-    if (classOne.hasOwnProperty(numbers)) {
-      console.log('ha la proprietà');
-    } else {
-      console.log('non ha la proprietà');
-    }
-  }
- */
   checkNumbers() {
     this.numbers.forEach((number) => {
       if (number % 3 === 0 && number % 5 === 0) {
@@ -34,6 +26,11 @@ const arrayNumbers = [36, 88, 20, 55, 4, 2, 75, 48, 15];
 
 let classOne = new classNumbers(arrayNumbers);
 
-//classOne.checkProperty();
-
-classOne.checkNumbers();
+(function checkProperty() {
+  if (classOne.hasOwnProperty('numbers')) {
+    console.log('ha la proprietà');
+    classOne.checkNumbers();
+  } else {
+    console.log('non ha la proprietà');
+  }
+})();
