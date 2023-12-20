@@ -17,3 +17,21 @@
   height: 40vh;
   background-color: cadetblue;
 }
+
+
+.squareThree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: bisque;
+}
+
+.circleOne {
+  margin-right: 10px;
+}
