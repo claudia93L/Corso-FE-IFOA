@@ -1,3 +1,5 @@
+const ball = document.getElementById('palla');
+
 function addPoints() {
   const score = document.getElementById('number');
   let points = 0;
@@ -14,10 +16,10 @@ function startGame() {
   const welcome = document.getElementById('welcome');
 
   welcome.style.display = 'none';
+  ball.classList.remove('d-none');
+  moveBallX();
 }
 
 function moveBallX() {
   const ball = document.getElementById('palla');
-
-  
 }

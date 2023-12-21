@@ -23,6 +23,7 @@ body {
   position: absolute;
   top: -150px;
   padding: 80px;
+  cursor: pointer;
 }
 
 .welcome {
@@ -41,6 +42,11 @@ body {
   background-color: rgb(240, 194, 134);
 }
 
+.welcome button:hover {
+  background-color: rgb(241, 173, 84);
+  cursor: pointer;
+}
+
 .punti {
   position: absolute;
   right: 5px;
@@ -53,6 +59,10 @@ body {
 .number {
   font-weight: 900;
   font-size: 26px;
+}
+
+.d-none {
+  display: none;
 }
 
 @keyframes fade {
