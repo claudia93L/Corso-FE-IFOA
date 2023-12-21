@@ -6,6 +6,7 @@ function addPoints() {
 
   return function () {
     points++;
+    ball.style.opacity = 0;
     score.innerText = points;
   };
 }
@@ -17,9 +18,35 @@ function startGame() {
 
   welcome.style.display = 'none';
   ball.classList.remove('d-none');
-  moveBallX();
+  moveBallY();
+}
+
+function getRandomXPosition() {
+  // Ottieni la larghezza della finestra e genera una posizione X casuale
+  const screenWidth = window.innerWidth;
+  const randomPx = Math.random() * screenWidth;
+  return randomPx;
 }
 
 function moveBallX() {
-  const ball = document.getElementById('palla');
+  const randomPx = getRandomXPosition();
+  ball.style.transform = `translateX(${randomPx}px)`;
 }
+
+function moveBallY() {
+  ball.animate(
+    [
+      // key frames
+      { transform: 'translateY(-150px)' },
+      { transform: 'translateY(100vh)' },
+    ],
+    {
+      duration: 1000,
+      iterations: Infinity,
+    }
+  );
+}
+
+window.onload = function () {
+  moveBallX();
+};
