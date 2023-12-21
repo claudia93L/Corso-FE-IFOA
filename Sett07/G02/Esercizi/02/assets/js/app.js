@@ -6,8 +6,9 @@ function addPoints() {
 
   return function () {
     points++;
-    ball.style.opacity = 0;
+    // ball.style.opacity = 0;
     score.innerText = points;
+    moveBallX();
   };
 }
 
@@ -22,7 +23,7 @@ function startGame() {
 }
 
 function getRandomXPosition() {
-  // Ottieni la larghezza della finestra e genera una posizione X casuale
+  // Ottieni la larghezza della finestra e genera una posizione casuale in px
   const screenWidth = window.innerWidth;
   const randomPx = Math.random() * screenWidth;
   return randomPx;
@@ -30,7 +31,7 @@ function getRandomXPosition() {
 
 function moveBallX() {
   const randomPx = getRandomXPosition();
-  ball.style.transform = `translateX(${randomPx}px)`;
+  ball.style.left = `${randomPx}px`;
 }
 
 function moveBallY() {
@@ -49,4 +50,7 @@ function moveBallY() {
 
 window.onload = function () {
   moveBallX();
+  if(ball.translateY() === '100vh') {
+    
+  }
 };
