@@ -1,5 +1,5 @@
 @import 'variables';
-@import 'mixin.scss';
+@import 'mixin';
 
 div {
   h1 {
@@ -49,17 +49,15 @@ div {
 
   @each $misura in $misure {
     .div-each {
-        h6 {
-            font-size: $misura;
-        }
-        h6 {
-            font-size: $misura;
-        }
-        h6 {
-            font-size: $misura;
-        }
-        
-
+      h6 {
+        font-size: $misura;
+      }
+      h6 {
+        font-size: $misura;
+      }
+      h6 {
+        font-size: $misura;
+      }
     }
   }
 }
