@@ -35,6 +35,10 @@ a {
   --bs-dropdown-min-width: 10%;
 }
 
+.dropdown-menu.show {
+  left: -100px;
+}
+
 .dropdown-menu li:hover {
   --bs-dropdown-link-hover-color: var(--color-white);
   --bs-dropdown-link-hover-bg: var(--color-red);
