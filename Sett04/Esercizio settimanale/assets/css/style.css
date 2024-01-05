@@ -31,7 +31,7 @@ body {
 }
 
 .container-margins {
-  margin: 0 10%;
+  margin: 0 5%;
 }
 
 /* COMMON */
@@ -133,7 +133,7 @@ header a,
 
 .logo-img {
   width: 20%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .logo-img img {
@@ -163,6 +163,7 @@ header a,
 .trending-articles .article-specs p,
 .trending-articles {
   font-size: 0.7em;
+  border: 1px solid red;
 }
 
 .trending-articles .article-specs p {
@@ -193,7 +194,7 @@ header a,
 }
 
 .hero-section .left {
-  margin-left: 10%;
+  margin-left: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -221,6 +222,10 @@ h1 {
   font-size: 0.8em;
   width: 55%;
   margin-bottom: 50px;
+}
+
+h1,
+.hero-section p {
   line-height: 1em;
 }
 
@@ -327,10 +332,12 @@ footer ul {
 .latest-articles .article-infos .row-alignment p,
 .latest-articles .article-infos .row-alignment a {
   font-size: 0.6em;
+  
 }
 
 .latest-articles .article-infos .row-alignment p:not(.article-specs p) {
   margin-left: 5px;
+  
 }
 
 .latest-articles .article-infos p:nth-of-type(1):not(.article-specs p) {
@@ -383,6 +390,7 @@ footer a {
   .trending-articles .article-infos p,
   .trending-articles .article-infos a {
     font-size: 0.8em;
+    
   }
   .trending-articles .article-specs span {
     margin-left: 25%;
@@ -392,4 +400,9 @@ footer a {
   .trending-articles .article-specs img {
     display: none;
   }
+
+  .latest-articles .article-infos .article-specs {
+    border: 1px solid red;
+  }
 }
+
