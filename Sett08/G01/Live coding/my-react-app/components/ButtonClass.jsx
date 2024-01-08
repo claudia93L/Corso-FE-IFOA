@@ -7,7 +7,8 @@ class ButtonClass extends Component {
     super(props);
     // utilizziamo l'oggetto state attuale con il count aggiornato
     this.state = {
-      count: 0,
+      // utilizziamo i dati ricevuti con la props
+      count: this.props.count,
     };
   }
 
