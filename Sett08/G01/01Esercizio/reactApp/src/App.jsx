@@ -18,6 +18,7 @@ function App() {
   let btnText = 'Testo da genitore';
 
   return (
+    // <> tag vuoto necessario a react per creare un punto d'accesso che non venga rendirizzato
     <>
       <h1>Prime prove React props</h1>
       <div className='card'>
