@@ -22,12 +22,12 @@ const Button = (props, changePageTitle) => {
     sendTitle();
   }, []);
 
-  /* const stileButton = {
-    marginTop: '30px',
-  }; */
+  const stileButton = {
+    border: '2px solid red',
+  }; 
 
   return (
-    <button onClick={() => setCount((count) => count + 1)}>
+    <button style={stileButton} onClick={() => setCount((count) => count + 1)}>
       Il conteggio è {count}
     </button>
   );
