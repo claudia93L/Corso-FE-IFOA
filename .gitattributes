@@ -1,7 +1,0 @@
-*.html language=HTML
-*.js language=JavaScript
-*.css language=CSS
-*.scss language=SCSS
-*.jsx language=JavaScript React
-*.redux language=JavaScript Redux
-
