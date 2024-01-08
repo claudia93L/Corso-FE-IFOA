@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import ButtonComponent from '../src/components/ButtonComponent';
 import ImageComponent from '../src/components/ImageComponent';
+import ButtonSecondary from '../src/components/ButtonSecondary';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function App() {
           count is {count}
         </button>
         <ButtonComponent></ButtonComponent>
+        <ButtonSecondary textContent='Soluzione alternativa'></ButtonSecondary>
         <ImageComponent></ImageComponent>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
