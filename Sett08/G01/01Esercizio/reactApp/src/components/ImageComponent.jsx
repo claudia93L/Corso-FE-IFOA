@@ -12,7 +12,9 @@ class ImageComponent extends Component {
   }
 
   render() {
-    return <img class='monkey' src={this.state.src} alt={this.state.alt}></img>;
+    return (
+      <img className='monkey' src={this.state.src} alt={this.state.alt}></img>
+    );
   }
 }
 
