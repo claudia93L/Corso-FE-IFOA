@@ -22,9 +22,9 @@ const Button = (props, changePageTitle) => {
     sendTitle();
   }, []);
 
-  const stileButton = {
+  /* const stileButton = {
     marginTop: '30px',
-  };
+  }; */
 
   return (
     <button onClick={() => setCount((count) => count + 1)}>
