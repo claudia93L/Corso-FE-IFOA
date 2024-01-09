@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Lista from '../src/components/Lista';
-import { Button } from 'react-bootstrap';
+import Lista from './components/Lista';
+import CardCustom from './components/CardCustom';
 
 function App() {
   const giorni = [
@@ -16,7 +16,9 @@ function App() {
 
   return (
     <>
-      <Button variant='success'>Ciao</Button>
+      {giorni.map((giorno, index) => (
+        <CardCustom giorno={giorno} jey={index}></CardCustom>
+      ))}
       <Lista giorni={giorni}></Lista>
     </>
   );
