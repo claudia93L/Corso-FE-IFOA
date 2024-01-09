@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
-function MyNav() {
+const MyNav = () => {
   return (
     <Navbar expand='lg' className='navbar-dark bg-dark'>
       <Container>
@@ -16,6 +16,6 @@ function MyNav() {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default MyNav;

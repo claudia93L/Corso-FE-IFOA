@@ -1,17 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import MyNav from './components/MyNav';
-import MyFooter from './components/MyFooter';
+import MyNav from './components/common/MyNav';
+import MyFooter from './components/common/MyFooter';
 import Welcome from './components/Welcome';
+import AllTheBooks from './components/AllTheBooks';
+import { Container } from 'react-bootstrap';
 
-function App() {
+const App = () => {
   return (
     <>
       <MyNav></MyNav>
-      <Welcome></Welcome>
+      <Container fluid className='mx-5'>
+        <Welcome></Welcome>
+        <AllTheBooks></AllTheBooks>
+      </Container>
       <MyFooter></MyFooter>
     </>
   );
-}
+};
 
 export default App;
