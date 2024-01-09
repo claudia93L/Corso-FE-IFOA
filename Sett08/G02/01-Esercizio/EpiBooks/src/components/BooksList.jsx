@@ -30,11 +30,11 @@ const BooksList = ({ setList }) => {
   ];
 
   return (
-    <div className='text-center py-4'>
+    <div className='text-center pt-4 pb-2'>
       {categories.map((category, index) => (
         <Button
-          variant='outline-success'
-          className='mx-2'
+          variant='outline-dark'
+          className='mx-2 mb-5'
           onClick={() => setList(category.data)}
           key={index}
         >

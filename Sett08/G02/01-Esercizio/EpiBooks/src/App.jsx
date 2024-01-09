@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <MyNav></MyNav>
-      <Container fluid className='mx-5'>
+      <Container className='mx-5'>
         <Welcome></Welcome>
         <AllTheBooks></AllTheBooks>
       </Container>

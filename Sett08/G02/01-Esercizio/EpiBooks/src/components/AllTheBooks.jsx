@@ -1,22 +1,27 @@
-import { Container, Button, Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { useState } from 'react';
 import BooksList from './BooksList';
 
 const AllTheBooks = () => {
+  const [bookList, setList] = useState([]);
+
   return (
+    <>
+      <BooksList setList={setList}></BooksList>
 
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant='top' src='holder.js/100px180' />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant='primary'>Buy now</Button>
-        </Card.Body>
-      </Card>
-
+      <div className='d-flex justify-content-between flex-wrap'>
+        {bookList.map((book) => (
+          <Card style={{ width: '18rem' }} key={book.asin} className='mb-3'>
+            <Card.Img variant='top' src={book.img} />
+            <Card.Body>
+              <Card.Title>{book.title}</Card.Title>
+              <Card.Text>{book.asin + ' - ' + book.price}</Card.Text>
+              <Button variant='primary'>Buy now</Button>
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
+    </>
   );
 };
 
