@@ -30,18 +30,20 @@ const BooksList = ({ setList }) => {
   ];
 
   return (
-    <div className='text-center pt-4 pb-2'>
-      {categories.map((category, index) => (
-        <Button
-          variant='outline-dark'
-          className='mx-2 mb-5'
-          onClick={() => setList(category.data)}
-          key={index}
-        >
-          {category.genre}
-        </Button>
-      ))}
-    </div>
+    <>
+      <div className='text-center pt-4 pb-2'>
+        {categories.map((category, index) => (
+          <Button
+            variant='outline-dark'
+            className='mx-2 mb-5'
+            onClick={() => setList(category.data)}
+            key={index}
+          >
+            {category.genre}
+          </Button>
+        ))}
+      </div>
+    </>
   );
 };
 
