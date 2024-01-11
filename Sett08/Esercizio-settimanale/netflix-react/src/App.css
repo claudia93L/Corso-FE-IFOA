@@ -1,0 +1,100 @@
+/* VARIABILI */
+
+:root {
+  --color-red: red;
+  --color-gray: gray;
+  --color-white: white;
+}
+
+/* COMMON */
+
+.btn,
+.card {
+  border: none;
+}
+
+footer a:hover,
+footer .social-media-section i:hover,
+footer .button-link a:hover {
+  color: var(--color-white);
+}
+
+.squared i,
+footer,
+footer li a,
+footer p,
+footer .social-media-section a {
+  color: var(--color-gray);
+}
+
+footer .social-media-section,
+footer li {
+  margin-bottom: 16px;
+}
+
+.squared {
+  width: 100%;
+}
+
+/* HEADER */
+
+.nav-item a:hover,
+header a:hover {
+  color: var(--color-red);
+}
+
+/* CATEGORY SECTION */
+
+h1 {
+  font-size: 1.6em;
+}
+
+.squared {
+  border: 1px solid var(--color-gray);
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+/* MOVIES SECTION */
+
+.card:hover {
+  transform: scale(0.9);
+  transition: 0.5s ease-in-out;
+}
+
+h2 {
+  margin-top: 32px;
+  font-size: 0.9em;
+}
+
+/* FOOTER */
+
+/* footer i {
+  font-size: 1.3em;
+}
+
+footer li,
+footer .button-link,
+.profile-content p {
+  text-wrap: nowrap;
+}
+
+footer .social-media-section i,
+.form-control .checkbox {
+  margin-right: 16px;
+}
+
+footer div,
+footer p {
+  width: fit-content;
+}
+
+.footer-content {
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.5em;
+} */
