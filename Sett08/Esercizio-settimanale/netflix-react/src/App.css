@@ -36,6 +36,10 @@ footer li {
   width: 100%;
 }
 
+.hover-red-bg:hover {
+  background-color: red;
+}
+
 /* HEADER */
 
 .nav-item a:hover,

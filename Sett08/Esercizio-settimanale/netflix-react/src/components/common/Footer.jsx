@@ -26,7 +26,7 @@ const Footer = () => {
             <Row>
               <div className='footer-menu col-12 text-left'>
                 <Row>
-                  <Col lg={3}>
+                  <Col md={3}>
                     <ul className='list-unstyled'>
                       <li>
                         <a href='#'>Audio and Subtitles</a>
@@ -42,7 +42,7 @@ const Footer = () => {
                       </li>
                     </ul>
                   </Col>
-                  <Col lg={3}>
+                  <Col md={3}>
                     <ul className='list-unstyled'>
                       <li>
                         <a href='#'>Audio Description</a>
@@ -55,7 +55,7 @@ const Footer = () => {
                       </li>
                     </ul>
                   </Col>
-                  <Col lg={3}>
+                  <Col md={3}>
                     <ul className='list-unstyled'>
                       <li>
                         <a href='#'>Help Center</a>
@@ -68,7 +68,7 @@ const Footer = () => {
                       </li>
                     </ul>
                   </Col>
-                  <Col lg={3}>
+                  <Col md={3}>
                     <ul className='list-unstyled'>
                       <li>
                         <a href='#'>Gift Cards</a>
@@ -86,7 +86,12 @@ const Footer = () => {
             </Row>
             <Row>
               <div>
-                <Button variant='outline-secondary'>Service Code</Button>
+                <Button
+                  variant='outline-secondary'
+                  className='border border-1 border-secondary hover-red-bg'
+                >
+                  Service Code
+                </Button>
               </div>
             </Row>
             <Row>

@@ -1,11 +1,29 @@
-import { useState, useEffect } from 'react';
+import { Row } from 'react-bootstrap';
+import Gallery from './movies/Gallery';
 import CategorySection from './CategorySection';
 
-const Main = () => {
-  const [pageTitle, setPageTitle] = useState('Gallery');
+const Main = ({ setPageTitle }) => {
+  const retrievePageTitle = (newPageTitle) => {
+    setPageTitle(newPageTitle);
+  };
+
   return (
     <>
-      <CategorySection></CategorySection>
+      <Row className='mx-4'>
+        <CategorySection></CategorySection>
+        <Gallery
+          retrievePageTitle={retrievePageTitle}
+          movieTitle='Harry Potter'
+        ></Gallery>
+        {/* <Gallery
+          retrievePageTitle={retrievePageTitle}
+          movieTitle='Avengers'
+        ></Gallery>
+        <Gallery
+          retrievePageTitle={retrievePageTitle}
+          movieTitle='Hunger Games'
+        ></Gallery> */}
+      </Row>
     </>
   );
 };

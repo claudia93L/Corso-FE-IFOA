@@ -5,7 +5,8 @@ import Footer from './components/common/Footer';
 import Main from './components/Main';
 import { useState, useEffect } from 'react';
 
-// Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc0ZDRmYjJjNmEwZDAwMTg0OTYxNjYiLCJpYXQiOjE3MDQ5MTQ2ODEsImV4cCI6MTcwNjEyNDI4MX0.-Oddul8hPzc9Q5BxNBUmPmrINgYRSZi-CBRgItUfTrE
+// http://www.omdbapi.com/?apikey=[yourkey]&
+//http://www.omdbapi.com/?i=tt3896198&apikey=d8685296&
 
 function App() {
   const [pageTitle, setPageTitle] = useState('Homepage | Netflix');
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       <NavbarComponent></NavbarComponent>
-      <Main setPageTitle={setPageTitle}></Main>
+      <Main setPageTitle={setPageTitle} className='mx-4'></Main>
       <Footer></Footer>
     </>
   );
