@@ -1,4 +1,3 @@
-import * as Icon from 'react-bootstrap-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavbarComponent from './components/common/NavbarComponent';
