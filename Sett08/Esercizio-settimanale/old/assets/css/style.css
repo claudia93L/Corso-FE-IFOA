@@ -1,0 +1,285 @@
+/* VARIABILI */
+
+:root {
+  --color-red: red;
+  --color-gray: gray;
+  --color-white: white;
+}
+
+/* GENERAL */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* COMMON */
+
+.btn,
+.card,
+.profile-content .form-control,
+.profile-content .form-select,
+.profile-content input[type='text'],
+.profile-content select:focus {
+  border: none;
+}
+
+.dropdown-menu {
+  --bs-dropdown-min-width: 10%;
+}
+
+.dropdown-menu.show {
+  left: -100px;
+}
+
+.dropdown-menu li:hover {
+  --bs-dropdown-link-hover-color: var(--color-white);
+  --bs-dropdown-link-hover-bg: var(--color-red);
+  --bs-dropdown-link-active-color: var(--color-white);
+  --bs-dropdown-link-active-bg: var(--color-red);
+}
+
+.nav-item a,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle.show,
+footer a:hover,
+header a,
+footer .social-media-section i:hover,
+footer .button-link a:hover,
+.profile-content .form-control input::placeholder,
+.profile-content input[type='text'],
+.profile-content .form-select,
+.profile-content .maturity-settings {
+  color: var(--color-white);
+}
+
+.squared i,
+footer,
+footer li a,
+footer button,
+footer p,
+footer .button-link a,
+footer .social-media-section a,
+.form-control {
+  color: var(--color-gray);
+}
+
+footer .button-link,
+.profile-details {
+  --bs-border-color: var(--color-gray);
+}
+
+.filter-section .btn,
+.filter-section .dropdown-menu,
+.squared i,
+.profile-content input[type='text'],
+.form-control label,
+.profile-content select,
+.profile-content .maturity-settings,
+.profile-content button,
+.profile-content h6,
+.buttons button,
+header,
+.navbar .right {
+  font-size: 0.7em;
+}
+
+footer .social-media-section,
+footer li,
+footer .button-link,
+.form-control input {
+  margin-bottom: 16px;
+}
+
+.profile-content input[type='text'],
+.squared,
+.profile-content img {
+  width: 100%;
+}
+
+footer li,
+footer .button-link,
+.profile-content p {
+  font-size: 0.6em;
+}
+
+.profile-content .form-select,
+input[type='checkbox'] {
+  border: 1px solid var(--color-white);
+}
+
+/* HEADER */
+
+header,
+.navbar .right {
+  font-weight: 300;
+}
+
+header {
+  margin-bottom: 8px;
+}
+
+header .dropdown-menu,
+header i {
+  font-size: 1.2em;
+}
+
+.navbar-brand,
+.dropdown {
+  width: 10%;
+}
+
+.navbar-brand img,
+.dropdown img {
+  max-width: 100%;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link .checked {
+  font-weight: 600;
+}
+
+.nav-item a:hover,
+header a:hover {
+  color: var(--color-red);
+}
+
+/* FILTER SECTION */
+
+h1 {
+  font-size: 1.6em;
+}
+
+.squared {
+  border: 1px solid var(--color-gray);
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+/* MOVIES SECTION */
+
+.card:hover {
+  transform: scale(0.9);
+  transition: 0.5s ease-in-out;
+}
+
+h2 {
+  margin-top: 32px;
+  font-size: 0.9em;
+}
+
+/* FOOTER */
+
+footer i {
+  font-size: 1.3em;
+}
+
+footer li,
+footer .button-link,
+.profile-content p {
+  text-wrap: nowrap;
+}
+
+footer .social-media-section i,
+.form-control .checkbox {
+  margin-right: 16px;
+}
+
+footer div,
+footer p {
+  width: fit-content;
+}
+
+.footer-content {
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.5em;
+}
+
+/* PROFILE PAGE */
+
+.profile-content .left {
+  width: 30%;
+}
+
+.profile-content .right {
+  width: 70%;
+}
+
+/* PROFILE FORM */
+
+.profile-content input[type='text'],
+.profile-content .maturity-settings {
+  background-color: rgb(107, 107, 107);
+  border: transparent;
+}
+
+.profile-content input:focus:not([type='checkbox']),
+.profile-content .form-select:focus,
+.profile-content .maturity-settings:focus,
+.checkbox:checked {
+  box-shadow: 0px 0px 10px 1px var(--color-red);
+}
+
+.profile-content input[type='text'],
+.profile-content select:focus,
+.profile-content .maturity-settings {
+  border-radius: 1px;
+  padding: 4px 8px;
+}
+
+.profile-content .form-select,
+.profile-content .form-control {
+  background-color: transparent;
+}
+
+.profile-content .form-select {
+  width: 50%;
+}
+
+.form-control button:hover,
+.buttons #btn-save:hover,
+.buttons button:hover {
+  background-color: var(--color-red);
+}
+
+.form-control .checkbox {
+  opacity: 0.5;
+  background-color: transparent;
+  border: 1px solid var(--color-gray);
+  border-radius: 2px;
+}
+
+.buttons button {
+  margin-right: 20px;
+}
+
+.buttons #btn-save {
+  background-color: var(--color-white);
+}
+
+.profile-content .img {
+  position: relative;
+  height: 50%;
+}
+
+.profile-content svg {
+  position: absolute;
+  top: 70%;
+  left: 5px;
+  cursor: pointer;
+}
