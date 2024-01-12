@@ -33,25 +33,25 @@ const Gallery = ({ saga, setLoading, setError }) => {
     fetchMovies();
   }, []);
 
-  // Hriduciamo 6 film in un array differente
-  const reduceMovies = (acc, cur, index) => {
+  // riduciamo 6 film in differenti array
+  const reduceMovies = (accumulator, currentEl, index) => {
     const groupIndex = Math.floor(index / 6);
-    if (!acc[groupIndex]) acc[groupIndex] = [];
-    acc[groupIndex].push(cur);
-    console.log(acc);
-    return acc;
+    if (!accumulator[groupIndex]) accumulator[groupIndex] = [];
+    accumulator[groupIndex].push(currentEl);
+    //console.log(accumulator);
+    return accumulator;
   };
 
   return (
     <>
-      <div className='saga-section p-0'>
-        <h2>{saga}</h2>
+      <div className='saga-section p-0 mt-3'>
+        <h2 className='h3'>{saga}</h2>
         <Row xs={2} md={3} lg={6}>
-          <Carousel className='w-100'>
+          <Carousel className='w-100 max mb-4 mt-2'>
             {movies.reduce(reduceMovies, []).map((movie, index) => (
               <Carousel.Item key={index}>
                 <Container fluid className='d-flex justify-content-center'>
-                  {movie.map((singleMovie, index) => (
+                  {movie.map((singleMovie) => (
                     <Col key={singleMovie.imdbID}>
                       <SingleMovie movie={singleMovie}></SingleMovie>
                     </Col>
