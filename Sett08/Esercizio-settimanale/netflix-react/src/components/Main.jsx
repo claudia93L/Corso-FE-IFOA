@@ -13,16 +13,16 @@ const Main = ({ setPageTitle }) => {
         <CategorySection></CategorySection>
         <Gallery
           retrievePageTitle={retrievePageTitle}
-          movieTitle='Harry Potter'
-        ></Gallery>
-        {/* <Gallery
-          retrievePageTitle={retrievePageTitle}
-          movieTitle='Avengers'
+          saga='Harry Potter'
         ></Gallery>
         <Gallery
           retrievePageTitle={retrievePageTitle}
-          movieTitle='Hunger Games'
-        ></Gallery> */}
+          saga='Avengers'
+        ></Gallery>
+        <Gallery
+          retrievePageTitle={retrievePageTitle}
+          saga='Hunger Games'
+        ></Gallery>
       </Row>
     </>
   );
