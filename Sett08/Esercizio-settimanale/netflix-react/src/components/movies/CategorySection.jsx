@@ -11,7 +11,12 @@ const CategorySection = () => {
         </Col>
         <Col md={1} className='m-0 p-0 ps-2'>
           <Dropdown>
-            <Dropdown.Toggle variant='outline-light'>Genres</Dropdown.Toggle>
+            <Dropdown.Toggle
+              variant='outline-light'
+              className='border border-light'
+            >
+              Genres
+            </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item className='hover-red-bg' href='#/action-1'>
                 Thriller
