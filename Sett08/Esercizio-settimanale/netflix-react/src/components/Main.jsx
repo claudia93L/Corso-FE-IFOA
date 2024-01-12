@@ -1,31 +1,20 @@
-import { Row, Spinner, Alert } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Gallery from './movies/Gallery';
 import CategorySection from './movies/CategorySection';
 import { useState } from 'react';
+import SpinnerLoading from './common/SpinnerLoading';
+import AlertError from './common/AlertError';
 
 const Main = () => {
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState(false);
 
   const getSpinner = () => {
-    return (
-      isLoading && (
-        <Spinner animation='border' role='status'>
-          <span className='visually-hidden'>Your movies are loading...</span>
-        </Spinner>
-      )
-    );
+    return isLoading && <SpinnerLoading></SpinnerLoading>;
   };
 
   const getErrorAlert = () => {
-    return (
-      isError && (
-        <Alert variant='danger'>
-          <Alert.Heading>Sorry, there was an unexpected error</Alert.Heading>
-          <p>Please, try again</p>
-        </Alert>
-      )
-    );
+    return isError && <AlertError></AlertError>;
   };
 
   return (
