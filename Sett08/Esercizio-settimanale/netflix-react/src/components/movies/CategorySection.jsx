@@ -6,7 +6,7 @@ const CategorySection = () => {
     <>
       <Row className='d-flex align-items-baseline m-0 p-0'>
         <Col md={1} className='m-0 p-0'>
-          <h1>TV Shows</h1>
+          <h1 className='h5'>TV Shows</h1>
         </Col>
         <Col md={1} className='m-0 p-0 ps-2'>
           <Dropdown>

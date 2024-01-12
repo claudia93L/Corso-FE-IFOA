@@ -35,7 +35,7 @@ const Gallery = ({ saga, setLoading, setError }) => {
 
   // riduciamo 6 film in differenti array
   const reduceMovies = (accumulator, currentEl, index) => {
-    const groupIndex = Math.floor(index / 6);
+    const groupIndex = Math.floor(index / 5);
     if (!accumulator[groupIndex]) accumulator[groupIndex] = [];
     accumulator[groupIndex].push(currentEl);
     //console.log(accumulator);
