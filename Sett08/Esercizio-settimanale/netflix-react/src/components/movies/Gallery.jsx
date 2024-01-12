@@ -2,11 +2,12 @@ import { Row, Col } from 'react-bootstrap';
 import SingleMovie from './SingleMovie';
 import { useState, useEffect } from 'react';
 
-const Gallery = ({ saga }) => {
+const Gallery = ({ saga, setLoading, setError }) => {
   const [movies, setMovies] = useState([]);
 
-  const getMovies = async () => {
+  const fetchMovies = async () => {
     try {
+      setLoading(true);
       const res = await fetch(
         `http://www.omdbapi.com/?s=${saga}&apikey=1a73cf6e`
       );
@@ -15,16 +16,21 @@ const Gallery = ({ saga }) => {
         const limitedMovies = data.Search.slice(0, 6);
         setMovies(limitedMovies);
         //console.log(limitedMovies);
+        setLoading(false);
       } else {
+        setLoading(false);
         console.log('error');
+        setError(true);
       }
     } catch (error) {
+      setLoading(false);
       console.log(error);
+      setError(true);
     }
   };
 
   useEffect(() => {
-    getMovies();
+    fetchMovies();
   }, []);
 
   return (
