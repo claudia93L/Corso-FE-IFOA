@@ -1,5 +1,6 @@
 import { Col } from 'react-bootstrap';
 import SingleMovie from './SingleMovie';
+import { useState } from 'react';
 
 const Gallery = () => {
   const [movies] = useState();

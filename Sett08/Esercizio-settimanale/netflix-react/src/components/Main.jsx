@@ -1,6 +1,6 @@
 import { Row } from 'react-bootstrap';
 import Gallery from './movies/Gallery';
-import CategorySection from './CategorySection';
+import CategorySection from './movies/CategorySection';
 
 const Main = ({ setPageTitle }) => {
   const retrievePageTitle = (newPageTitle) => {

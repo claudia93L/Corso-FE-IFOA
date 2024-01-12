@@ -6,7 +6,7 @@ import Main from './components/Main';
 import { useState, useEffect } from 'react';
 
 // http://www.omdbapi.com/?apikey=[yourkey]&
-//http://www.omdbapi.com/?i=tt3896198&apikey=d8685296&
+// http://www.omdbapi.com/?i=tt3896198&apikey=d8685296&
 
 function App() {
   const [pageTitle, setPageTitle] = useState('Homepage | Netflix');

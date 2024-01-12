@@ -34,6 +34,8 @@ footer li {
 
 .squared {
   width: 100%;
+  height: 5%;
+  margin-left: 10px;
 }
 
 .hover-red-bg:hover {
