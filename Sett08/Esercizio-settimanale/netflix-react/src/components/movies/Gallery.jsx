@@ -30,7 +30,7 @@ const Gallery = ({ saga }) => {
   return (
     <>
       <div className='saga-section p-0'>
-        <h2>Titolo</h2>
+        <h2>{saga}</h2>
         <Row xs={2} md={3} lg={6}>
           {movies.map((movie) => (
             <Col key={movie.imdbID}>
