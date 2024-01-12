@@ -4,8 +4,8 @@ import * as Icon from 'react-bootstrap-icons';
 const Footer = () => {
   return (
     <>
-      <footer className='mt-5 bg-black' style={{ width: 800 }}>
-        <div className='footer-content d-flex py-3 flex-column'>
+      <footer className='mt-5 bg-black' style={{ width: '100%' }}>
+        <div className='footer-content d-flex py-3 flex-column mx-auto'>
           <Container fluid>
             <Row>
               <div className='social-media-section'>
