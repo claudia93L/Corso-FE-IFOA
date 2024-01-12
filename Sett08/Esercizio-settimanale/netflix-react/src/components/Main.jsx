@@ -21,7 +21,7 @@ const Main = ({ setPageTitle }) => {
         ></Gallery>
         <Gallery
           retrievePageTitle={retrievePageTitle}
-          saga='Hunger Games'
+          saga='Dragon Ball'
         ></Gallery>
       </Row>
     </>
