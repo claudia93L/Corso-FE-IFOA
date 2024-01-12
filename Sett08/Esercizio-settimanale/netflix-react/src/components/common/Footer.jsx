@@ -9,16 +9,16 @@ const Footer = () => {
           <Container fluid>
             <Row>
               <div className='social-media-section'>
-                <a href='#'>
+                <a href='#' className='tx-white-hover me-2'>
                   <Icon.Facebook></Icon.Facebook>
                 </a>
-                <a href='#'>
+                <a href='#' className='tx-white-hover me-2'>
                   <Icon.Instagram></Icon.Instagram>
                 </a>
-                <a href='#'>
+                <a href='#' className='tx-white-hover me-2'>
                   <Icon.Twitter></Icon.Twitter>
                 </a>
-                <a href='#'>
+                <a href='#' className='tx-white-hover me-2'>
                   <Icon.Youtube></Icon.Youtube>
                 </a>
               </div>
@@ -88,7 +88,7 @@ const Footer = () => {
               <div>
                 <Button
                   variant='outline-secondary'
-                  className='border border-1 border-secondary hover-red-bg'
+                  className='border border-1 border-secondary hover-red-bg mb-4'
                 >
                   Service Code
                 </Button>

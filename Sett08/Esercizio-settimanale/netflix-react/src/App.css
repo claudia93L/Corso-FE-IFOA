@@ -39,7 +39,7 @@ footer li {
 }
 
 .hover-red-bg:hover {
-  background-color: red;
+  background-color: var(--color-red);
 }
 
 /* HEADER */
@@ -103,4 +103,8 @@ footer p {
 
 footer p {
   font-size: 0.5em;
+}
+
+footer .tx-white-hover:hover {
+  color: var(--color-white);
 }
