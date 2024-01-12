@@ -14,7 +14,7 @@ const Gallery = ({ saga }) => {
         let data = await res.json();
         const limitedMovies = data.Search.slice(0, 6);
         setMovies(limitedMovies);
-        console.log(limitedMovies);
+        //console.log(limitedMovies);
       } else {
         console.log('error');
       }
