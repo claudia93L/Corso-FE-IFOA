@@ -1,0 +1,13 @@
+/* CATEGORY SECTION */
+
+h1 {
+  font-size: 1.6em;
+}
+
+.squared {
+  border: 1px solid var(--color-gray);
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}

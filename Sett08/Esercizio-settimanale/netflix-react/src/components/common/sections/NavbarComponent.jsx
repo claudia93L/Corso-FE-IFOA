@@ -1,5 +1,6 @@
 import { Nav, Navbar, Container, Dropdown } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
+import './NavbarComponent.css';
 
 const NavbarComponent = () => {
   return (
@@ -25,11 +26,11 @@ const NavbarComponent = () => {
           <Icon.Search></Icon.Search>
 
           <a className='mx-3' href='#'>
-          <img
-                style={{ width: 30 }}
-                src='../../../src/assets/kids_icon.png'
-                alt='Profilo'
-              />
+            <img
+              style={{ width: 30 }}
+              src='../../../src/assets/kids_icon.png'
+              alt='Profilo'
+            />
           </a>
           <Icon.BellFill></Icon.BellFill>
           <Dropdown>

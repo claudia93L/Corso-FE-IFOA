@@ -1,5 +1,6 @@
 import { Row, Col, Dropdown } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
+import './CategorySection.css';
 
 const CategorySection = () => {
   return (

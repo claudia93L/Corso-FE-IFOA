@@ -1,0 +1,33 @@
+/* FOOTER */
+
+footer i {
+    font-size: 1.3em;
+  }
+  
+  footer li,
+  footer .button-link,
+  .profile-content p {
+    text-wrap: nowrap;
+  }
+  
+  footer .social-media-section i,
+  .form-control .checkbox {
+    margin-right: 16px;
+  }
+  
+  footer div,
+  footer p {
+    width: fit-content;
+  }
+  
+  .footer-content {
+    margin: 0 auto;
+  }
+  
+  footer p {
+    font-size: 0.5em;
+  }
+  
+  footer .tx-white-hover:hover {
+    color: var(--color-white);
+  }

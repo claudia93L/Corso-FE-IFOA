@@ -1,0 +1,6 @@
+/* HEADER */
+
+.nav-item a:hover,
+header a:hover {
+  color: var(--color-red);
+}

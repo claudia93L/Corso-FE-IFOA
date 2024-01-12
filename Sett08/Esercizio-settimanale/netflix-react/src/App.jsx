@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import NavbarComponent from './components/common/NavbarComponent';
-import Footer from './components/common/Footer';
+import NavbarComponent from './components/common/sections/NavbarComponent';
+import Footer from './components/common/sections/Footer';
 import Main from './components/Main';
 import { useState, useEffect } from 'react';
 

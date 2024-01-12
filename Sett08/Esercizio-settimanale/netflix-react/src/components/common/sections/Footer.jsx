@@ -1,5 +1,6 @@
 import { Button, Row, Col, Container } from 'react-bootstrap';
-import * as Icon from 'react-bootstrap-icons';
+import SocialMediaIcons from '../SocialMediaIcons';
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -8,20 +9,7 @@ const Footer = () => {
         <div className='footer-content d-flex py-3 flex-column mx-auto'>
           <Container fluid>
             <Row>
-              <div className='social-media-section'>
-                <a href='#' className='tx-white-hover me-2'>
-                  <Icon.Facebook></Icon.Facebook>
-                </a>
-                <a href='#' className='tx-white-hover me-2'>
-                  <Icon.Instagram></Icon.Instagram>
-                </a>
-                <a href='#' className='tx-white-hover me-2'>
-                  <Icon.Twitter></Icon.Twitter>
-                </a>
-                <a href='#' className='tx-white-hover me-2'>
-                  <Icon.Youtube></Icon.Youtube>
-                </a>
-              </div>
+              <SocialMediaIcons></SocialMediaIcons>
             </Row>
             <Row>
               <div className='footer-menu col-12 text-left'>

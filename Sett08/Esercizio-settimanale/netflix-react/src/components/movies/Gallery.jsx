@@ -1,6 +1,7 @@
 import { Row, Col, Carousel, Container } from 'react-bootstrap';
 import SingleMovie from './SingleMovie';
 import { useState, useEffect } from 'react';
+import './Gallery.css';
 
 const Gallery = ({ saga, setLoading, setError }) => {
   const [movies, setMovies] = useState([]);
