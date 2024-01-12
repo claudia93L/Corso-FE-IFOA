@@ -49,7 +49,7 @@ const Gallery = ({ saga, setLoading, setError }) => {
       <div className='saga-section p-0 mt-3'>
         <h2 className='h3'>{saga}</h2>
         <Row xs={2} md={3} lg={6}>
-          <Carousel className='w-100 max mb-4 mt-2'>
+          <Carousel className='w-100 mb-4 mt-2'>
             {movies.reduce(reduceMovies, []).map((movie, index) => (
               <Carousel.Item key={index}>
                 <Container fluid className='d-flex justify-content-center'>
