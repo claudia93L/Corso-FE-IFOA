@@ -1,4 +1,4 @@
-import { Row, Col, Carousel } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import SingleMovie from './SingleMovie';
 import { useState, useEffect } from 'react';
 
@@ -13,7 +13,7 @@ const Gallery = ({ saga }) => {
       if (res.ok) {
         let data = await res.json();
         setMovies(data.Search);
-        console.log(data.Search);
+        //console.log(data.Search);
       } else {
         console.log('error');
       }
@@ -29,17 +29,13 @@ const Gallery = ({ saga }) => {
   return (
     <>
       <div className='saga-section p-0'>
-        <h2>{saga}</h2>
+        <h2>Titolo</h2>
         <Row xs={2} md={3} lg={6}>
-          <Carousel>
-            {movies.map((movie) => (
-              <Carousel.Item key={movie.imdbID}>
-                <Col /* key={movie.imdbID} */>
-                  <SingleMovie movie={movie}></SingleMovie>
-                </Col>
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          {movies.map((movie) => (
+            <Col key={movie.imdbID}>
+              <SingleMovie movie={movie}></SingleMovie>
+            </Col>
+          ))}
         </Row>
       </div>
     </>
@@ -47,3 +43,16 @@ const Gallery = ({ saga }) => {
 };
 
 export default Gallery;
+
+{
+  /* <Carousel>
+<Carousel.Item key={movie.imdbID}>
+  {movies.map((movie) => (
+    
+      <SingleMovie movie={movie}></SingleMovie>
+    
+  ))}
+  </Carousel.Item>
+</Carousel>;
+ */
+}
