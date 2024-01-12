@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Carousel } from 'react-bootstrap';
 import SingleMovie from './SingleMovie';
 import { useState, useEffect } from 'react';
 
@@ -29,13 +29,17 @@ const Gallery = ({ saga }) => {
   return (
     <>
       <div className='saga-section p-0'>
-        <h2>Titolo</h2>
+        <h2>{saga}</h2>
         <Row xs={2} md={3} lg={6}>
-          {movies.map((movie) => (
-            <Col key={movie.imdbID}>
-              <SingleMovie movie={movie}></SingleMovie>
-            </Col>
-          ))}
+          <Carousel>
+            {movies.map((movie) => (
+              <Carousel.Item key={movie.imdbID}>
+                <Col /* key={movie.imdbID} */>
+                  <SingleMovie movie={movie}></SingleMovie>
+                </Col>
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </Row>
       </div>
     </>
