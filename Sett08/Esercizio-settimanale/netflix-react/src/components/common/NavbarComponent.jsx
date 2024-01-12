@@ -25,7 +25,11 @@ const NavbarComponent = () => {
           <Icon.Search></Icon.Search>
 
           <a className='mx-3' href='#'>
-            KIDS
+          <img
+                style={{ width: 30 }}
+                src='../../../src/assets/kids_icon.png'
+                alt='Profilo'
+              />
           </a>
           <Icon.BellFill></Icon.BellFill>
           <Dropdown>
