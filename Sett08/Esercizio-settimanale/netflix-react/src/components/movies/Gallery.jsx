@@ -13,7 +13,8 @@ const Gallery = ({ saga, setLoading, setError }) => {
       );
       if (res.ok) {
         let data = await res.json();
-        const limitedMovies = data.Search; /*.slice(0, 6) */
+        const limitedMovies =
+          data.Search; /*.slice(0, 6) per ridurre a 6 film per riga*/
         setMovies(limitedMovies);
         //console.log(limitedMovies);
         setLoading(false);
@@ -64,30 +65,19 @@ const Gallery = ({ saga, setLoading, setError }) => {
       </div>
     </>
   );
+
+  {
+    /* vecchia versione con cards statiche, senza carosello - responsive
+    
+    <Row xs={2} md={3} lg={6}>
+            {movies.map((movie) => (
+              <Col key={movie.imdbID}>
+                <SingleMovie movie={movie}></SingleMovie>
+              </Col>
+            ))}
+          </Row>
+   */
+  }
 };
 
 export default Gallery;
-
-{
-  /* <Carousel>
-<Carousel.Item key={movie.imdbID}>
-  {movies.map((movie) => (
-    
-      <SingleMovie movie={movie}></SingleMovie>
-    
-  ))}
-  </Carousel.Item>
-</Carousel>;
- */
-}
-
-{
-  /* <Row xs={2} md={3} lg={6}>
-          {movies.map((movie) => (
-            <Col key={movie.imdbID}>
-              <SingleMovie movie={movie}></SingleMovie>
-            </Col>
-          ))}
-        </Row>
- */
-}
