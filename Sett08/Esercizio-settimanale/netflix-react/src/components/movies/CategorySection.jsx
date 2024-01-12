@@ -26,8 +26,8 @@ const CategorySection = () => {
         </Col>
         <Col md={9} className='m-0'></Col>
         <Col md={1} className='m-0 d-flex justify-content-end'>
-          <Icon.TextLeft className='squared'></Icon.TextLeft>
-          <Icon.Grid className='squared'></Icon.Grid>
+          <Icon.TextLeft className='squared d-md-block d-sm-none'></Icon.TextLeft>
+          <Icon.Grid className='squared d-md-block d-sm-none'></Icon.Grid>
         </Col>
       </Row>
     </>

@@ -3,11 +3,7 @@ import Gallery from './movies/Gallery';
 import CategorySection from './movies/CategorySection';
 import { useState } from 'react';
 
-const Main = ({ setPageTitle }) => {
-  const retrievePageTitle = (newPageTitle) => {
-    setPageTitle(newPageTitle);
-  };
-
+const Main = () => {
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState(false);
 
@@ -41,19 +37,16 @@ const Main = ({ setPageTitle }) => {
         <Gallery
           setLoading={setLoading}
           setError={setError}
-          retrievePageTitle={retrievePageTitle}
           saga='Harry Potter'
         ></Gallery>
         <Gallery
           setLoading={setLoading}
           setError={setError}
-          retrievePageTitle={retrievePageTitle}
           saga='Avengers'
         ></Gallery>
         <Gallery
           setLoading={setLoading}
           setError={setError}
-          retrievePageTitle={retrievePageTitle}
           saga='Dragon Ball'
         ></Gallery>
       </Row>

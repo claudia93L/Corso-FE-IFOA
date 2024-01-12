@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <NavbarComponent></NavbarComponent>
-      <Main setPageTitle={setPageTitle} className='mx-4'></Main>
+      <Main className='mx-4'></Main>
       <Footer></Footer>
     </>
   );
