@@ -31,13 +31,13 @@ a {
   border: none;
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
   --bs-dropdown-min-width: 10%;
 }
 
 .dropdown-menu.show {
   left: -100px;
-}
+} */
 
 .dropdown-menu li:hover {
   --bs-dropdown-link-hover-color: var(--color-white);
