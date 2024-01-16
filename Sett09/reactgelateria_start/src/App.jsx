@@ -5,21 +5,17 @@ import { Menu } from '../src/components/Menu';
 
 class App extends React.Component {
   render() {
-    return <></>;
+    return (
+      <>
+        <div className='App'>
+          <section className='section-center'>
+            <h3>Gelateria Tutto-Ciocco</h3>
+            <Menu></Menu>
+          </section>
+        </div>
+      </>
+    );
   }
 }
 
 export default App;
-
-/* const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div className="App">
-        <section className="section-center">
-          <h3>Gelateria Tutto-Ciocco</h3>
-          <Menu />
-        </section>
-      </div>
-    </>
-  ) */
