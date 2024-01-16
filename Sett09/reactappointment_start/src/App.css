@@ -6,3 +6,21 @@ h1 {
 body {
   color: #fff;
 }
+
+.people-list {
+  background-color: #222;
+  border-radius: var(--radius);
+  width: 100%;
+  box-shadow: var(--dark-shadow);
+}
+
+.user-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.user-list li {
+  padding: 1rem;
+  width: 100%;
+  border-bottom: 1px solid var(--divider-color);
+}
