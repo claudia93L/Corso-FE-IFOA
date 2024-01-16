@@ -30,22 +30,26 @@ class App extends React.Component {
         <div className='container'>
           <h1>Prossimi appuntamenti</h1>
         </div>
-        <div className='people-list'>
-          <List
-            data={this.state.appointments}
-            removeAppointment={this.removeAppointment}
-          />
-        </div>
-        <div className='btn-group'>
-          <button className='btn btn-reset' onClick={this.reloadList}>
-            Reload list
-          </button>
-          <button
-            className='btn btn-delete'
-            onClick={() => this.setState({ appointments: [] })}
-          >
-            Delete all
-          </button>
+        <div className='mx-5'>
+          <div className='people-list'>
+            <List
+              data={this.state.appointments}
+              removeAppointment={this.removeAppointment}
+            />
+          </div>
+          <div className='btn-group'>
+            <div className='w-100 d-flex justify-content-between'>
+              <button className='btn btn-reset w-25' onClick={this.reloadList}>
+                Reload list
+              </button>
+              <button
+                className='btn btn-delete w-25'
+                onClick={() => this.setState({ appointments: [] })}
+              >
+                Delete all
+              </button>
+            </div>
+          </div>
         </div>
       </>
     );
