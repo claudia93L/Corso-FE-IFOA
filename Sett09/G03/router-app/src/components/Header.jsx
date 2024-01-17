@@ -1,12 +1,25 @@
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Header = () => {
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Link to='/'>Home</Link>
-        <Link to='/contatti'>Contatti</Link>
-        <Link to='/chisiamo'>Chi siamo</Link>
+      <div className='d-flex justify-content-between'>
+        <Button variant='dark'>
+          <Link to='/' className='text-white'>
+            Home
+          </Link>
+        </Button>
+        <Button variant='dark'>
+          <Link to='/contatti' className='text-white'>
+            Contatti
+          </Link>
+        </Button>
+        <Button variant='dark'>
+          <Link to='/chisiamo' className='text-white'>
+            Chi siamo
+          </Link>
+        </Button>
       </div>
     </div>
   );

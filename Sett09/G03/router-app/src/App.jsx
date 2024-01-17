@@ -1,14 +1,18 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Header></Header>
         <Routes>
           <Route path='/' element={<Home page='Homepage'></Home>}></Route>
           <Route
@@ -24,6 +28,7 @@ function App() {
             element={<NotFound page='404 Not Found'></NotFound>}
           ></Route>
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </>
   );
