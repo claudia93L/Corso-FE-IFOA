@@ -1,6 +1,6 @@
 import Main from '../Main';
 
-const TVShows = ({ page }) => {
+const Movies = ({ page }) => {
   return (
     <>
       <Main page={page}></Main>
@@ -8,4 +8,4 @@ const TVShows = ({ page }) => {
   );
 };
 
-export default TVShows;
+export default Movies;

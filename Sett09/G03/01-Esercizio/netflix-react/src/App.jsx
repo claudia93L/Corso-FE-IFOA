@@ -3,19 +3,14 @@ import './App.css';
 import NavbarComponent from './components/common/sections/NavbarComponent';
 import Footer from './components/common/sections/Footer';
 import Homepage from './components/pages/Homepage';
-import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import TVShows from './components/pages/TVShows';
+import Movies from './components/pages/Movies';
+import MovieDetails from './components/movies/MovieDetails';
 
 // http://www.omdbapi.com/?s=movieTitle&apikey=d8685296&
 
 function App() {
-  const [pageTitle, setPageTitle] = useState('Homepage | Netflix');
-
-  useEffect(() => {
-    document.title = pageTitle;
-  }, [pageTitle]);
-
   return (
     <>
       <NavbarComponent></NavbarComponent>
@@ -27,6 +22,11 @@ function App() {
         <Route
           path='/tvshows'
           element={<TVShows page='TV Shows'></TVShows>}
+        ></Route>
+        <Route path='/movies' element={<Movies page='Movies'></Movies>}></Route>
+        <Route
+          path='movieDetails/:movieId'
+          element={<MovieDetails page='Movie Details Page'></MovieDetails>}
         ></Route>
       </Routes>
       <Footer></Footer>

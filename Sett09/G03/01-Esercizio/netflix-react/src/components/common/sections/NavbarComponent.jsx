@@ -2,8 +2,15 @@ import { Nav, Navbar, Container, Dropdown } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
 import './NavbarComponent.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const NavbarComponent = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (to) => {
+    navigate(to); // Utilizza la funzione di navigazione per cambiare la rotta
+  };
+
   return (
     <>
       <Navbar bg='black' data-bs-theme='dark'>
@@ -18,13 +25,13 @@ const NavbarComponent = () => {
             </Navbar.Brand>
           </Link>
           <Nav>
-            <Nav.Link href='#'>
-              <Link to='/'>Home</Link>
+            <Nav.Link onClick={() => handleNavigate('/')}>Homepage</Nav.Link>
+            <Nav.Link onClick={() => handleNavigate('/tvshows')}>
+              TV Shows
             </Nav.Link>
-            <Nav.Link href='#'>
-              <Link to='/tvshows'>TV Shows</Link>
+            <Nav.Link onClick={() => handleNavigate('/movies')}>
+              Movies
             </Nav.Link>
-            <Nav.Link href='#'>Movies</Nav.Link>
             <Nav.Link href='#'>Recently added</Nav.Link>
             <Nav.Link href='#'>My List</Nav.Link>
           </Nav>

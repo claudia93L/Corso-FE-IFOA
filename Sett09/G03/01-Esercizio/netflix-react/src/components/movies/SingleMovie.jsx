@@ -1,19 +1,21 @@
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SingleMovie = ({ movie }) => {
   return (
     <div>
-      <Card
-        href='#'
-        className='cursor-pointer bg-black'
-        style={{ width: 200, height: 280 }}
-      >
-        <Card.Img
-          src={movie.Poster}
-          alt={movie.Title}
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-        ></Card.Img>
-      </Card>
+      <Link>
+        <Card
+          className='cursor-pointer bg-black'
+          style={{ width: 200, height: 280 }}
+        >
+          <Card.Img
+            src={movie.Poster}
+            alt={movie.Title}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+          ></Card.Img>
+        </Card>
+      </Link>
     </div>
   );
 };
