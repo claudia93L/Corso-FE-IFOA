@@ -1,22 +1,29 @@
 import { Nav, Navbar, Container, Dropdown } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
 import './NavbarComponent.css';
+import { Link } from 'react-router-dom';
 
 const NavbarComponent = () => {
   return (
     <>
       <Navbar bg='black' data-bs-theme='dark'>
         <Container className=' d-flex flex-row align-items-center justify-content-start'>
-          <Navbar.Brand href='#'>
-            <img
-              src='../../../src/assets/netflix_logo.png'
-              alt='Logo Netflix'
-              style={{ width: 120 }}
-            />
-          </Navbar.Brand>
+          <Link to='/'>
+            <Navbar.Brand>
+              <img
+                src='../../../src/assets/netflix_logo.png'
+                alt='Logo Netflix'
+                style={{ width: 120 }}
+              />
+            </Navbar.Brand>
+          </Link>
           <Nav>
-            <Nav.Link href='#'>Home</Nav.Link>
-            <Nav.Link href='#'>TV Shows</Nav.Link>
+            <Nav.Link href='#'>
+              <Link to='/'>Home</Link>
+            </Nav.Link>
+            <Nav.Link href='#'>
+              <Link to='/tvshows'>TV Shows</Link>
+            </Nav.Link>
             <Nav.Link href='#'>Movies</Nav.Link>
             <Nav.Link href='#'>Recently added</Nav.Link>
             <Nav.Link href='#'>My List</Nav.Link>
