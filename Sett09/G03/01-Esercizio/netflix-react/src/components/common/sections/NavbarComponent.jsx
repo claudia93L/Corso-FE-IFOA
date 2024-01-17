@@ -8,7 +8,7 @@ const NavbarComponent = () => {
   const navigate = useNavigate();
 
   const handleNavigate = (to) => {
-    navigate(to); // Utilizza la funzione di navigazione per cambiare la rotta
+    navigate(to);
   };
 
   return (

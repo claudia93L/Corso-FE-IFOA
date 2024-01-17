@@ -2,6 +2,7 @@ import { Row, Col, Carousel, Container } from 'react-bootstrap';
 import SingleMovie from './SingleMovie';
 import { useState, useEffect } from 'react';
 import './Gallery.css';
+import { Link } from 'react-router-dom';
 
 const Gallery = ({ saga, setLoading, setError }) => {
   const [movies, setMovies] = useState([]);
@@ -55,7 +56,9 @@ const Gallery = ({ saga, setLoading, setError }) => {
                 <Container fluid className='d-flex justify-content-center'>
                   {movie.map((singleMovie) => (
                     <Col key={singleMovie.imdbID}>
-                      <SingleMovie movie={singleMovie}></SingleMovie>
+                      <Link to={`movieDetails/${singleMovie.imdbID}`}>
+                        <SingleMovie movie={singleMovie}></SingleMovie>
+                      </Link>
                     </Col>
                   ))}
                 </Container>
