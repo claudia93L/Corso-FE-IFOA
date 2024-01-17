@@ -10,14 +10,19 @@ import Footer from './components/Footer';
 // ancor meglio, si inserisce il browser router dentro main e si inserisce al suo interno il componente app
 function App() {
   // il path che modifica la route e deve ricevere l'id obbligatoriamente, è bene usarlo se si va ad una pagina dove l'id è obbligatorio
+
   return (
     <>
       <BrowserRouter>
         <Header></Header>
         <Routes>
           <Route path='/' element={<Home page='Homepage'></Home>}></Route>
-          <Route
+          {/* <Route
             path='/contatti/:userName'
+            element={<Contacts page='Contatti'></Contacts>}
+          ></Route> */}
+          <Route
+            path='/contatti/'
             element={<Contacts page='Contatti'></Contacts>}
           ></Route>
           <Route

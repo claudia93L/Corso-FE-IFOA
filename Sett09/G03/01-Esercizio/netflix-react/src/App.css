@@ -1,0 +1,51 @@
+/* VARIABILI */
+
+:root {
+  --color-red: red;
+  --color-gray: gray;
+  --color-white: white;
+}
+
+/* COMMON */
+
+.btn,
+.card {
+  border: none;
+}
+
+footer a:hover,
+footer .social-media-section i:hover,
+footer .button-link a:hover {
+  color: var(--color-white);
+}
+
+.squared i,
+footer,
+footer li a,
+footer p,
+footer .social-media-section a {
+  color: var(--color-gray);
+}
+
+footer .social-media-section,
+footer li {
+  margin-bottom: 16px;
+}
+
+.squared {
+  width: 100%;
+  height: 5%;
+  margin-left: 10px;
+}
+
+.hover-red-bg:hover {
+  background-color: var(--color-red);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+

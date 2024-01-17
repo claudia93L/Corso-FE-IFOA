@@ -6,6 +6,7 @@ const Contacts = ({ page }) => {
   return (
     <div>
       <h2>Ciao, {params.userName}</h2>
+      {/* <h2>Ciao, {params.id}</h2> */}
       <Main page={page}></Main>
     </div>
   );

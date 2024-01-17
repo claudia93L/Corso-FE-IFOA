@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const id = 'test';
+
   return (
     <div>
       <div className='d-flex justify-content-between'>
@@ -16,7 +19,7 @@ const Header = () => {
           </Link>
         </Button>
         <Button variant='dark'>
-          <Link to='/chisiamo' className='text-white'>
+          <Link to={`/contatti/>${id}`} className='text-white'>
             Chi siamo
           </Link>
         </Button>
