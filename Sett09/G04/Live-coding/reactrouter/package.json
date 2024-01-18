@@ -1,5 +1,5 @@
 {
-  "name": "meteo-app",
+  "name": "reactrouter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.0.1",
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.1.0",
-    "react-router": "^6.21.2",
-    "react-router-dom": "^6.21.2",
-    "redux": "^5.0.1"
+    "react-router-dom": "^6.21.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
