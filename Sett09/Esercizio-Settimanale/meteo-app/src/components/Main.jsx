@@ -5,25 +5,27 @@ import { CardComponent } from './CardComponent';
 
 const Main = () => {
   const [search, setSearch] = useState('');
-  const [city, setCity] = useState([]);
+  const [city, setCity] = useState(null);
+  const [btnCity, setBtnCity] = useState('');
   const navigate = useNavigate();
 
   const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const apiKey = '&APPID=1b2c78e3829adfa6630d5a8e796fba86';
 
-  useEffect(() => {
-    if (search?.length > 2) {
-      fetchData();
-    }
-  }, [search]);
-
   const handleSearch = () => {
-    navigate(`/searchresults?search=${search}`);
+    navigate(`/searchresults?searchedCity=${search}`);
+  };
+
+  // da sistemare
+  const getValue = (e) => {
+    const btnCity = e.target.innerText;
+    console.log(btnCity);
+    return btnCity;
   };
 
   const fetchData = async () => {
     try {
-      const resp = await fetch(baseURL + search + apiKey);
+      const resp = await fetch(baseURL + btnCity + apiKey);
       if (resp.ok) {
         const data = await resp.json();
         setCity(data);
@@ -35,6 +37,10 @@ const Main = () => {
       console.error('Error in the HTTP request:', error);
     }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -56,15 +62,27 @@ const Main = () => {
           </Button>
         </InputGroup>
         <div className='d-flex flex-row justify-content-center'>
-          <Button variant='btn btn-primary mx-3'>Cagliari</Button>
-          <Button variant='btn btn-primary mx-3'>Rome</Button>
-          <Button variant='btn btn-primary mx-3'>Barcelona</Button>
-          <Button variant='btn btn-primary mx-3'>Tokyo</Button>
-          <Button variant='btn btn-primary mx-3'>New York</Button>
-          <Button variant='btn btn-primary mx-3'>Paris</Button>
+          <Button variant='btn btn-primary mx-3' onClick={getValue}>
+            Cagliari
+          </Button>
+          <Button variant='btn btn-primary mx-3' onClick={getValue}>
+            Rome
+          </Button>
+          <Button variant='btn btn-primary mx-3' onClick={getValue}>
+            Barcelona
+          </Button>
+          <Button variant='btn btn-primary mx-3' onClick={getValue}>
+            Tokyo
+          </Button>
+          <Button variant='btn btn-primary mx-3' onClick={getValue}>
+            New York
+          </Button>
+          <Button variant='btn btn-primary mx-3' onClick={getValue}>
+            Paris
+          </Button>
         </div>
 
-        <CardComponent city={city.id}></CardComponent>
+        <CardComponent city={btnCity}></CardComponent>
       </Container>
     </>
   );

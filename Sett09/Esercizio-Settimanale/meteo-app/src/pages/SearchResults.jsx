@@ -3,7 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 
 const SearchResults = () => {
   const location = useLocation();
-  const searchedTerm = new URLSearchParams(location.search).get('search');
+  const searchedTerm = new URLSearchParams(location.search).get('searchedCity');
 
   const [search, setSearch] = useState('');
   const [cities, setCities] = useState([]);
@@ -13,7 +13,7 @@ const SearchResults = () => {
 
   const fetchData = async () => {
     try {
-      const resp = await fetch(baseURL + search + apiKey);
+      const resp = await fetch(baseURL + searchedCity + apiKey);
       if (resp.ok) {
         const data = await resp.json();
         setCities(data);
