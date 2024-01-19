@@ -9,7 +9,9 @@ const Main = () => {
 
   const handleSearch = () => {
     setCityData(search);
-    navigate(`/searchresults?searchedCity=${search}`);
+    if (search) {
+      navigate(`/searchresults?searchedCity=${search}`);
+    }
   };
 
   return (
@@ -27,7 +29,7 @@ const Main = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <Button onClick={handleSearch} variant='btn btn-success'>
+          <Button onClick={handleSearch} variant='btn btn-primary'>
             Search
           </Button>
         </InputGroup>
