@@ -28,7 +28,7 @@ export const CardComponent = ({ city }) => {
     fetchData();
   }, [city]);
 
-  const chooseImg = () => {
+  /* const chooseImg = () => {
     let src;
 
     switch (cityData.weather[0].main.toLowerCase()) {
@@ -36,8 +36,14 @@ export const CardComponent = ({ city }) => {
         return (src = './src/assets/sun.png');
       case 'clouds':
         return (src = './src/assets/cloud.png');
+      case 'rain':
+        return (src = './src/assets/rain.png');
+      case 'snow':
+        return (src = './src/assets/snow.png');
+      case 'drizzle':
+        return (src = './src/assets/rainy-sun.png');
     }
-  };
+  }; */
 
   const convertTemperature = () => {
     let celsius = cityData.main.temp - 273.15;
@@ -55,7 +61,11 @@ export const CardComponent = ({ city }) => {
           <Card.Body>
             {cityData && (
               <>
-                <Card.Img src={chooseImg()} style={{ width: 100 }}></Card.Img>
+                <Card.Img
+                  src={`./src/assets/${cityData.weather[0].icon}.png`}
+                  style={{ width: 100 }}
+                  alt={cityData.weather[0].description}
+                ></Card.Img>
                 <Card.Title>
                   {cityData.name}, {cityData.sys.country}
                 </Card.Title>
