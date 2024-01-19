@@ -174,6 +174,10 @@ const isThisAnEmail = (email) =>
 
 console.log(isThisAnEmail('claudia@gmail.com'));
 
+/* FEEDBACK
+
+Esercizio 7: non funzionante, scritto così ritorna sempre il primo elemento dell'array  */
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
@@ -235,6 +239,11 @@ function rollTheDices(numeroLanci) {
 }
 
 console.log(rollTheDices(2));
+
+/* FEEDBACK 
+
+Esercizio 9: hai invertito la logica Esercizio 12: andava restituito l'intero oggetto, non soltanto l'anno
+*/
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
@@ -422,6 +431,11 @@ console.log(oggetto);
 deleteProp(oggetto, (oggetto.stringa = 'Stringa test'));
 
 console.log(oggetto);
+
+/* FEEDBACK 
+
+Esercizio 12: andava restituito l'intero oggetto, non soltanto l'anno
+*/
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
