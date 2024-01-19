@@ -49,7 +49,7 @@ export const CardComponent = ({ city }) => {
   }, [city]);
 
   return (
-    <div className='d-flex justify-content-center'>
+    <div className='d-flex justify-content-center mb-5'>
       {cityData && cityForecastData ? (
         <Card className='text-center my-5 w-50'>
           <Card.Header className='bg-warning'>
