@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Button, InputGroup, Form, Container } from 'react-bootstrap';
-import { CardComponent } from './CardComponent';
 import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
