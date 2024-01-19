@@ -51,7 +51,7 @@ export const CardComponent = ({ city }) => {
   return (
     <div className='d-flex justify-content-center'>
       {cityData && cityForecastData ? (
-        <Card className='text-center my-5 w-25'>
+        <Card className='text-center my-5 w-50'>
           <Card.Header className='bg-warning'>
             Today's weather in the city of {city}
           </Card.Header>
@@ -60,10 +60,11 @@ export const CardComponent = ({ city }) => {
               <>
                 <Card.Img
                   src={`./src/assets/${cityData.weather[0].icon}.png`}
-                  style={{ width: 100 }}
+                  style={{ width: 150 }}
                   alt={cityData.weather[0].description}
+                  className='my-2'
                 ></Card.Img>
-                <Card.Title>
+                <Card.Title className='display-5'>
                   {cityData.name}, {cityData.sys.country}
                 </Card.Title>
                 <Card.Text>Temperature: {cityData.main.temp}°C</Card.Text>
@@ -84,14 +85,14 @@ export const CardComponent = ({ city }) => {
                   return (
                     <div
                       key={el.dt}
-                      className={`d-flex flex-row px-3 py-2 ${bgClass}`}
+                      className={`d-flex flex-row px-3 py-2 justify-content-center ${bgClass}`}
                     >
                       <img
                         src={`./src/assets/${el.weather[0].icon}.png`}
                         alt={el.weather[0].description}
-                        className='w-25'
+                        style={{ width: 100 }}
                       />
-                      <div className='d-flex flex-column text-left mx-3'>
+                      <div className='d-flex flex-column text-left mx-5 justify-content-center'>
                         <h5>{el.main.temp}°C</h5>
                         <p>Date: {el.dt_txt}</p>
                       </div>
