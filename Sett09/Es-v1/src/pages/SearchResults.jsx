@@ -3,10 +3,10 @@ import { useLocation, Link } from 'react-router-dom';
 
 const SearchResults = () => {
   const location = useLocation();
-  const searchedTerm = new URLSearchParams(location.search).get('searchedCity');
+  const searchedCity = new URLSearchParams(location.search).get('searchedCity');
 
   const [search, setSearch] = useState('');
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState();
 
   const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const apiKey = '&APPID=1b2c78e3829adfa6630d5a8e796fba86';
@@ -17,7 +17,7 @@ const SearchResults = () => {
       if (resp.ok) {
         const data = await resp.json();
         setCities(data);
-        //console.log(data);
+        console.log(data);
       } else {
         console.error('Error in the HTTP request');
       }
@@ -27,9 +27,9 @@ const SearchResults = () => {
   };
 
   useEffect(() => {
-    if (searchedTerm?.length > 2) {
-      setSearch(searchedTerm);
-      //console.log(searchedTerm);
+    if (searchedCity?.length > 2) {
+      setSearch(searchedCity);
+      //console.log(searchedCity);
     }
   }, []);
 
