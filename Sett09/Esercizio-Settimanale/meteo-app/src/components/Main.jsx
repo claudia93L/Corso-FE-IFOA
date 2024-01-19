@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { Button, InputGroup, Form, Container } from 'react-bootstrap';
 import { CardComponent } from './CardComponent';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
   const [search, setSearch] = useState('');
   const [cityData, setCityData] = useState(null);
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     setCityData(search);
+    navigate(`/searchresults?searchedCity=${search}`);
   };
 
   return (
@@ -29,7 +32,7 @@ const Main = () => {
             Search
           </Button>
         </InputGroup>
-        {<CardComponent city={cityData}></CardComponent>}
+        {/* {<CardComponent city={cityData}></CardComponent>} */}
       </Container>
     </>
   );
