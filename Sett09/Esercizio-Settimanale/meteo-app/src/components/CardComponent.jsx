@@ -48,10 +48,21 @@ export const CardComponent = ({ city }) => {
     fetchDataForecast();
   }, [city]);
 
+  function formatDateTime(timestamp) {
+    const fullDate = new Date(timestamp);
+    //  padStart -> utilizzata per estendere una stringa aggiungendo caratteri specifici all'inizio della stringa fino a raggiungere una lunghezza target specificata. è utile quando si desidera formattare una stringa per assicurarsi che abbia una certa lunghezza minima e, se necessario, riempirla con caratteri di riempimento
+    // utilizzandolo, mi assicuro che se, se l'ora o la data sono di un solo numero, verrà aggiunto lo zero per avere sempre due cifre
+    const day = String(fullDate.getDate()).padStart(2, '0');
+    const month = String(fullDate.getMonth() + 1).padStart(2, '0');
+    const hour = String(fullDate.getHours()).padStart(2, '0');
+    const minutes = String(fullDate.getMinutes()).padStart(2, '0');
+    return `${day}/${month} - ${hour}:${minutes}`;
+  }
+
   return (
     <div className='d-flex justify-content-center mb-5'>
       {cityData && cityForecastData ? (
-        <Card className='text-center my-5 w-50'>
+        <Card className='text-center mt-1 mb-5 w-50'>
           <Card.Header className='bg-warning'>
             Today's weather in the city of {city}
           </Card.Header>
@@ -77,6 +88,9 @@ export const CardComponent = ({ city }) => {
                 </Card.Text>
                 <Card.Text>Wind speed: {cityData.wind.speed} km/h</Card.Text>
                 <Card.Text>Humidity: {cityData.main.humidity}%</Card.Text>
+                <div className='bg-dark text-light py-3 mb-0'>
+                  <h6>Keep scrolling to discover the full forecast</h6>
+                </div>
 
                 {cityForecastData.map((el, i) => {
                   const isEven = i % 2 === 0;
@@ -94,7 +108,7 @@ export const CardComponent = ({ city }) => {
                       />
                       <div className='d-flex flex-column text-left mx-5 justify-content-center'>
                         <h5>{el.main.temp}°C</h5>
-                        <p>Date: {el.dt_txt}</p>
+                        <p>Date: {formatDateTime(el.dt_txt)}</p>
                       </div>
                     </div>
                   );
