@@ -75,19 +75,27 @@ export const CardComponent = ({ city }) => {
                   alt={cityData.weather[0].description}
                   className='my-2'
                 ></Card.Img>
-                <Card.Title className='display-5'>
+                <Card.Title className='display-5 mb-4'>
                   {cityData.name}, {cityData.sys.country}
                 </Card.Title>
-                <Card.Text>Temperature: {cityData.main.temp}°C</Card.Text>
                 <Card.Text>
-                  Perceived temperature: {cityData.main.feels_like} °C
+                  Temperature: <b>{cityData.main.temp}°C</b>
                 </Card.Text>
-                <Card.Text>Weather: {cityData.weather[0].main}</Card.Text>
                 <Card.Text>
-                  Description: {cityData.weather[0].description}
+                  Perceived temperature: <b>{cityData.main.feels_like} °C</b>
                 </Card.Text>
-                <Card.Text>Wind speed: {cityData.wind.speed} km/h</Card.Text>
-                <Card.Text>Humidity: {cityData.main.humidity}%</Card.Text>
+                <Card.Text>
+                  Weather: <b>{cityData.weather[0].main}</b>
+                </Card.Text>
+                <Card.Text>
+                  Description: <b>{cityData.weather[0].description}</b>
+                </Card.Text>
+                <Card.Text>
+                  Wind speed: <b>{cityData.wind.speed} km/h</b>
+                </Card.Text>
+                <Card.Text>
+                  Humidity: <b>{cityData.main.humidity}%</b>
+                </Card.Text>
                 <div className='bg-dark text-light py-3 mb-0'>
                   <h6>Keep scrolling to discover the full forecast</h6>
                 </div>
