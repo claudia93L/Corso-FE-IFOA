@@ -32,7 +32,6 @@ const Main = () => {
             Search
           </Button>
         </InputGroup>
-        {/* {<CardComponent city={cityData}></CardComponent>} */}
       </Container>
     </>
   );
