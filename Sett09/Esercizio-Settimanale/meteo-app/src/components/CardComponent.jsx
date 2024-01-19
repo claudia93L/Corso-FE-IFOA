@@ -7,24 +7,24 @@ export const CardComponent = ({ city }) => {
   const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const apiKey = '&APPID=1b2c78e3829adfa6630d5a8e796fba86';
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        if (city) {
-          const resp = await fetch(baseURL + city + apiKey);
-          if (resp.ok) {
-            const data = await resp.json();
-            setCityData(data);
-            // console.log(data);
-          } else {
-            console.error('Error in the HTTP request');
-          }
+  const fetchData = async () => {
+    try {
+      if (city) {
+        const resp = await fetch(baseURL + city + apiKey);
+        if (resp.ok) {
+          const data = await resp.json();
+          setCityData(data);
+          // console.log(data);
+        } else {
+          console.error('Error in the HTTP request');
         }
-      } catch (error) {
-        console.error('Error in the HTTP request:', error);
       }
-    };
+    } catch (error) {
+      console.error('Error in the HTTP request:', error);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
   }, [city]);
 
