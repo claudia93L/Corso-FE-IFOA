@@ -70,7 +70,7 @@ export const CardComponent = ({ city }) => {
             {cityData && (
               <>
                 <Card.Img
-                  src={`./src/assets/${cityData.weather[0].icon}.png`}
+                  src={`./src/assets/weather-icons/${cityData.weather[0].icon}.png`}
                   style={{ width: 150 }}
                   alt={cityData.weather[0].description}
                   className='my-2'
@@ -102,7 +102,7 @@ export const CardComponent = ({ city }) => {
                       className={`d-flex flex-row px-3 py-2 justify-content-center ${bgClass}`}
                     >
                       <img
-                        src={`./src/assets/${el.weather[0].icon}.png`}
+                        src={`./src/assets/weather-icons/${el.weather[0].icon}.png`}
                         alt={el.weather[0].description}
                         style={{ width: 100 }}
                       />
