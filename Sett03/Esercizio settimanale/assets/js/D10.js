@@ -174,10 +174,6 @@ const isThisAnEmail = (email) =>
 
 console.log(isThisAnEmail('claudia@gmail.com'));
 
-/* FEEDBACK
-
-Esercizio 7: non funzionante, scritto così ritorna sempre il primo elemento dell'array  */
-
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
@@ -195,12 +191,8 @@ const giorni = [
 ];
 
 const whatDayIsIt = () => {
-  let data = new Date();
-
-  data = data.getDay();
-
-  const giorno = giorni.find((el) => el.indexOf(data));
-
+  const data = new Date();
+  const giorno = giorni[data.getDay()];
   return giorno;
 };
 
@@ -240,11 +232,6 @@ function rollTheDices(numeroLanci) {
 
 console.log(rollTheDices(2));
 
-/* FEEDBACK 
-
-Esercizio 9: hai invertito la logica Esercizio 12: andava restituito l'intero oggetto, non soltanto l'anno
-*/
-
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
@@ -255,7 +242,7 @@ const howManyDays = (data) => {
   const oggi = new Date();
   data = new Date(data);
 
-  const differenzaMillisecondi = data.getTime() - oggi.getTime();
+  const differenzaMillisecondi = oggi.getTime() - data.getTime();
 
   // formula (1000 milliseconds * (60 seconds * 60 minutes) * 24 hours)
 
@@ -432,11 +419,6 @@ deleteProp(oggetto, (oggetto.stringa = 'Stringa test'));
 
 console.log(oggetto);
 
-/* FEEDBACK 
-
-Esercizio 12: andava restituito l'intero oggetto, non soltanto l'anno
-*/
-
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
@@ -448,7 +430,7 @@ let filmRecente = movies[0].Year;
 const newestMovie = () => {
   for (let i = 0; i < movies.length; i++) {
     if (filmRecente < movies[i].Year) {
-      filmRecente = movies[i].Year;
+      filmRecente = movies[i];
     }
   }
   return filmRecente;
